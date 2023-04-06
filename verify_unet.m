@@ -28,9 +28,12 @@ XData = cell(n,1);
 YData = cell(n,1);
 for i=1:n
     XData{i} = imread(imds.Files{idxs(i)});
-    YData{i} = imread(pxds.Files{idxs(i)});
+    % Transform YData into 1s (triangle) and 2s (background)
+    target = double(imread(pxds.Files{idxs(i)}));
+    target = target/(-255) + 2; % change 0 and 255 to 2 and 1 (respectively)
+    YData{i} = target;
 end
-    
+
 % 3) Create input set
 npixels = 10; % number of pixels to attack
 pix_idxs = randperm(1024,npixels); % randomly select pixels to attack
@@ -56,15 +59,17 @@ ver_rs = cell(n,1);       % verified reach set
 eval_seg_ims = cell(n,1); % predicted segmentation image
 f1 = cell(n,1);           % figure 1 (evaluated image)
 f2 = cell(n,1);           % figure 2 (verified image w.r.t evaluated image)
+f3 = cell(n,1);           % figure 3 (ground truth data (target output))
 reachOptions.reachMethod = 'approx-star';
 for i=1:n
     t = tic;
-    [riou(i), rv(i), rs(i), ~, ~, ~, ~, ver_rs{i}, eval_seg_ims{i}] = net.verify_segmentation(I(i), XData(i), reachOptions);
+    [riou(i), rv(i), rs(i), ~, ~, ~, ~, ver_rs(i), eval_seg_ims(i)] = net.verify_segmentation(I(i), XData(i), reachOptions);
     time(i) = toc(t);
      % Visualize results
-    [f1{i}, f2{i}] = net.plot_segmentation_output_set(ver_rs{1}, eval_seg_ims{1});
+    [f1, f2] = net.plot_segmentation_output_set(ver_rs{i}, eval_seg_ims{i});
+    [~, f3] = net.plot_segmentation_output_set(ver_rs{i}, YData{i});
 end
 
 % Save results
-save("unet_robustness_verify.mat", 'time', 'riou', 'rs', 'rv', 'f1', 'f2');
+save("unet_avg_robustness_resuts.mat", 'time', 'riou', 'rs', 'rv');
 
