@@ -7,11 +7,11 @@
 %% 1) Load data 
 
 % Download if necessary
-dataFolder = "medNist/MedNIST";
+dataFolder = "../data/MedNIST";
 if ~isfolder(dataFolder) % data is not downloaded yet
     dataSource = "https://github.com/Project-MONAI/MONAI-extra-test-data/releases/download/0.8.1/MedNIST.tar.gz";
     gunzip(dataSource, 'medNist');
-    untar('medNist/MedNIST.tar', "medNist");
+    untar('../data/MedNIST.tar', "medNist");
 end
 
 % Go through every folder (label) and load all images

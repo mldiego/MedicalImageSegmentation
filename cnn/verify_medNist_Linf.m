@@ -13,7 +13,7 @@ net.OutputSize = net.Layers{end-2}.OutputSize;
 % 2) Load data
 rng(2023);
 % Go through every folder (label) and load all 10 images per class
-dataFolder = "medNist/MedNIST";
+dataFolder = "../data/MedNIST";
 categs = dir(dataFolder);
 % Initialize vars
 N = 60;
@@ -54,17 +54,20 @@ YData = repmat(YData, length(disturbance), 1);
 % 4) Robustness Verification
 reachOptions.reachMethod = 'approx-star';
 res = zeros(N*nD,2);
-for i=1:N*nD
+% for i=1:N*nD
+for i=1:10:51
     t = tic;
     res(i,1) = net.verify_robustness(I(i), reachOptions, YData(i));
     res(i,2) = toc(t);
+% %     reachSets{floor(i/10)+1} = net.reachSet;
 end
 
 % Save results 
-save('medNist_results.mat', 'res');
-
-fprintf('\n--------- RESULTS -----------\n');
-disp("Robust = "+string(sum(res(:,1)==1))+ "/" + string(length(YData)));
-disp("Unknown = "+string(sum(res(:,1)==2))+ "/" + string(length(YData)));
-disp("Not robust = "+string(sum(res(:,1)==0))+ "/" + string(length(YData)));
-disp("Computation time per image = "+string(mean(res(:,2))) + " seconds");
+save('medNist_analysis.mat', 'res', "reachSets", '-v7.3');
+% save('medNist_results.mat', 'res');
+% 
+% fprintf('\n--------- RESULTS -----------\n');
+% disp("Robust = "+string(sum(res(:,1)==1))+ "/" + string(length(YData)));
+% disp("Unknown = "+string(sum(res(:,1)==2))+ "/" + string(length(YData)));
+% disp("Not robust = "+string(sum(res(:,1)==0))+ "/" + string(length(YData)));
+% disp("Computation time per image = "+string(mean(res(:,2))) + " seconds");
