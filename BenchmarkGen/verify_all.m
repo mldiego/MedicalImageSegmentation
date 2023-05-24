@@ -35,13 +35,13 @@ for dd = 1:nD
         lb = max(lb, lb_min); % ensure no negative values
         ub = img + epsilon;
         ub = min(ub, ub_max); % ensure no values > 255 (max pixel value)
-        set_idx = (dd-1)*60+i;
+        set_idx = (dd-1)*N+i;
         I(set_idx) = ImageStar(lb, ub);
     end
 end
 YData = repmat(YData, length(disturbance), 1);
 
-%% Then verify all data with each model (5*3*3 = 30 models)
+%% Then verify all data with each model (5*3*3 = 45 models)
 
 % Iterate trhough every folder and subfolder and analyze all the models
 path = pwd;
@@ -50,19 +50,20 @@ folders = dir(path);
 % correspond to (".", and "..")
 
 % Go into every folder of and analyze each model
-for r = 3:length(folders) % iterate through regularizer
-    if folders(r).isdir
-        sub_path = [path, filesep, folders(r).name, filesep];
-        inits_path = dir(sub_path);
-        for i = 3:length(inits_path) % go trhough all initialization
-            if inits_path(i).isdir
-                temp_path = [sub_path, inits_path(i).name, filesep, 'models', filesep];
-                models_path = dir([temp_path, '*.mat']);
-                for m = 1:length(models_path) % go through all models
-                    netpath = [temp_path, models_path(m).name];
-                    verify_medNist_model(netpath, I, YData);
-                end
+for r = 4:5 % iterate through regularizers (3)
+    sub_path = [path, filesep, folders(r).name, filesep];
+    inits_path = dir(sub_path);
+    for i = 3:length(inits_path) % go through all initializations (3 x 3)
+        if inits_path(i).isdir
+            temp_path = [sub_path, inits_path(i).name, filesep, 'models', filesep];
+            models_path = dir([temp_path, '*.mat']);
+            for m = 1:length(models_path) % go through all models ( 5 x 3 x 3 )
+                netpath = [temp_path, models_path(m).name];
+                verify_medNist_model(netpath, I, YData);
             end
         end
     end
 end
+
+% 45 different files should be generated under the directory "BenchmarkGen/results/"
+

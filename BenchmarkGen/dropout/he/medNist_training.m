@@ -96,6 +96,6 @@ for sd = seeds
     disp("Test accuracy = " + string(accuracy));
     
     % Save model
-    save("models/model_he_narrow_"+string(sd)+".mat", 'net', 'accuracy');
+    save("models/model_dropout_he_"+string(sd)+".mat", 'net', 'accuracy');
 
 end

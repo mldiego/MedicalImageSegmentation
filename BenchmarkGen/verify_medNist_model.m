@@ -2,8 +2,8 @@ function verify_medNist_model(modelpath, Sets, targets)
 
     % Get names for saving and display
     modelName = split(modelpath, filesep);
-    regName = modelName{end-2};
-    initName = modelName{end-1};
+    regName = modelName{end-3};
+    initName = modelName{end-2};
     saveName = split(modelName{end},'.');
     saveName = saveName{1};
     disp(['Verifying model with regularization: ', regName, ' , initialization: ' , initName, ', name: ', saveName]);
@@ -13,7 +13,11 @@ function verify_medNist_model(modelpath, Sets, targets)
     nn = matlab2nnv(net); % transform net to nnv format (NN)
     % ensure I/O are correct
     nn.InputSize = net.Layers(1).InputSize;
-    nn.OutputSize = net.Layers(end-2).OutputSize;
+    if isa(net, "SeriesNetwork")
+        nn.OutputSize = net.Layers(end-2).OutputSize; % dropout and l2
+    else
+        nn.OutputSize = net.Layers(end-1).OutputSize; % jacobian
+    end
 
     % Check input data
     if length(Sets) ~= length(targets)
