@@ -16,7 +16,18 @@ end
 %% Analysis per class
 
 % res indexes per class
+zero  = [1:10, 101:110];
+one   = [11:20, 111:120];
+two   = [21:30, 121:130];
+three = [31:40, 131:140];
+four  = [41:50, 141:150];
+five  = [51:60, 151:160];
+six   = [61:70, 161:170];
+seven = [71:80, 171:180];
+eight = [81:90, 181:190];
+nine  = [91:100, 191:200];
 
+classes = [zero; one; two; three; four; five; six; seven; eight; nine];
 
 numClasses = 10;
 classRes = zeros(numClasses,4);
@@ -39,7 +50,7 @@ end
 regs = ["dropout", "jacobian", "l2"];
 Nregs = length(regs);
 regRes = zeros(Nregs,4); % dropout, jacobian, l2
-idxs = 1:240; % all indexes for the rest of the results
+idxs = 1:200; % all indexes for the rest of the results
 
 for r = 1:Nregs
     Rob = 0; Unk = 0; Norob = 0; Avgtime = 0;
@@ -61,7 +72,7 @@ end
 inits = ["glorot", "he", "narrow"]; 
 Ninits = length(inits);
 initRes = zeros(Ninits,4);
-idxs = 1:240; % all indexes for the rest of the results
+idxs = 1:200; % all indexes for the rest of the results
 
 for r = 1:Ninits
     Rob = 0; Unk = 0; Norob = 0; Avgtime = 0;
@@ -78,6 +89,25 @@ for r = 1:Ninits
     initRes(r,:) = [Rob, Unk, Norob, Avgtime];
 end
 
+%% Analysis per seed (0,1,2,3,4)
+
+seeds = ["0", "1", "2", "3", "4"]; 
+Nseeds = length(seeds);
+seedRes = zeros(Nseeds,4);
+idxs = 1:200; % all indexes for the rest of the results
+
+for i=1:N
+    loc_seed = mod(i,5);
+    if loc_seed == 0
+        loc_seed = 5;
+    end
+    [rob, unk, norob, time] = process_model_res(allRes{i,1}, idxs);
+    seedRes(loc_seed, 1) = seedRes(loc_seed, 1)  + rob/1800;
+    seedRes(loc_seed, 2) = seedRes(loc_seed, 2)  + unk/1800;
+    seedRes(loc_seed, 3) = seedRes(loc_seed, 3)  + norob/1800;
+    seedRes(loc_seed, 4) = seedRes(loc_seed, 4)  + time/9;
+end
+
 
 %% Analysis per reg, per init (3 x 3)
 
@@ -85,7 +115,7 @@ end
 % dropout (glorot -> he -> narrow) -> jacobian (glorot -> he -> narrow) -> L2 (glorot -> he -> narrow)
 
 regInitRes = zeros(Ninits*Nregs,4);
-idxs = 1:240; % all indexes for the rest of the results
+idxs = 1:200; % all indexes for the rest of the results
 
 for i=1:N
     combo = ceil(i/5);
@@ -116,15 +146,15 @@ for c = 1:numClasses
             regClassRes(c,3) = regClassRes(c,3) + norob;
             regClassRes(c,4) = regClassRes(c,4) + time;
         elseif contains(allRes{i,2}, "jacobian")
-            regClassRes(c+6,1) = regClassRes(c+6,1) + rob;
-            regClassRes(c+6,2) = regClassRes(c+6,2) + unk;
-            regClassRes(c+6,3) = regClassRes(c+6,3) + norob;
-            regClassRes(c+6,4) = regClassRes(c+6,4) + time;
+            regClassRes(c+numClasses,1) = regClassRes(c+numClasses,1) + rob;
+            regClassRes(c+numClasses,2) = regClassRes(c+numClasses,2) + unk;
+            regClassRes(c+numClasses,3) = regClassRes(c+numClasses,3) + norob;
+            regClassRes(c+numClasses,4) = regClassRes(c+numClasses,4) + time;
         else % L2
-            regClassRes(c+12,1) = regClassRes(c+12,1) + rob;
-            regClassRes(c+12,2) = regClassRes(c+12,2) + unk;
-            regClassRes(c+12,3) = regClassRes(c+12,3) + norob;
-            regClassRes(c+12,4) = regClassRes(c+12,4) + time;
+            regClassRes(c+numClasses*2,1) = regClassRes(c+numClasses*2,1) + rob;
+            regClassRes(c+numClasses*2,2) = regClassRes(c+numClasses*2,2) + unk;
+            regClassRes(c+numClasses*2,3) = regClassRes(c+numClasses*2,3) + norob;
+            regClassRes(c+numClasses*2,4) = regClassRes(c+numClasses*2,4) + time;
         end
     end
 end
@@ -143,10 +173,10 @@ for i=1:N
     for c = 1:numClasses
         idxs = classes(c,:);
         [rob, unk, norob, time] = process_model_res(allRes{i,1}, idxs);
-        regInitClassRes(combo*6+c,1) = regInitClassRes(combo*6+c,1) + rob; % robust
-        regInitClassRes(combo*6+c,2) = regInitClassRes(combo*6+c,2) + unk; % unknown
-        regInitClassRes(combo*6+c,3) = regInitClassRes(combo*6+c,3) + norob; % not robust
-        regInitClassRes(combo*6+c,4) = regInitClassRes(combo*6+c,4) + time; % computation time
+        regInitClassRes(combo*numClasses+c,1) = regInitClassRes(combo*numClasses+c,1) + rob; % robust
+        regInitClassRes(combo*numClasses+c,2) = regInitClassRes(combo*numClasses+c,2) + unk; % unknown
+        regInitClassRes(combo*numClasses+c,3) = regInitClassRes(combo*numClasses+c,3) + norob; % not robust
+        regInitClassRes(combo*numClasses+c,4) = regInitClassRes(combo*numClasses+c,4) + time; % computation time
     end
 end
 regInitClassRes(:,4) = regInitClassRes(:,4)/5; % 5 = number of models per combo
@@ -159,26 +189,26 @@ classNames = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
 
 %% Compare regularization vs classes
 
-dropout_class = regInitClassRes(1:6,:) + regInitClassRes(7:12,:) + regInitClassRes(13:18,:);
+dropout_class = regInitClassRes(1:10,:) + regInitClassRes(11:20,:) + regInitClassRes(21:30,:);
 dropout_class(:,4) = dropout_class(:,4)/15; % compute average time
-dropout_class(:,1:3) = dropout_class(:,1:3)/600; % total number of instanes (plot as percentage)
-jacobian_class = regInitClassRes(19:24,:) + regInitClassRes(25:30,:) + regInitClassRes(31:36,:);
+dropout_class(:,1:3) = dropout_class(:,1:3)/300; % total number of instances (plot as percentage)
+jacobian_class = regInitClassRes(31:40,:) + regInitClassRes(41:50,:) + regInitClassRes(51:60,:);
 jacobian_class(:,4) = jacobian_class(:,4)/15;
-jacobian_class(:,1:3) = jacobian_class(:,1:3)/600; % total number of instanes (plot as percentage)
-l2_class= regInitClassRes(37:42,:) + regInitClassRes(43:48,:) + regInitClassRes(49:54,:);
+jacobian_class(:,1:3) = jacobian_class(:,1:3)/300; % total number of instanes (plot as percentage)
+l2_class= regInitClassRes(61:70,:) + regInitClassRes(71:80,:) + regInitClassRes(81:90,:);
 l2_class(:,4) = l2_class(:,4)/15;
-l2_class(:,1:3) = l2_class(:,1:3)/600; % total number of instanes (plot as percentage)
+l2_class(:,1:3) = l2_class(:,1:3)/300; % total number of instanes (plot as percentage)
 
 % Create figure
 figure;
 grid;hold on;
-plot(1:6, dropout_class(:,1),'r-d');
-plot(1:6, jacobian_class(:,1),'b-o');
-plot(1:6, l2_class(:,1),'k--');
-set(gca, 'xtick', 1:6)
+plot(1:numClasses, dropout_class(:,1),'r-d');
+plot(1:numClasses, jacobian_class(:,1),'b-o');
+plot(1:numClasses, l2_class(:,1),'k--');
+set(gca, 'xtick', 1:numClasses)
 set(gca, 'xticklabel', classNames);
-set(gca, "YTick", 0.9:0.01:1);
-ylim([0.925, 1.005])
+% set(gca, "YTick", 0.9:0.01:1);
+% ylim([0.925, 1.005])
 ylabel("Robust %");
 legend('dropout','jacobian', 'L2', 'Location','best');
 exportgraphics(gca, "plots/regRes_vs_class.pdf",'ContentType','vector');
@@ -186,10 +216,10 @@ exportgraphics(gca, "plots/regRes_vs_class.pdf",'ContentType','vector');
 % Create figure
 figure;
 grid;hold on;
-plot(1:6, dropout_class(:,4),'r-d');
-plot(1:6, jacobian_class(:,4),'b-o');
-plot(1:6, l2_class(:,4),'k--');
-set(gca, 'xtick', 1:6)
+plot(1:numClasses, dropout_class(:,4),'r-d');
+plot(1:numClasses, jacobian_class(:,4),'b-o');
+plot(1:numClasses, l2_class(:,4),'k--');
+set(gca, 'xtick', 1:numClasses)
 set(gca, 'xticklabel', classNames);
 ylabel("Time (s)")
 legend('dropout','jacobian', 'L2', 'Location','best');
@@ -198,26 +228,26 @@ exportgraphics(gca, "plots/regTime_vs_class.pdf",'ContentType','vector');
 
 %% Compare initializers vs classes
 
-glorot_class = regInitClassRes(1:6,:) + regInitClassRes(19:24,:) + regInitClassRes(37:42,:);
+glorot_class = regInitClassRes(1:10,:) + regInitClassRes(31:40,:) + regInitClassRes(61:70,:);
 glorot_class(:,4) = glorot_class(:,4)/15; % compute average time
-glorot_class(:,1:3) = glorot_class(:,1:3)/600; % total number of instanes (plot as percentage)
-he_class = regInitClassRes(7:12,:) + regInitClassRes(25:30,:) + regInitClassRes(43:48,:) ;
+glorot_class(:,1:3) = glorot_class(:,1:3)/300; % total number of instanes (plot as percentage)
+he_class = regInitClassRes(11:20,:) + regInitClassRes(41:50,:) + regInitClassRes(71:80,:) ;
 he_class(:,4) = he_class(:,4)/15;
-he_class(:,1:3) = he_class(:,1:3)/600; % total number of instanes (plot as percentage)
-narrow_class = regInitClassRes(13:18,:) + regInitClassRes(31:36,:) + regInitClassRes(49:54,:);
+he_class(:,1:3) = he_class(:,1:3)/300; % total number of instanes (plot as percentage)
+narrow_class = regInitClassRes(21:30,:) + regInitClassRes(51:60,:) + regInitClassRes(81:90,:);
 narrow_class(:,4) = narrow_class(:,4)/15;
-narrow_class(:,1:3) = narrow_class(:,1:3)/600; % total number of instanes (plot as percentage)
+narrow_class(:,1:3) = narrow_class(:,1:3)/300; % total number of instanes (plot as percentage)
 
 % Create figure
 figure;
 grid;hold on;
-plot(1:6, glorot_class(:,1),'r-d');
-plot(1:6, he_class(:,1),'b-o');
-plot(1:6, narrow_class(:,1),'k--');
-set(gca, 'xtick', 1:6)
+plot(1:numClasses, glorot_class(:,1),'r-d');
+plot(1:numClasses, he_class(:,1),'b-o');
+plot(1:numClasses, narrow_class(:,1),'k--');
+set(gca, 'xtick', 1:numClasses)
 set(gca, 'xticklabel', classNames);
-set(gca, "YTick", 0.9:0.01:1);
-ylim([0.925, 1.005])
+% set(gca, "YTick", 0.9:0.01:1);
+% ylim([0.925, 1.005])
 ylabel("Robust %");
 legend('glorot','he', 'narrow-normal', 'Location','best');
 exportgraphics(gca, "plots/initRes_vs_class.pdf",'ContentType','vector');
@@ -225,33 +255,62 @@ exportgraphics(gca, "plots/initRes_vs_class.pdf",'ContentType','vector');
 % Create figure
 figure;
 grid;hold on;
-plot(1:6, glorot_class(:,4),'r-d');
-plot(1:6, he_class(:,4),'b-o');
-plot(1:6, narrow_class(:,4),'k--');
-set(gca, 'xtick', 1:6)
+plot(1:numClasses, glorot_class(:,4),'r-d');
+plot(1:numClasses, he_class(:,4),'b-o');
+plot(1:numClasses, narrow_class(:,4),'k--');
+set(gca, 'xtick', 1:numClasses)
 set(gca, 'xticklabel', classNames);
 ylabel("Time (s)")
 legend('glorot','he', 'narrow-normal', 'Location','best');
 exportgraphics(gca, "plots/initTime_vs_class.pdf",'ContentType','vector');
+
+%% Compare seeds vs classes
+
+zero_seed = [];
+one_seed = [];
+two_seed = [];
+three_seed = [];
+four_seed = [];
+
+% Create figure
+figure;
+grid;hold on;
+set(gca, 'xtick', 1:numClasses)
+set(gca, 'xticklabel', classNames);
+% set(gca, "YTick", 0.9:0.01:1);
+% ylim([0.925, 1.005])
+ylabel("Robust %");
+legend('glorot','he', 'narrow-normal', 'Location','best');
+exportgraphics(gca, "plots/initRes_vs_class.pdf",'ContentType','vector');
+
+% Create figure
+figure;
+grid;hold on;
+set(gca, 'xtick', 1:numClasses)
+set(gca, 'xticklabel', classNames);
+ylabel("Time (s)")
+legend('glorot','he', 'narrow-normal', 'Location','best');
+exportgraphics(gca, "plots/initTime_vs_class.pdf",'ContentType','vector');
+
 
 %% Compare combinations vs classes
 
 % Create figure
 figure;
 grid;hold on;
-plot(1:6, regInitClassRes(1:6,1)/200,'--d', 'Color', "#A2142F");
-plot(1:6, regInitClassRes(7:12,1)/200,'b-o');
-plot(1:6, regInitClassRes(13:18,1)/200,'k--.');
-plot(1:6, regInitClassRes(19:24,1)/200,'m-x');
-plot(1:6, regInitClassRes(25:30,1)/200,'-v', 'Color', "#EDB120");
-plot(1:6, regInitClassRes(31:36,1)/200,'--', 'Color','#808080');
-plot(1:6, regInitClassRes(37:42,1)/200,'->', 'Color', "#D95319");
-plot(1:6, regInitClassRes(43:48,1)/200,'-s', 'Color', "#7E2F8E");
-plot(1:6, regInitClassRes(49:54,1)/200,'--+', 'Color', "#77AC30");
-set(gca, 'xtick', 1:6)
+plot(1:numClasses, regInitClassRes(1:10,1)/100,'--d', 'Color', "#A2142F");
+plot(1:numClasses, regInitClassRes(11:20,1)/100,'b-o');
+plot(1:numClasses, regInitClassRes(21:30,1)/100,'k--.');
+plot(1:numClasses, regInitClassRes(31:40,1)/100,'m-x');
+plot(1:numClasses, regInitClassRes(41:50,1)/100,'-v', 'Color', "#EDB120");
+plot(1:numClasses, regInitClassRes(51:60,1)/100,'--', 'Color','#808080');
+plot(1:numClasses, regInitClassRes(61:70,1)/100,'->', 'Color', "#D95319");
+plot(1:numClasses, regInitClassRes(71:80,1)/100,'-s', 'Color', "#7E2F8E");
+plot(1:numClasses, regInitClassRes(81:90,1)/100,'--+', 'Color', "#77AC30");
+set(gca, 'xtick', 1:numClasses)
 set(gca, 'xticklabel', classNames);
-set(gca, "YTick", 0.9:0.01:1);
-ylim([0.925, 1.005])
+% set(gca, "YTick", 0.9:0.01:1);
+% ylim([0.925, 1.005])
 ylabel("Robust %");
 legend('dropout_G','dropout_H', 'dropout_N', 'jacobian_G','jacobian_H',...
     'jacobian_N', 'L2_G','L2_H', 'L2_N', 'Location','best');
@@ -260,16 +319,16 @@ exportgraphics(gca, "plots/comboRes_vs_class.pdf",'ContentType','vector');
 % Create figure
 figure;
 grid; hold on;
-plot(1:6, regInitClassRes(1:6,4),'--d', 'Color', "#A2142F");
-plot(1:6, regInitClassRes(7:12,4),'b-o');
-plot(1:6, regInitClassRes(13:18,4),'k--.');
-plot(1:6, regInitClassRes(19:24,4),'m-x');
-plot(1:6, regInitClassRes(25:30,4),'-v', 'Color', "#EDB120");
-plot(1:6, regInitClassRes(31:36,4),'--', 'Color','#808080');
-plot(1:6, regInitClassRes(37:42,4),'->', 'Color', "#D95319");
-plot(1:6, regInitClassRes(43:48,4),'-s', 'Color', "#7E2F8E");
-plot(1:6, regInitClassRes(49:54,4),'--+', 'Color', "#77AC30");
-set(gca, 'xtick', 1:6)
+plot(1:numClasses, regInitClassRes(1:10,4),'--d', 'Color', "#A2142F");
+plot(1:numClasses, regInitClassRes(11:20,4),'b-o');
+plot(1:numClasses, regInitClassRes(21:30,4),'k--.');
+plot(1:numClasses, regInitClassRes(31:40,4),'m-x');
+plot(1:numClasses, regInitClassRes(41:50,4),'-v', 'Color', "#EDB120");
+plot(1:numClasses, regInitClassRes(51:60,4),'--', 'Color','#808080');
+plot(1:numClasses, regInitClassRes(61:70,4),'->', 'Color', "#D95319");
+plot(1:numClasses, regInitClassRes(71:80,4),'-s', 'Color', "#7E2F8E");
+plot(1:numClasses, regInitClassRes(81:90,4),'--+', 'Color', "#77AC30");
+set(gca, 'xtick', 1:numClasses)
 set(gca, 'xticklabel', classNames);
 ylabel("Time (s)")
 legend('dropout_G','dropout_H', 'dropout_N', 'jacobian_G','jacobian_H',...

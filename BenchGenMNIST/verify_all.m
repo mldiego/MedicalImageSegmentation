@@ -9,7 +9,7 @@ filenameLabelsTest = 't10k-labels-idx1-ubyte.gz';
 % use test data for verification
 XData = processImagesMNIST(dataPath + filenameImagesTest);
 labelData = processLabelsMNIST(dataPath + filenameLabelsTest);
-N = 100; % 20 images per class
+N = 100; % 10 images per class
 YData = zeros(N,1);
 
 % 3) Adversarial attack (L_inf)
