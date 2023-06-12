@@ -21,7 +21,7 @@ function verify_mnist_model(modelpath, Sets, targets)
 
     % Check input data
     if length(Sets) ~= length(targets)
-        error("Input and outputs muct match");
+        error("Input and outputs must match");
     end
     
     % Initialize save vars

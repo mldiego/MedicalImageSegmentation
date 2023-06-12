@@ -2,7 +2,7 @@
 
 %% 1) Load data
 
-dataPath = "../../../data/MNIST/";
+dataPath = "../../data/MNIST/";
 filenameImagesTrain = 'train-images-idx3-ubyte.gz';
 filenameLabelsTrain = 'train-labels-idx1-ubyte.gz';
 
