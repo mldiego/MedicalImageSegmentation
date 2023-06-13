@@ -266,31 +266,31 @@ exportgraphics(gca, "plots/initTime_vs_class.pdf",'ContentType','vector');
 
 %% Compare seeds vs classes
 
-zero_seed = [];
-one_seed = [];
-two_seed = [];
-three_seed = [];
-four_seed = [];
-
-% Create figure
-figure;
-grid;hold on;
-set(gca, 'xtick', 1:numClasses)
-set(gca, 'xticklabel', classNames);
-% set(gca, "YTick", 0.9:0.01:1);
-% ylim([0.925, 1.005])
-ylabel("Robust %");
-legend('glorot','he', 'narrow-normal', 'Location','best');
-exportgraphics(gca, "plots/initRes_vs_class.pdf",'ContentType','vector');
-
-% Create figure
-figure;
-grid;hold on;
-set(gca, 'xtick', 1:numClasses)
-set(gca, 'xticklabel', classNames);
-ylabel("Time (s)")
-legend('glorot','he', 'narrow-normal', 'Location','best');
-exportgraphics(gca, "plots/initTime_vs_class.pdf",'ContentType','vector');
+% zero_seed = [];
+% one_seed = [];
+% two_seed = [];
+% three_seed = [];
+% four_seed = [];
+% 
+% % Create figure
+% figure;
+% grid;hold on;
+% set(gca, 'xtick', 1:numClasses)
+% set(gca, 'xticklabel', classNames);
+% % set(gca, "YTick", 0.9:0.01:1);
+% % ylim([0.925, 1.005])
+% ylabel("Robust %");
+% legend('glorot','he', 'narrow-normal', 'Location','best');
+% exportgraphics(gca, "plots/initRes_vs_class.pdf",'ContentType','vector');
+% 
+% % Create figure
+% figure;
+% grid;hold on;
+% set(gca, 'xtick', 1:numClasses)
+% set(gca, 'xticklabel', classNames);
+% ylabel("Time (s)")
+% legend('glorot','he', 'narrow-normal', 'Location','best');
+% exportgraphics(gca, "plots/initTime_vs_class.pdf",'ContentType','vector');
 
 
 %% Compare combinations vs classes

@@ -84,6 +84,25 @@ for r = 1:Ninits
     initRes(r,:) = [Rob, Unk, Norob, Avgtime];
 end
 
+%% Analysis per seed (0,1,2,3,4)
+
+seeds = ["0", "1", "2", "3", "4"]; 
+Nseeds = length(seeds);
+seedRes = zeros(Nseeds,4);
+idxs = 1:240; % all indexes for the rest of the results
+
+for i=1:N
+    loc_seed = mod(i,5);
+    if loc_seed == 0
+        loc_seed = 5;
+    end
+    [rob, unk, norob, time] = process_model_res(allRes{i,1}, idxs);
+    seedRes(loc_seed, 1) = seedRes(loc_seed, 1)  + rob/2160;
+    seedRes(loc_seed, 2) = seedRes(loc_seed, 2)  + unk/2160;
+    seedRes(loc_seed, 3) = seedRes(loc_seed, 3)  + norob/2160;
+    seedRes(loc_seed, 4) = seedRes(loc_seed, 4)  + time/9;
+end
+
 
 %% Analysis per reg, per init (3 x 3)
 
