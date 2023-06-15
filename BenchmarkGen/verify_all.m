@@ -1,28 +1,42 @@
 %% First, get the data loaded (same images used for all the models)
 
-% Load data
-rng(2023);
-% Go through every folder (label) and load all 10 images per class
+%% 1) Load data 
+
+% Download if necessary
 dataFolder = "../data/MedNIST";
+if ~isfolder(dataFolder) % data is not downloaded yet
+    mkdir("../data/");
+    dataSource = "https://github.com/Project-MONAI/MONAI-extra-test-data/releases/download/0.8.1/MedNIST.tar.gz";
+    gunzip(dataSource, 'medNist');
+    untar('medNist/MedNIST.tar', "../data/");
+end
+
+% Go through every folder (label) and load all images
 categs = dir(dataFolder);
 % Initialize vars
-N = 120; % 20 images per class
-XData = zeros(64, 64, 1, N); % (height, width, channels, batch)
-YData = zeros(N, 1);
+Nall = 58954; % total number of images
+XData = zeros(64, 64, 1, Nall); % height = width = 64, 10k imgs per class (greyscale)
+YData = zeros(Nall, 1);        % except BreatMRI, that has only 8954
 % Load images
 count = 1;
 for i = 3:length(categs)-1
     label = dir(dataFolder + "/"+ string(categs(i).name));
-    indx_ = randperm(8500, 20);
-    for k = indx_
-        XData(:, :, :, count) = imread([label(k+2).folder '/' label(k+2).name]);
+    for k = 3:length(label)
+        XData(:, :, :, count) = imread([label(k).folder '/' label(k).name]);
         YData(count) = i-2;
         count = count + 1;
     end
 end
 
+% Get indxs to verify
+verInfo = load("acc_results.mat");
+XData = XData(:, :, :, verInfo.xVerIdxs);
+YData = YData(verInfo.xVerIdxs);
+
+N = length(YData); % total number of images to verify
+
 % 3) Adversarial attack (L_inf)
-disturbance = [1,2]; 
+disturbance = 3; 
 nD = length(disturbance);
 ub_max = 255*ones(64,64);
 lb_min = zeros(64,64);
@@ -50,7 +64,7 @@ folders = dir(path);
 % correspond to (".", and "..")
 
 % Go into every folder of and analyze each model
-for r = 4:5 % iterate through regularizers (3)
+for r = 4:6 % iterate through regularizers (3)
     sub_path = [path, filesep, folders(r).name, filesep];
     inits_path = dir(sub_path);
     for i = 3:length(inits_path) % go through all initializations (3 x 3)
