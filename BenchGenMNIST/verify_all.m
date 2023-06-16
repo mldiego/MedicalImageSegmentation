@@ -1,43 +1,36 @@
 %% First, get the data loaded (same images used for all the models)
 
 % Load data
-rng(2023);
 dataPath = "../data/MNIST/";
 filenameImagesTest = 't10k-images-idx3-ubyte.gz';
 filenameLabelsTest = 't10k-labels-idx1-ubyte.gz';
 
 % use test data for verification
 XData = processImagesMNIST(dataPath + filenameImagesTest);
-labelData = processLabelsMNIST(dataPath + filenameLabelsTest);
-N = 100; % 10 images per class
-YData = zeros(N,1);
+YData = processLabelsMNIST(dataPath + filenameLabelsTest);
+YData = double(YData);
+
+% Get indxs to verify
+verInfo = load("acc_results.mat");
+XData = XData(:, :, :, verInfo.xVerIdxs);
+YData = YData(verInfo.xVerIdxs);
+
+N = length(YData); % total number of images to verify
 
 % 3) Adversarial attack (L_inf)
-disturbance = [1/255, 2/255]; 
+disturbance = 3/255; 
 nD = length(disturbance);
 ub_max = ones(28,28);
 lb_min = zeros(28,28);
 I(N*nD) = ImageStar; % Initialize var for input sets
-count = [0,0,0,0,0,0,0,0,0,0];
-for dd = 1:nD
-    epsilon = disturbance(dd);
-    count = [0,0,0,0,0,0,0,0,0,0];
-    i = 1;
-    while sum(count) < N
-        target = double(labelData(i));
-        if count(target) < 10
-            count(target) = count(target)+1;
-            img = XData(:,:,:,i);
-            lb = img - epsilon;
-            lb = max(lb, lb_min); % ensure no negative values
-            ub = img + epsilon;
-            ub = min(ub, ub_max); % ensure no values > 255 (max pixel value)
-            set_idx = (dd-1)*N + count(target) + 10*(target-1); % order sets by index, easier for postprocessing
-            I(set_idx) = ImageStar(lb, ub);
-            YData(set_idx) = target;
-        end
-        i = i+1;
-    end
+for i = 1:N
+    target = YData(i);
+    img = XData(:,:,:,i);
+    lb = img - epsilon;
+    lb = max(lb, lb_min); % ensure no negative values
+    ub = img + epsilon;
+    ub = min(ub, ub_max); % ensure no values > 255 (max pixel value)
+    I(i) = ImageStar(lb, ub);
 end
 
 %% Then verify all data with each model (5*3*3 = 45 models)

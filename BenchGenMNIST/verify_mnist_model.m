@@ -37,9 +37,14 @@ function verify_mnist_model(modelpath, Sets, targets)
         if ~mod(i, 20)
             disp("Verifying input "+string(i)+ " ...");
         end
-        t = tic;
-        res(i,1) = nn.verify_robustness(Sets(i), reachOptions, targets(i));
-        res(i,2) = toc(t);
+        try
+            t = tic;
+            res(i,1) = nn.verify_robustness(Sets(i), reachOptions, targets(i));
+            res(i,2) = toc(t);
+        catch
+            res(i,1) = -1;
+            res(i,2) = -1;
+        end
     end
     
     % Save results

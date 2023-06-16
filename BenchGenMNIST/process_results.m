@@ -50,7 +50,7 @@ end
 regs = ["dropout", "jacobian", "l2"];
 Nregs = length(regs);
 regRes = zeros(Nregs,4); % dropout, jacobian, l2
-idxs = 1:200; % all indexes for the rest of the results
+idxs = 1:300; % all indexes for the rest of the results
 
 for r = 1:Nregs
     Rob = 0; Unk = 0; Norob = 0; Avgtime = 0;
@@ -72,7 +72,7 @@ end
 inits = ["glorot", "he", "narrow"]; 
 Ninits = length(inits);
 initRes = zeros(Ninits,4);
-idxs = 1:200; % all indexes for the rest of the results
+idxs = 1:300; % all indexes for the rest of the results
 
 for r = 1:Ninits
     Rob = 0; Unk = 0; Norob = 0; Avgtime = 0;
@@ -94,7 +94,7 @@ end
 seeds = ["0", "1", "2", "3", "4"]; 
 Nseeds = length(seeds);
 seedRes = zeros(Nseeds,4);
-idxs = 1:200; % all indexes for the rest of the results
+idxs = 1:300; % all indexes for the rest of the results
 
 for i=1:N
     loc_seed = mod(i,5);
@@ -102,9 +102,9 @@ for i=1:N
         loc_seed = 5;
     end
     [rob, unk, norob, time] = process_model_res(allRes{i,1}, idxs);
-    seedRes(loc_seed, 1) = seedRes(loc_seed, 1)  + rob/1800;
-    seedRes(loc_seed, 2) = seedRes(loc_seed, 2)  + unk/1800;
-    seedRes(loc_seed, 3) = seedRes(loc_seed, 3)  + norob/1800;
+    seedRes(loc_seed, 1) = seedRes(loc_seed, 1)  + rob/2700;
+    seedRes(loc_seed, 2) = seedRes(loc_seed, 2)  + unk/2700;
+    seedRes(loc_seed, 3) = seedRes(loc_seed, 3)  + norob/2700;
     seedRes(loc_seed, 4) = seedRes(loc_seed, 4)  + time/9;
 end
 
@@ -115,7 +115,7 @@ end
 % dropout (glorot -> he -> narrow) -> jacobian (glorot -> he -> narrow) -> L2 (glorot -> he -> narrow)
 
 regInitRes = zeros(Ninits*Nregs,4);
-idxs = 1:200; % all indexes for the rest of the results
+idxs = 1:300; % all indexes for the rest of the results
 
 for i=1:N
     combo = ceil(i/5);
@@ -187,7 +187,7 @@ classNames = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
 %% Visualize results
 
 
-%% Compare regularization vs classes
+%% Compare regularization vs classes (TODO)
 
 dropout_class = regInitClassRes(1:10,:) + regInitClassRes(11:20,:) + regInitClassRes(21:30,:);
 dropout_class(:,4) = dropout_class(:,4)/15; % compute average time
@@ -226,7 +226,7 @@ legend('dropout','jacobian', 'L2', 'Location','best');
 exportgraphics(gca, "plots/regTime_vs_class.pdf",'ContentType','vector');
 
 
-%% Compare initializers vs classes
+%% Compare initializers vs classes (TODO)
 
 glorot_class = regInitClassRes(1:10,:) + regInitClassRes(31:40,:) + regInitClassRes(61:70,:);
 glorot_class(:,4) = glorot_class(:,4)/15; % compute average time
@@ -264,7 +264,7 @@ ylabel("Time (s)")
 legend('glorot','he', 'narrow-normal', 'Location','best');
 exportgraphics(gca, "plots/initTime_vs_class.pdf",'ContentType','vector');
 
-%% Compare seeds vs classes
+%% Compare seeds vs classes (TODO)
 
 % zero_seed = [];
 % one_seed = [];
@@ -293,7 +293,7 @@ exportgraphics(gca, "plots/initTime_vs_class.pdf",'ContentType','vector');
 % exportgraphics(gca, "plots/initTime_vs_class.pdf",'ContentType','vector');
 
 
-%% Compare combinations vs classes
+%% Compare combinations vs classes (TODO)
 
 % Create figure
 figure;

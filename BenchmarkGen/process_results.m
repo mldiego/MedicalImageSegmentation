@@ -16,12 +16,12 @@ end
 %% Analysis per class
 
 % res indexes per class
-abdomen = [1:20, 121:140];
-breast  = [21:40, 141:160];
-chest   = [41:60, 161:180];
-cxr     = [61:80, 181:200];
-hand    = [81:100, 201:220];
-head    = [101:120, 221:240];
+abdomen = 1:50;
+breast  = 51:100;
+chest   = 101:150;
+cxr     = 151:200;
+hand    = 201:250;
+head    = 251:300;
 
 classes = [abdomen; breast; chest; cxr; hand; head];
 numClasses = 6;
@@ -45,7 +45,7 @@ end
 regs = ["dropout", "jacobian", "l2"];
 Nregs = length(regs);
 regRes = zeros(Nregs,4); % dropout, jacobian, l2
-idxs = 1:240; % all indexes for the rest of the results
+idxs = 1:300; % all indexes for the rest of the results
 
 for r = 1:Nregs
     Rob = 0; Unk = 0; Norob = 0; Avgtime = 0;
@@ -67,7 +67,7 @@ end
 inits = ["glorot", "he", "narrow"]; 
 Ninits = length(inits);
 initRes = zeros(Ninits,4);
-idxs = 1:240; % all indexes for the rest of the results
+idxs = 1:300; % all indexes for the rest of the results
 
 for r = 1:Ninits
     Rob = 0; Unk = 0; Norob = 0; Avgtime = 0;
@@ -89,7 +89,7 @@ end
 seeds = ["0", "1", "2", "3", "4"]; 
 Nseeds = length(seeds);
 seedRes = zeros(Nseeds,4);
-idxs = 1:240; % all indexes for the rest of the results
+idxs = 1:300; % all indexes for the rest of the results
 
 for i=1:N
     loc_seed = mod(i,5);
@@ -97,9 +97,9 @@ for i=1:N
         loc_seed = 5;
     end
     [rob, unk, norob, time] = process_model_res(allRes{i,1}, idxs);
-    seedRes(loc_seed, 1) = seedRes(loc_seed, 1)  + rob/2160;
-    seedRes(loc_seed, 2) = seedRes(loc_seed, 2)  + unk/2160;
-    seedRes(loc_seed, 3) = seedRes(loc_seed, 3)  + norob/2160;
+    seedRes(loc_seed, 1) = seedRes(loc_seed, 1)  + rob/2700; % 9 (3 init x 3 reg) * 300 (images) = 2700
+    seedRes(loc_seed, 2) = seedRes(loc_seed, 2)  + unk/2700;
+    seedRes(loc_seed, 3) = seedRes(loc_seed, 3)  + norob/2700;
     seedRes(loc_seed, 4) = seedRes(loc_seed, 4)  + time/9;
 end
 
@@ -110,7 +110,7 @@ end
 % dropout (glorot -> he -> narrow) -> jacobian (glorot -> he -> narrow) -> L2 (glorot -> he -> narrow)
 
 regInitRes = zeros(Ninits*Nregs,4);
-idxs = 1:240; % all indexes for the rest of the results
+idxs = 1:300; % all indexes for the rest of the results
 
 for i=1:N
     combo = ceil(i/5);
@@ -182,7 +182,7 @@ classNames = ["AbdomenCT", "BreatMRI", "ChestCT", "CXR", "Hand", "HeadCT"];
 %% Visualize results
 
 
-%% Compare regularization vs classes
+%% Compare regularization vs classes (TODO)
 
 dropout_class = regInitClassRes(1:6,:) + regInitClassRes(7:12,:) + regInitClassRes(13:18,:);
 dropout_class(:,4) = dropout_class(:,4)/15; % compute average time
@@ -221,7 +221,7 @@ legend('dropout','jacobian', 'L2', 'Location','best');
 exportgraphics(gca, "plots/regTime_vs_class.pdf",'ContentType','vector');
 
 
-%% Compare initializers vs classes
+%% Compare initializers vs classes (TODO)
 
 glorot_class = regInitClassRes(1:6,:) + regInitClassRes(19:24,:) + regInitClassRes(37:42,:);
 glorot_class(:,4) = glorot_class(:,4)/15; % compute average time
@@ -259,7 +259,7 @@ ylabel("Time (s)")
 legend('glorot','he', 'narrow-normal', 'Location','best');
 exportgraphics(gca, "plots/initTime_vs_class.pdf",'ContentType','vector');
 
-%% Compare combinations vs classes
+%% Compare combinations vs classes (TODO)
 
 % Create figure
 figure;
