@@ -18,8 +18,8 @@ YData = YData(verInfo.xVerIdxs);
 N = length(YData); % total number of images to verify
 
 % 3) Adversarial attack (L_inf)
-disturbance = 3/255; 
-nD = length(disturbance);
+epsilon = 3/255; 
+nD = length(epsilon);
 ub_max = ones(28,28);
 lb_min = zeros(28,28);
 I(N*nD) = ImageStar; % Initialize var for input sets
@@ -42,7 +42,7 @@ folders = dir(path);
 % correspond to (".", and "..")
 
 % Go into every folder of and analyze each model
-for r = 3:5 % iterate through regularizers (3)
+for r = 4:6 % iterate through regularizers (3)
     sub_path = [path, filesep, folders(r).name, filesep];
     inits_path = dir(sub_path);
     for i = 3:length(inits_path) % go through all initializations (3 x 3)
