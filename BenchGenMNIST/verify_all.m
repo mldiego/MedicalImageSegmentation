@@ -29,7 +29,7 @@ for i = 1:N
     lb = img - epsilon;
     lb = max(lb, lb_min); % ensure no negative values
     ub = img + epsilon;
-    ub = min(ub, ub_max); % ensure no values > 255 (max pixel value)
+    ub = min(ub, ub_max); % ensure no values > 1 (max pixel value)
     I(i) = ImageStar(lb, ub);
 end
 
@@ -45,7 +45,7 @@ folders = dir(path);
 for r = 4:6 % iterate through regularizers (3)
     sub_path = [path, filesep, folders(r).name, filesep];
     inits_path = dir(sub_path);
-    for i = 3:length(inits_path) % go through all initializations (3 x 3)
+    for i = 5:length(inits_path) % go through all initializations (3 x 3)
         if inits_path(i).isdir
             temp_path = [sub_path, inits_path(i).name, filesep, 'models', filesep];
             models_path = dir([temp_path, '*.mat']);

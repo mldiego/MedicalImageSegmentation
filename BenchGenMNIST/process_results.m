@@ -1,7 +1,6 @@
 %% Process results
-results_folder = dir('results');
 
-% N = 45;
+results_folder = dir('results');
 
 % first load all results
 N = length(results_folder)-2;
@@ -16,16 +15,16 @@ end
 %% Analysis per class
 
 % res indexes per class
-zero  = [1:10, 101:110];
-one   = [11:20, 111:120];
-two   = [21:30, 121:130];
-three = [31:40, 131:140];
-four  = [41:50, 141:150];
-five  = [51:60, 151:160];
-six   = [61:70, 161:170];
-seven = [71:80, 171:180];
-eight = [81:90, 181:190];
-nine  = [91:100, 191:200];
+zero  = 1:30;
+one   = 31:60;
+two   = 61:90;
+three = 91:120;
+four  = 121:150;
+five  = 151:180;
+six   = 181:210;
+seven = 211:240;
+eight = 241:270;
+nine  = 271:300;
 
 classes = [zero; one; two; three; four; five; six; seven; eight; nine];
 
@@ -190,14 +189,14 @@ classNames = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
 %% Compare regularization vs classes (TODO)
 
 dropout_class = regInitClassRes(1:10,:) + regInitClassRes(11:20,:) + regInitClassRes(21:30,:);
-dropout_class(:,4) = dropout_class(:,4)/15; % compute average time
-dropout_class(:,1:3) = dropout_class(:,1:3)/300; % total number of instances (plot as percentage)
+dropout_class(:,4) = dropout_class(:,4)/3; % compute average time
+dropout_class(:,1:3) = dropout_class(:,1:3)/450; % total number of instances (plot as percentage)
 jacobian_class = regInitClassRes(31:40,:) + regInitClassRes(41:50,:) + regInitClassRes(51:60,:);
-jacobian_class(:,4) = jacobian_class(:,4)/15;
-jacobian_class(:,1:3) = jacobian_class(:,1:3)/300; % total number of instanes (plot as percentage)
+jacobian_class(:,4) = jacobian_class(:,4)/3;
+jacobian_class(:,1:3) = jacobian_class(:,1:3)/450; % total number of instanes (plot as percentage)
 l2_class= regInitClassRes(61:70,:) + regInitClassRes(71:80,:) + regInitClassRes(81:90,:);
-l2_class(:,4) = l2_class(:,4)/15;
-l2_class(:,1:3) = l2_class(:,1:3)/300; % total number of instanes (plot as percentage)
+l2_class(:,4) = l2_class(:,4)/3;
+l2_class(:,1:3) = l2_class(:,1:3)/450; % total number of instanes (plot as percentage)
 
 % Create figure
 figure;
@@ -229,14 +228,14 @@ exportgraphics(gca, "plots/regTime_vs_class.pdf",'ContentType','vector');
 %% Compare initializers vs classes (TODO)
 
 glorot_class = regInitClassRes(1:10,:) + regInitClassRes(31:40,:) + regInitClassRes(61:70,:);
-glorot_class(:,4) = glorot_class(:,4)/15; % compute average time
-glorot_class(:,1:3) = glorot_class(:,1:3)/300; % total number of instanes (plot as percentage)
+glorot_class(:,4) = glorot_class(:,4)/3; % compute average time
+glorot_class(:,1:3) = glorot_class(:,1:3)/450; % total number of instanes (plot as percentage)
 he_class = regInitClassRes(11:20,:) + regInitClassRes(41:50,:) + regInitClassRes(71:80,:) ;
-he_class(:,4) = he_class(:,4)/15;
-he_class(:,1:3) = he_class(:,1:3)/300; % total number of instanes (plot as percentage)
+he_class(:,4) = he_class(:,4)/3;
+he_class(:,1:3) = he_class(:,1:3)/450; % total number of instanes (plot as percentage)
 narrow_class = regInitClassRes(21:30,:) + regInitClassRes(51:60,:) + regInitClassRes(81:90,:);
-narrow_class(:,4) = narrow_class(:,4)/15;
-narrow_class(:,1:3) = narrow_class(:,1:3)/300; % total number of instanes (plot as percentage)
+narrow_class(:,4) = narrow_class(:,4)/3;
+narrow_class(:,1:3) = narrow_class(:,1:3)/450; % total number of instanes (plot as percentage)
 
 % Create figure
 figure;
@@ -293,20 +292,20 @@ exportgraphics(gca, "plots/initTime_vs_class.pdf",'ContentType','vector');
 % exportgraphics(gca, "plots/initTime_vs_class.pdf",'ContentType','vector');
 
 
-%% Compare combinations vs classes (TODO)
+%% Compare combinations vs classes
 
 % Create figure
 figure;
 grid;hold on;
-plot(1:numClasses, regInitClassRes(1:10,1)/100,'--d', 'Color', "#A2142F");
-plot(1:numClasses, regInitClassRes(11:20,1)/100,'b-o');
-plot(1:numClasses, regInitClassRes(21:30,1)/100,'k--.');
-plot(1:numClasses, regInitClassRes(31:40,1)/100,'m-x');
-plot(1:numClasses, regInitClassRes(41:50,1)/100,'-v', 'Color', "#EDB120");
-plot(1:numClasses, regInitClassRes(51:60,1)/100,'--', 'Color','#808080');
-plot(1:numClasses, regInitClassRes(61:70,1)/100,'->', 'Color', "#D95319");
-plot(1:numClasses, regInitClassRes(71:80,1)/100,'-s', 'Color', "#7E2F8E");
-plot(1:numClasses, regInitClassRes(81:90,1)/100,'--+', 'Color', "#77AC30");
+plot(1:numClasses, regInitClassRes(1:10,1)/150,'--d', 'Color', "#A2142F");
+plot(1:numClasses, regInitClassRes(11:20,1)/150,'b-o');
+plot(1:numClasses, regInitClassRes(21:30,1)/150,'k--.');
+plot(1:numClasses, regInitClassRes(31:40,1)/150,'m-x');
+plot(1:numClasses, regInitClassRes(41:50,1)/150,'-v', 'Color', "#EDB120");
+plot(1:numClasses, regInitClassRes(51:60,1)/150,'--', 'Color','#808080');
+plot(1:numClasses, regInitClassRes(61:70,1)/150,'->', 'Color', "#D95319");
+plot(1:numClasses, regInitClassRes(71:80,1)/150,'-s', 'Color', "#7E2F8E");
+plot(1:numClasses, regInitClassRes(81:90,1)/150,'--+', 'Color', "#77AC30");
 set(gca, 'xtick', 1:numClasses)
 set(gca, 'xticklabel', classNames);
 % set(gca, "YTick", 0.9:0.01:1);

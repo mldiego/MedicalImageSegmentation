@@ -64,10 +64,10 @@ folders = dir(path);
 % correspond to (".", and "..")
 
 % Go into every folder of and analyze each model
-for r = 5:6 % iterate through regularizers (3)
+for r = 4:4 % iterate through regularizers (3)
     sub_path = [path, filesep, folders(r).name, filesep];
     inits_path = dir(sub_path);
-    for i = 3:length(inits_path) % go through all initializations (3 x 3)
+    for i = 5:length(inits_path) % go through all initializations (3 x 3)
         if inits_path(i).isdir
             temp_path = [sub_path, inits_path(i).name, filesep, 'models', filesep];
             models_path = dir([temp_path, '*.mat']);

@@ -185,14 +185,14 @@ classNames = ["AbdomenCT", "BreatMRI", "ChestCT", "CXR", "Hand", "HeadCT"];
 %% Compare regularization vs classes (TODO)
 
 dropout_class = regInitClassRes(1:6,:) + regInitClassRes(7:12,:) + regInitClassRes(13:18,:);
-dropout_class(:,4) = dropout_class(:,4)/15; % compute average time
-dropout_class(:,1:3) = dropout_class(:,1:3)/600; % total number of instanes (plot as percentage)
+dropout_class(:,4) = dropout_class(:,4)/3; % compute average time
+dropout_class(:,1:3) = dropout_class(:,1:3)/900; % total number of instances (plot as percentage)
 jacobian_class = regInitClassRes(19:24,:) + regInitClassRes(25:30,:) + regInitClassRes(31:36,:);
-jacobian_class(:,4) = jacobian_class(:,4)/15;
-jacobian_class(:,1:3) = jacobian_class(:,1:3)/600; % total number of instanes (plot as percentage)
+jacobian_class(:,4) = jacobian_class(:,4)/3;
+jacobian_class(:,1:3) = jacobian_class(:,1:3)/900; % total number of instances (plot as percentage)
 l2_class= regInitClassRes(37:42,:) + regInitClassRes(43:48,:) + regInitClassRes(49:54,:);
-l2_class(:,4) = l2_class(:,4)/15;
-l2_class(:,1:3) = l2_class(:,1:3)/600; % total number of instanes (plot as percentage)
+l2_class(:,4) = l2_class(:,4)/3;
+l2_class(:,1:3) = l2_class(:,1:3)/900; % total number of instances (plot as percentage)
 
 % Create figure
 figure;
@@ -225,13 +225,13 @@ exportgraphics(gca, "plots/regTime_vs_class.pdf",'ContentType','vector');
 
 glorot_class = regInitClassRes(1:6,:) + regInitClassRes(19:24,:) + regInitClassRes(37:42,:);
 glorot_class(:,4) = glorot_class(:,4)/15; % compute average time
-glorot_class(:,1:3) = glorot_class(:,1:3)/600; % total number of instanes (plot as percentage)
+glorot_class(:,1:3) = glorot_class(:,1:3)/900; % total number of instanes (plot as percentage)
 he_class = regInitClassRes(7:12,:) + regInitClassRes(25:30,:) + regInitClassRes(43:48,:) ;
 he_class(:,4) = he_class(:,4)/15;
-he_class(:,1:3) = he_class(:,1:3)/600; % total number of instanes (plot as percentage)
+he_class(:,1:3) = he_class(:,1:3)/900; % total number of instanes (plot as percentage)
 narrow_class = regInitClassRes(13:18,:) + regInitClassRes(31:36,:) + regInitClassRes(49:54,:);
 narrow_class(:,4) = narrow_class(:,4)/15;
-narrow_class(:,1:3) = narrow_class(:,1:3)/600; % total number of instanes (plot as percentage)
+narrow_class(:,1:3) = narrow_class(:,1:3)/900; % total number of instanes (plot as percentage)
 
 % Create figure
 figure;
@@ -264,15 +264,15 @@ exportgraphics(gca, "plots/initTime_vs_class.pdf",'ContentType','vector');
 % Create figure
 figure;
 grid;hold on;
-plot(1:6, regInitClassRes(1:6,1)/200,'--d', 'Color', "#A2142F");
-plot(1:6, regInitClassRes(7:12,1)/200,'b-o');
-plot(1:6, regInitClassRes(13:18,1)/200,'k--.');
-plot(1:6, regInitClassRes(19:24,1)/200,'m-x');
-plot(1:6, regInitClassRes(25:30,1)/200,'-v', 'Color', "#EDB120");
-plot(1:6, regInitClassRes(31:36,1)/200,'--', 'Color','#808080');
-plot(1:6, regInitClassRes(37:42,1)/200,'->', 'Color', "#D95319");
-plot(1:6, regInitClassRes(43:48,1)/200,'-s', 'Color', "#7E2F8E");
-plot(1:6, regInitClassRes(49:54,1)/200,'--+', 'Color', "#77AC30");
+plot(1:6, regInitClassRes(1:6,1)/250,'--d', 'Color', "#A2142F");
+plot(1:6, regInitClassRes(7:12,1)/250,'b-o');
+plot(1:6, regInitClassRes(13:18,1)/250,'k--.');
+plot(1:6, regInitClassRes(19:24,1)/250,'m-x');
+plot(1:6, regInitClassRes(25:30,1)/250,'-v', 'Color', "#EDB120");
+plot(1:6, regInitClassRes(31:36,1)/250,'--', 'Color','#808080');
+plot(1:6, regInitClassRes(37:42,1)/250,'->', 'Color', "#D95319");
+plot(1:6, regInitClassRes(43:48,1)/250,'-s', 'Color', "#7E2F8E");
+plot(1:6, regInitClassRes(49:54,1)/250,'--+', 'Color', "#77AC30");
 set(gca, 'xtick', 1:6)
 set(gca, 'xticklabel', classNames);
 set(gca, "YTick", 0.9:0.01:1);
