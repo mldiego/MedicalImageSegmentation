@@ -182,7 +182,7 @@ classNames = ["AbdomenCT", "BreatMRI", "ChestCT", "CXR", "Hand", "HeadCT"];
 %% Visualize results
 
 
-%% Compare regularization vs classes (TODO)
+%% Compare regularization vs classes
 
 dropout_class = regInitClassRes(1:6,:) + regInitClassRes(7:12,:) + regInitClassRes(13:18,:);
 dropout_class(:,4) = dropout_class(:,4)/3; % compute average time
@@ -202,8 +202,8 @@ plot(1:6, jacobian_class(:,1),'b-o');
 plot(1:6, l2_class(:,1),'k--');
 set(gca, 'xtick', 1:6)
 set(gca, 'xticklabel', classNames);
-set(gca, "YTick", 0.9:0.01:1);
-ylim([0.925, 1.005])
+% set(gca, "YTick", 0.9:0.01:1);
+% ylim([0.925, 1.005])
 ylabel("Robust %");
 legend('dropout','jacobian', 'L2', 'Location','best');
 exportgraphics(gca, "plots/regRes_vs_class.pdf",'ContentType','vector');
@@ -221,7 +221,7 @@ legend('dropout','jacobian', 'L2', 'Location','best');
 exportgraphics(gca, "plots/regTime_vs_class.pdf",'ContentType','vector');
 
 
-%% Compare initializers vs classes (TODO)
+%% Compare initializers vs classes 
 
 glorot_class = regInitClassRes(1:6,:) + regInitClassRes(19:24,:) + regInitClassRes(37:42,:);
 glorot_class(:,4) = glorot_class(:,4)/15; % compute average time
@@ -241,8 +241,8 @@ plot(1:6, he_class(:,1),'b-o');
 plot(1:6, narrow_class(:,1),'k--');
 set(gca, 'xtick', 1:6)
 set(gca, 'xticklabel', classNames);
-set(gca, "YTick", 0.9:0.01:1);
-ylim([0.925, 1.005])
+% set(gca, "YTick", 0.9:0.01:1);
+% ylim([0.925, 1.005])
 ylabel("Robust %");
 legend('glorot','he', 'narrow-normal', 'Location','best');
 exportgraphics(gca, "plots/initRes_vs_class.pdf",'ContentType','vector');
@@ -259,7 +259,7 @@ ylabel("Time (s)")
 legend('glorot','he', 'narrow-normal', 'Location','best');
 exportgraphics(gca, "plots/initTime_vs_class.pdf",'ContentType','vector');
 
-%% Compare combinations vs classes (TODO)
+%% Compare combinations vs classes 
 
 % Create figure
 figure;
@@ -275,8 +275,8 @@ plot(1:6, regInitClassRes(43:48,1)/250,'-s', 'Color', "#7E2F8E");
 plot(1:6, regInitClassRes(49:54,1)/250,'--+', 'Color', "#77AC30");
 set(gca, 'xtick', 1:6)
 set(gca, 'xticklabel', classNames);
-set(gca, "YTick", 0.9:0.01:1);
-ylim([0.925, 1.005])
+% set(gca, "YTick", 0.9:0.01:1);
+% ylim([0.925, 1.005])
 ylabel("Robust %");
 legend('dropout_G','dropout_H', 'dropout_N', 'jacobian_G','jacobian_H',...
     'jacobian_N', 'L2_G','L2_H', 'L2_N', 'Location','best');
