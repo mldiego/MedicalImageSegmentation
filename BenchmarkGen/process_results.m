@@ -42,20 +42,20 @@ end
 % 
 % classes = [abdomen; breast; chest; cxr; hand; head];
 % numClasses = 6;
-% classRes = zeros(numClasses,4);
-% 
-% % Process results per class
-% for c = 1:numClasses
-%     idxs = classes(c,:);
-%     Rob = 0; Unk = 0; Norob = 0; Avgtime = 0;
-%     for i=1:N
-%         [rob, unk, norob, time] = process_model_res(allRes{i,1}, idxs);
-%         Rob = Rob + rob; Unk = Unk + unk; 
-%         Norob = Norob + norob; Avgtime = Avgtime + time;
-%     end
-%     Avgtime = Avgtime/N;
-%     classRes(c,:) = [Rob, Unk, Norob, Avgtime];
-% end
+classRes = zeros(numClasses,4);
+
+% Process results per class
+for c = 1:numClasses
+    idxs = classes(c,:);
+    Rob = 0; Unk = 0; Norob = 0; Avgtime = 0;
+    for i=1:N
+        [rob, unk, norob, time] = process_model_res(allRes{i,1}, idxs);
+        Rob = Rob + rob; Unk = Unk + unk; 
+        Norob = Norob + norob; Avgtime = Avgtime + time;
+    end
+    Avgtime = Avgtime/N;
+    classRes(c,:) = [Rob, Unk, Norob, Avgtime];
+end
 
 %% Analysis per regularizer
 
@@ -215,7 +215,7 @@ for i=1:N
 end
 regInitClassRes(:,4) = regInitClassRes(:,4)/5; % 5 = number of models per combo
 
-classNames = ["AbdomenCT", "BreatMRI", "ChestCT", "CXR", "Hand", "HeadCT"];
+classNames = ["AbdomenCT", "BreastMRI", "ChestCT", "CXR", "Hand", "HeadCT"];
 
 
 %% All stats for each model
@@ -397,6 +397,16 @@ set(gca, 'xticklabel', classNames);
 ylabel("Time (s)");
 legend('0', '1', '2', '3', '4', 'Location','best');
 exportgraphics(gca, "plots/seedTime_vs_class.pdf",'ContentType','vector');
+
+%% Are these models not robuts, or simply harder to verify?
+folder_path = 'results_falsify';
+results_folder = dir(folder_path);
+falseRes = cell(N,2);
+for i=3:N+2
+    ind_res = load([folder_path, filesep, results_folder(i).name]);
+    falseRes{i-2,1} = sum(ind_res.res(:,1)==0);
+    falseRes{i-2,2} = results_folder(i).name;
+end
 
 %% Helper functions
 

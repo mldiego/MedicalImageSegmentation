@@ -48,20 +48,20 @@ end
 % classes = [zero; one; two; three; four; five; six; seven; eight; nine];
 % 
 % numClasses = 10;
-% classRes = zeros(numClasses,4);
-% 
-% % Process results per class
-% for c = 1:numClasses
-%     idxs = classes(c,:);
-%     Rob = 0; Unk = 0; Norob = 0; Avgtime = 0;
-%     for i=1:N
-%         [rob, unk, norob, time] = process_model_res(allRes{i,1}, idxs);
-%         Rob = Rob + rob; Unk = Unk + unk; 
-%         Norob = Norob + norob; Avgtime = Avgtime + time;
-%     end
-%     Avgtime = Avgtime/N;
-%     classRes(c,:) = [Rob, Unk, Norob, Avgtime];
-% end
+classRes = zeros(numClasses,4);
+
+% Process results per class
+for c = 1:numClasses
+    idxs = classes(c,:);
+    Rob = 0; Unk = 0; Norob = 0; Avgtime = 0;
+    for i=1:N
+        [rob, unk, norob, time] = process_model_res(allRes{i,1}, idxs);
+        Rob = Rob + rob; Unk = Unk + unk; 
+        Norob = Norob + norob; Avgtime = Avgtime + time;
+    end
+    Avgtime = Avgtime/N;
+    classRes(c,:) = [Rob, Unk, Norob, Avgtime];
+end
 
 %% Analysis per regularizer
 
@@ -280,6 +280,7 @@ set(gca, 'xtick', 1:numClasses)
 set(gca, 'xticklabel', classNames);
 % set(gca, "YTick", 0.9:0.01:1);
 ylim([0.975, 1.0])
+xlim([1 10])
 ylabel("Robust %");
 legend('dropout','jacobian', 'L2', 'Location','best');
 exportgraphics(gca, "plots/regRes_vs_class.pdf",'ContentType','vector');
@@ -292,6 +293,7 @@ plot(1:numClasses, jacobian_class(:,4),'b-o');
 plot(1:numClasses, l2_class(:,4),'k--');
 set(gca, 'xtick', 1:numClasses)
 set(gca, 'xticklabel', classNames);
+xlim([1 10])
 ylabel("Time (s)")
 legend('dropout','jacobian', 'L2', 'Location','best');
 exportgraphics(gca, "plots/regTime_vs_class.pdf",'ContentType','vector');
@@ -319,6 +321,7 @@ set(gca, 'xtick', 1:numClasses)
 set(gca, 'xticklabel', classNames);
 % set(gca, "YTick", 0.9:0.01:1);
 % ylim([0.925, 1.005])
+xlim([1 10])
 ylabel("Robust %");
 legend('glorot','he', 'narrow-normal', 'Location','best');
 exportgraphics(gca, "plots/initRes_vs_class.pdf",'ContentType','vector');
@@ -331,6 +334,7 @@ plot(1:numClasses, he_class(:,4),'b-o');
 plot(1:numClasses, narrow_class(:,4),'k--');
 set(gca, 'xtick', 1:numClasses)
 set(gca, 'xticklabel', classNames);
+xlim([1 10])
 ylabel("Time (s)")
 legend('glorot','he', 'narrow-normal', 'Location','best');
 exportgraphics(gca, "plots/initTime_vs_class.pdf",'ContentType','vector');
@@ -353,7 +357,8 @@ plot(1:numClasses, regInitClassRes(81:90,1)/150,'--+', 'Color', "#77AC30");
 set(gca, 'xtick', 1:numClasses)
 set(gca, 'xticklabel', classNames);
 % set(gca, "YTick", 0.9:0.01:1);
-% ylim([0.925, 1.005])
+ylim([0.925, 1.0])
+xlim([1 10])
 ylabel("Robust %");
 legend('dropout_G','dropout_H', 'dropout_N', 'jacobian_G','jacobian_H',...
     'jacobian_N', 'L2_G','L2_H', 'L2_N', 'Location','best');
@@ -373,6 +378,7 @@ plot(1:numClasses, regInitClassRes(71:80,4),'-s', 'Color', "#7E2F8E");
 plot(1:numClasses, regInitClassRes(81:90,4),'--+', 'Color', "#77AC30");
 set(gca, 'xtick', 1:numClasses)
 set(gca, 'xticklabel', classNames);
+xlim([1 10])
 ylabel("Time (s)")
 legend('dropout_G','dropout_H', 'dropout_N', 'jacobian_G','jacobian_H',...
     'jacobian_N', 'L2_G','L2_H', 'L2_N', 'Location','best');
@@ -399,6 +405,7 @@ set(gca, 'xtick', 1:10)
 set(gca, 'xticklabel', classNames);
 % set(gca, "YTick", 0.9:0.01:1);
 % ylim([0.925, 1.005])
+xlim([1 10])
 ylabel("Robust %");
 legend('0', '1', '2', '3', '4', 'Location','best');
 exportgraphics(gca, "plots/seed_vs_class.pdf",'ContentType','vector');
@@ -416,9 +423,20 @@ set(gca, 'xtick', 1:10)
 set(gca, 'xticklabel', classNames);
 % set(gca, "YTick", 0.9:0.01:1);
 % ylim([0.925, 1.005])
+xlim([1 10])
 ylabel("Time (s)");
 legend('0', '1', '2', '3', '4', 'Location','best');
 exportgraphics(gca, "plots/seedTime_vs_class.pdf",'ContentType','vector');
+
+%% Are these models not robuts, or simply harder to verify?
+folder_path = 'results_falsify';
+results_folder = dir(folder_path);
+falseRes = cell(N,2);
+for i=3:N+2
+    ind_res = load([folder_path, filesep, results_folder(i).name]);
+    falseRes{i-2,1} = sum(ind_res.res(:,1)==0);
+    falseRes{i-2,2} = results_folder(i).name;
+end
 
 %% Helper functions
 

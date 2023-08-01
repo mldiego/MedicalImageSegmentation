@@ -19,29 +19,25 @@ N = length(YData); % total number of images to verify
 
 % 3) Adversarial attack (L_inf)
 epsilon = 3/255; 
-nD = length(epsilon);
 ub_max = ones(28,28);
 lb_min = zeros(28,28);
-I(N*nD) = ImageStar; % Initialize var for input sets
 nR = 100;
+xRand = cell(N);
 
-for dd = 1:nD
-    epsilon = disturbance(dd);
-    for i=1:N
-        img = XData(:,:,:,i);
-        lb = img - epsilon;
-        lb = max(lb, lb_min); % ensure no negative values
-        ub = img + epsilon;
-        ub = min(ub, ub_max); % ensure no values > 255 (max pixel value)
-        set_idx = (dd-1)*N+i;
-        lb = reshape(lb, [28*28, 1]);
-        ub = reshape(ub, [28*28, 1]);
-        xB = Box(lb, ub); % lb, ub must be vectors
-        xRand = xB.sample(nR-2);
-        xRand = [lb, ub, xRand];
-    end
+for i=1:N
+    img = XData(:,:,:,i);
+    lb = img - epsilon;
+    lb = max(lb, lb_min); % ensure no negative values
+    ub = img + epsilon;
+    ub = min(ub, ub_max); % ensure no values > 255 (max pixel value)
+    set_idx = (dd-1)*N+i;
+    lb = reshape(lb, [28*28, 1]);
+    ub = reshape(ub, [28*28, 1]);
+    xB = Box(lb, ub); % lb, ub must be vectors
+    xImg = xB.sample(nR-2);
+    xImg = [lb, ub, xImg];
+    xRand{i} = xImg;
 end
-YData = repmat(YData, length(disturbance), 1);
 
 %% Then verify all data with each model (5*3*3 = 45 models)
 
@@ -55,17 +51,17 @@ folders = dir(path);
 for r = 4:6 % iterate through regularizers (3)
     sub_path = [path, filesep, folders(r).name, filesep];
     inits_path = dir(sub_path);
-    for i = 5:length(inits_path) % go through all initializations (3 x 3)
+    for i = 3:length(inits_path) % go through all initializations (3 x 3)
         if inits_path(i).isdir
             temp_path = [sub_path, inits_path(i).name, filesep, 'models', filesep];
             models_path = dir([temp_path, '*.mat']);
             for m = 1:length(models_path) % go through all models ( 5 x 3 x 3 )
                 netpath = [temp_path, models_path(m).name];
-                medNist_falsify_model(netpath, I, YData);
+                mnist_falsify_model(netpath, xRand, YData);
             end
         end
     end
 end
 
-% 45 different files should be generated under the directory "BenchmarkGen/results/"
+% 45 different files should be generated under the directory "BenchmarkGen/results_falsify/"
 
