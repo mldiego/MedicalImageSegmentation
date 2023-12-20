@@ -1,0 +1,40 @@
+----------------- Options ---------------
+               batch_size: 32                            
+               blend_mode: gaussian                      
+              blend_sigma: 0.125                         
+          checkpoints_dir: ../checkpoints                
+                 dataroot: ../data/                      
+                 datasets: ['MSSEG16']                   	[default: None]
+                    debug: False                         
+         display_per_iter: False                         
+                    do_ds: False                         
+               early_stop: 200                           
+                    epoch: best                          
+                     init: normal                        
+                  init_lr: 0.0005                        
+                    kfold: 1                             	[default: None]
+                load_ckpt: False                         
+                max_epoch: 1000                          	[default: 400]
+               modalities: ['flair']                     	[default: None]
+                multi_gpu: False                         
+                     name: size_80                       	[default: None]
+                      nid: 7                             
+              num_classes: 1                             
+              num_samples: 1                             
+              num_workers: 4                             
+                  offline: True                          	[default: False]
+                  overlap: 0.5                           
+             padding_mode: constant                      
+              padding_val: 0                             
+              save_output: False                         
+                     seed: 0                             
+                 skip_gen: True                          	[default: False]
+           skip_val_epoch: 0                             
+              start_decay: 200                           
+            sw_batch_size: 32                            
+          test_modalities: ['flair']                     	[default: None]
+                test_size: [80, 80]                      	[default: (128, 128)]
+               train_size: [80, 80]                      	[default: (128, 128)]
+             val_interval: 5                             
+             weight_decay: 3e-05                         
+----------------- End -------------------

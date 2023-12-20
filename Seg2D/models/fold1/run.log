@@ -1,0 +1,5095 @@
+
+2023-06-21 13:06:23: The total number of training data (training + validation): 12
+2023-06-21 13:06:23: 9 and 3 are used for training and validation
+model architecture: 2D Tiramisu network
+model initialization: Normal
+
+experiment timestamp: 2023-06-21 13:06:35
+
+2023-06-21 13:06:35
+epoch:  1
+Start generating 2D slices...
+Start generating 2D slices...
+Start generating 2D slices...
+Start generating 2D slices...
+Start generating 2D slices...
+Start generating 2D slices...
+Start generating 2D slices...
+
+2023-06-21 13:20:43: The total number of training data (training + validation): 200
+2023-06-21 13:20:43: 197 and 3 are used for training and validation
+model architecture: 2D Tiramisu network
+model initialization: Normal
+
+experiment timestamp: 2023-06-21 13:20:52
+
+2023-06-21 13:20:52
+epoch:  1
+Start generating 2D slices...
+Start generating 2D slices...
+Start generating 2D slices...
+Start generating 2D slices...
+
+2023-06-21 13:26:43: The total number of training data (training + validation): 218
+2023-06-21 13:26:43: 215 and 3 are used for training and validation
+model architecture: 2D Tiramisu network
+model initialization: Normal
+
+experiment timestamp: 2023-06-21 13:26:52
+
+2023-06-21 13:26:52
+epoch:  1
+Start generating 2D slices...
+Start generating 2D slices...
+
+2023-06-21 13:28:00: The total number of training data (training + validation): 256
+2023-06-21 13:28:00: 253 and 3 are used for training and validation
+model architecture: 2D Tiramisu network
+model initialization: Normal
+Start generating 2D slices...
+
+2023-06-21 13:28:29: The total number of training data (training + validation): 256
+2023-06-21 13:28:29: 253 and 3 are used for training and validation
+model architecture: 2D Tiramisu network
+model initialization: Normal
+Start generating 2D slices...
+Start generating 2D slices...
+Start generating 2D slices...
+
+2023-06-21 13:29:48: The total number of training data (training + validation): 236
+2023-06-21 13:29:48: 233 and 3 are used for training and validation
+model architecture: 2D Tiramisu network
+model initialization: Normal
+Start generating 2D slices...
+Start generating 2D slices...
+Start generating 2D slices...
+
+2023-06-21 16:17:11: The total number of training data (training + validation): 236
+2023-06-21 16:17:11: 233 and 3 are used for training and validation
+model architecture: 2D LightUNet
+model initialization: Normal
+
+experiment timestamp: 2023-06-21 16:17:21
+
+2023-06-21 16:17:21
+epoch:  1
+Start generating 2D slices...
+
+2023-06-21 16:18:23: The total number of training data (training + validation): 236
+2023-06-21 16:18:23: 233 and 3 are used for training and validation
+model architecture: 2D LightUNet
+model initialization: Normal
+
+experiment timestamp: 2023-06-21 16:18:33
+
+2023-06-21 16:18:33
+epoch:  1
+Start generating 2D slices...
+
+2023-06-21 16:20:06: The total number of training data (training + validation): 236
+2023-06-21 16:20:06: 233 and 3 are used for training and validation
+model architecture: 2D LightUNet
+model initialization: Normal
+
+experiment timestamp: 2023-06-21 16:20:14
+
+2023-06-21 16:20:14
+epoch:  1
+Start generating 2D slices...
+
+2023-06-21 16:20:58: The total number of training data (training + validation): 236
+2023-06-21 16:20:58: 233 and 3 are used for training and validation
+model architecture: 2D LightUNet
+model initialization: Normal
+
+experiment timestamp: 2023-06-21 16:21:09
+
+2023-06-21 16:21:09
+epoch:  1
+Start generating 2D slices...
+
+2023-06-21 16:21:32: The total number of training data (training + validation): 236
+2023-06-21 16:21:32: 233 and 3 are used for training and validation
+model architecture: 2D LightUNet
+model initialization: Normal
+
+experiment timestamp: 2023-06-21 16:21:41
+
+2023-06-21 16:21:41
+epoch:  1
+Start generating 2D slices...
+
+2023-06-21 16:40:44: The total number of training data (training + validation): 236
+2023-06-21 16:40:44: 233 and 3 are used for training and validation
+model architecture: 2D LightUNet
+model initialization: Normal
+
+experiment timestamp: 2023-06-21 16:40:54
+
+2023-06-21 16:40:54
+epoch:  1
+Start generating 2D slices...
+
+2023-06-21 16:43:53: The total number of training data (training + validation): 236
+2023-06-21 16:43:53: 233 and 3 are used for training and validation
+model architecture: 2D LightUNet
+model initialization: Normal
+
+experiment timestamp: 2023-06-21 16:44:03
+
+2023-06-21 16:44:03
+epoch:  1
+Start generating 2D slices...
+
+2023-06-21 16:51:29: The total number of training data (training + validation): 236
+2023-06-21 16:51:29: 233 and 3 are used for training and validation
+model architecture: 2D LightUNet
+model initialization: Normal
+
+experiment timestamp: 2023-06-21 16:51:38
+
+2023-06-21 16:51:38
+epoch:  1
+Start generating 2D slices...
+
+2023-06-21 16:54:10: The total number of training data (training + validation): 236
+2023-06-21 16:54:10: 233 and 3 are used for training and validation
+model architecture: 2D LightUNet
+model initialization: Normal
+
+experiment timestamp: 2023-06-21 16:54:19
+
+2023-06-21 16:54:19
+epoch:  1
+Start generating 2D slices...
+
+2023-06-21 16:56:51: The total number of training data (training + validation): 236
+2023-06-21 16:56:51: 233 and 3 are used for training and validation
+model architecture: 2D LightUNet
+model initialization: Normal
+Start generating 2D slices...
+
+2023-06-21 16:57:53: The total number of training data (training + validation): 236
+2023-06-21 16:57:53: 233 and 3 are used for training and validation
+model architecture: 2D LightUNet
+model initialization: Normal
+
+experiment timestamp: 2023-06-21 16:58:02
+
+2023-06-21 16:58:02
+epoch:  1
+2023-06-21 16:58:08: train loss: 901.9375
+2023-06-21 16:58:08: lr: 0.001
+2023-06-21 16:58:08: This epoch took 6.47 s
+
+2023-06-21 16:58:08
+epoch:  2
+2023-06-21 16:58:10: train loss: 898.4375
+2023-06-21 16:58:10: lr: 0.001
+2023-06-21 16:58:10: This epoch took 1.63 s
+
+2023-06-21 16:58:10
+epoch:  3
+2023-06-21 16:58:11: train loss: 858.5625
+2023-06-21 16:58:11: lr: 0.001
+2023-06-21 16:58:11: This epoch took 1.73 s
+
+2023-06-21 16:58:11
+epoch:  4
+2023-06-21 16:58:14: train loss: 830.4375
+2023-06-21 16:58:14: lr: 0.001
+2023-06-21 16:58:14: This epoch took 2.28 s
+
+2023-06-21 16:58:14
+epoch:  5
+2023-06-21 16:58:16: train loss: 793.4375
+Start generating 2D slices...
+
+2023-06-21 17:00:16: The total number of training data (training + validation): 236
+2023-06-21 17:00:16: 233 and 3 are used for training and validation
+model architecture: 2D LightUNet
+model initialization: Normal
+
+experiment timestamp: 2023-06-21 17:00:27
+
+2023-06-21 17:00:27
+epoch:  1
+2023-06-21 17:00:30: train loss: 901.9375
+2023-06-21 17:00:30: lr: 0.001
+2023-06-21 17:00:30: This epoch took 3.09 s
+
+2023-06-21 17:00:30
+epoch:  2
+2023-06-21 17:00:31: train loss: 898.4375
+2023-06-21 17:00:31: lr: 0.001
+2023-06-21 17:00:31: This epoch took 1.79 s
+
+2023-06-21 17:00:31
+epoch:  3
+2023-06-21 17:00:33: train loss: 859.6250
+2023-06-21 17:00:33: lr: 0.001
+2023-06-21 17:00:33: This epoch took 1.68 s
+
+2023-06-21 17:00:33
+epoch:  4
+2023-06-21 17:00:35: train loss: 829.0000
+2023-06-21 17:00:35: lr: 0.001
+2023-06-21 17:00:35: This epoch took 2.28 s
+
+2023-06-21 17:00:35
+epoch:  5
+2023-06-21 17:00:37: train loss: 791.0000
+Start generating 2D slices...
+
+2023-06-21 17:02:04: The total number of training data (training + validation): 236
+2023-06-21 17:02:04: 233 and 3 are used for training and validation
+model architecture: 2D LightUNet
+model initialization: Normal
+
+experiment timestamp: 2023-06-21 17:02:13
+
+2023-06-21 17:02:13
+epoch:  1
+2023-06-21 17:02:17: train loss: 901.9375
+2023-06-21 17:02:17: lr: 0.001
+2023-06-21 17:02:17: This epoch took 3.41 s
+
+2023-06-21 17:02:17
+epoch:  2
+2023-06-21 17:02:18: train loss: 898.4375
+2023-06-21 17:02:18: lr: 0.001
+2023-06-21 17:02:18: This epoch took 1.41 s
+
+2023-06-21 17:02:18
+epoch:  3
+2023-06-21 17:02:20: train loss: 859.2500
+2023-06-21 17:02:20: lr: 0.001
+2023-06-21 17:02:20: This epoch took 1.87 s
+
+2023-06-21 17:02:20
+epoch:  4
+2023-06-21 17:02:22: train loss: 827.9375
+2023-06-21 17:02:22: lr: 0.001
+2023-06-21 17:02:22: This epoch took 1.87 s
+
+2023-06-21 17:02:22
+epoch:  5
+2023-06-21 17:02:24: train loss: 791.3125
+2023-06-21 17:03:18: validation foreground dice: ['0.0000']
+2023-06-21 17:03:18: current mean dice: 0.0000, best mean dice: 0.0000 at epoch 5
+2023-06-21 17:03:18: lr: 0.001
+2023-06-21 17:03:18: This epoch took 56.30 s
+
+2023-06-21 17:03:18
+epoch:  6
+2023-06-21 17:03:20: train loss: 765.7500
+2023-06-21 17:03:20: lr: 0.001
+2023-06-21 17:03:20: This epoch took 1.85 s
+
+2023-06-21 17:03:20
+epoch:  7
+2023-06-21 17:03:22: train loss: 738.0625
+2023-06-21 17:03:22: lr: 0.001
+2023-06-21 17:03:22: This epoch took 2.00 s
+
+2023-06-21 17:03:22
+epoch:  8
+2023-06-21 17:03:24: train loss: 709.5000
+2023-06-21 17:03:24: lr: 0.001
+2023-06-21 17:03:24: This epoch took 1.78 s
+
+2023-06-21 17:03:24
+epoch:  9
+2023-06-21 17:03:26: train loss: 679.3750
+2023-06-21 17:03:26: lr: 0.001
+2023-06-21 17:03:26: This epoch took 1.93 s
+
+2023-06-21 17:03:26
+epoch:  10
+2023-06-21 17:03:28: train loss: 627.0000
+2023-06-21 17:04:19: validation foreground dice: ['0.2143']
+2023-06-21 17:04:19: current mean dice: 0.2143, best mean dice: 0.2143 at epoch 10
+2023-06-21 17:04:19: lr: 0.001
+2023-06-21 17:04:19: This epoch took 53.78 s
+
+2023-06-21 17:04:19
+epoch:  11
+2023-06-21 17:04:21: train loss: 593.9375
+2023-06-21 17:04:21: lr: 0.001
+2023-06-21 17:04:21: This epoch took 1.83 s
+
+2023-06-21 17:04:21
+epoch:  12
+2023-06-21 17:04:23: train loss: 551.0938
+2023-06-21 17:04:23: lr: 0.001
+2023-06-21 17:04:23: This epoch took 1.63 s
+
+2023-06-21 17:04:23
+epoch:  13
+2023-06-21 17:04:24: train loss: 499.2812
+2023-06-21 17:04:24: lr: 0.001
+2023-06-21 17:04:24: This epoch took 1.62 s
+
+2023-06-21 17:04:24
+epoch:  14
+2023-06-21 17:04:26: train loss: 480.7500
+2023-06-21 17:04:26: lr: 0.001
+2023-06-21 17:04:26: This epoch took 1.91 s
+
+2023-06-21 17:04:26
+epoch:  15
+Start generating 2D slices...
+
+2023-06-21 17:05:28: The total number of training data (training + validation): 1034
+2023-06-21 17:05:28: 1031 and 3 are used for training and validation
+model architecture: 2D LightUNet
+model initialization: Normal
+
+experiment timestamp: 2023-06-21 17:05:36
+
+2023-06-21 17:05:36
+epoch:  1
+2023-06-21 17:05:41: train loss: 872.8333
+2023-06-21 17:05:42: lr: 0.001
+2023-06-21 17:05:42: This epoch took 5.18 s
+
+2023-06-21 17:05:42
+epoch:  2
+2023-06-21 17:05:46: train loss: 739.2879
+2023-06-21 17:05:46: lr: 0.001
+2023-06-21 17:05:46: This epoch took 4.21 s
+
+2023-06-21 17:05:46
+epoch:  3
+2023-06-21 17:05:50: train loss: 580.5076
+2023-06-21 17:05:50: lr: 0.001
+2023-06-21 17:05:50: This epoch took 3.98 s
+
+2023-06-21 17:05:50
+epoch:  4
+2023-06-21 17:05:54: train loss: 412.0833
+2023-06-21 17:05:54: lr: 0.001
+2023-06-21 17:05:54: This epoch took 4.43 s
+
+2023-06-21 17:05:54
+epoch:  5
+2023-06-21 17:05:58: train loss: 288.0379
+2023-06-21 17:06:53: validation foreground dice: ['0.3059']
+2023-06-21 17:06:54: current mean dice: 0.3059, best mean dice: 0.3059 at epoch 5
+2023-06-21 17:06:54: lr: 0.001
+2023-06-21 17:06:54: This epoch took 59.46 s
+
+2023-06-21 17:06:54
+epoch:  6
+2023-06-21 17:06:58: train loss: 210.6326
+2023-06-21 17:06:58: lr: 0.001
+2023-06-21 17:06:58: This epoch took 4.02 s
+
+2023-06-21 17:06:58
+epoch:  7
+2023-06-21 17:07:02: train loss: 170.1098
+2023-06-21 17:07:02: lr: 0.001
+2023-06-21 17:07:02: This epoch took 4.55 s
+
+2023-06-21 17:07:02
+epoch:  8
+2023-06-21 17:07:07: train loss: 144.6155
+2023-06-21 17:07:07: lr: 0.001
+2023-06-21 17:07:07: This epoch took 4.37 s
+
+2023-06-21 17:07:07
+epoch:  9
+2023-06-21 17:07:11: train loss: 131.3295
+2023-06-21 17:07:11: lr: 0.001
+2023-06-21 17:07:11: This epoch took 4.42 s
+
+2023-06-21 17:07:11
+epoch:  10
+2023-06-21 17:07:15: train loss: 116.3561
+2023-06-21 17:08:09: validation foreground dice: ['0.3312']
+2023-06-21 17:08:09: current mean dice: 0.3312, best mean dice: 0.3312 at epoch 10
+2023-06-21 17:08:09: lr: 0.001
+2023-06-21 17:08:09: This epoch took 58.36 s
+
+2023-06-21 17:08:09
+epoch:  11
+2023-06-21 17:08:28: train loss: 111.8011
+2023-06-21 17:08:28: lr: 0.001
+2023-06-21 17:08:28: This epoch took 18.57 s
+
+2023-06-21 17:08:28
+epoch:  12
+2023-06-21 17:08:33: train loss: 108.5398
+2023-06-21 17:08:33: lr: 0.001
+2023-06-21 17:08:33: This epoch took 4.67 s
+
+2023-06-21 17:08:33
+epoch:  13
+2023-06-21 17:08:37: train loss: 100.8807
+2023-06-21 17:08:37: lr: 0.001
+2023-06-21 17:08:37: This epoch took 4.48 s
+
+2023-06-21 17:08:37
+epoch:  14
+2023-06-21 17:08:41: train loss: 95.9697
+2023-06-21 17:08:41: lr: 0.001
+2023-06-21 17:08:41: This epoch took 4.25 s
+
+2023-06-21 17:08:41
+epoch:  15
+2023-06-21 17:08:46: train loss: 94.7330
+2023-06-21 17:09:36: validation foreground dice: ['0.6090']
+2023-06-21 17:09:36: current mean dice: 0.6090, best mean dice: 0.6090 at epoch 15
+2023-06-21 17:09:36: lr: 0.001
+2023-06-21 17:09:36: This epoch took 54.51 s
+
+2023-06-21 17:09:36
+epoch:  16
+2023-06-21 17:09:41: train loss: 93.9337
+2023-06-21 17:09:41: lr: 0.001
+2023-06-21 17:09:41: This epoch took 5.14 s
+
+2023-06-21 17:09:41
+epoch:  17
+2023-06-21 17:09:47: train loss: 103.4508
+2023-06-21 17:09:47: lr: 0.001
+2023-06-21 17:09:47: This epoch took 5.88 s
+
+2023-06-21 17:09:47
+epoch:  18
+2023-06-21 17:09:52: train loss: 90.4943
+2023-06-21 17:09:52: lr: 0.001
+2023-06-21 17:09:52: This epoch took 5.24 s
+
+2023-06-21 17:09:52
+epoch:  19
+Start generating 2D slices...
+
+2023-06-21 17:10:04: The total number of training data (training + validation): 1034
+2023-06-21 17:10:04: 1031 and 3 are used for training and validation
+model architecture: 2D LightUNet
+model initialization: Normal
+
+experiment timestamp: 2023-06-21 17:10:15
+
+2023-06-21 17:10:15
+epoch:  1
+2023-06-21 17:10:20: train loss: 874.5000
+2023-06-21 17:10:20: lr: 0.001
+2023-06-21 17:10:20: This epoch took 5.19 s
+
+2023-06-21 17:10:20
+epoch:  2
+2023-06-21 17:10:25: train loss: 736.8788
+2023-06-21 17:10:25: lr: 0.001
+2023-06-21 17:10:25: This epoch took 4.47 s
+
+2023-06-21 17:10:25
+epoch:  3
+2023-06-21 17:10:29: train loss: 584.6667
+2023-06-21 17:10:29: lr: 0.001
+2023-06-21 17:10:29: This epoch took 4.89 s
+
+2023-06-21 17:10:29
+epoch:  4
+2023-06-21 17:10:35: train loss: 424.3939
+2023-06-21 17:10:35: lr: 0.001
+2023-06-21 17:10:35: This epoch took 5.08 s
+
+2023-06-21 17:10:35
+epoch:  5
+2023-06-21 17:10:39: train loss: 325.4886
+2023-06-21 17:11:32: validation foreground dice: ['0.3971']
+2023-06-21 17:11:32: current mean dice: 0.3971, best mean dice: 0.3971 at epoch 5
+2023-06-21 17:11:32: lr: 0.001
+2023-06-21 17:11:32: This epoch took 57.17 s
+
+2023-06-21 17:11:32
+epoch:  6
+2023-06-21 17:11:37: train loss: 222.9394
+2023-06-21 17:11:37: lr: 0.001
+2023-06-21 17:11:37: This epoch took 5.01 s
+
+2023-06-21 17:11:37
+epoch:  7
+2023-06-21 17:11:42: train loss: 173.9318
+2023-06-21 17:11:42: lr: 0.001
+2023-06-21 17:11:42: This epoch took 5.12 s
+
+2023-06-21 17:11:42
+epoch:  8
+2023-06-21 17:11:47: train loss: 143.9470
+2023-06-21 17:11:47: lr: 0.001
+2023-06-21 17:11:47: This epoch took 4.94 s
+
+2023-06-21 17:11:47
+epoch:  9
+2023-06-21 17:11:51: train loss: 127.0701
+2023-06-21 17:11:51: lr: 0.001
+2023-06-21 17:11:51: This epoch took 4.59 s
+
+2023-06-21 17:11:51
+epoch:  10
+2023-06-21 17:11:56: train loss: 117.3087
+2023-06-21 17:12:50: validation foreground dice: ['0.1403']
+2023-06-21 17:12:50: current mean dice: 0.1403, best mean dice: 0.3971 at epoch 5
+2023-06-21 17:12:50: lr: 0.001
+2023-06-21 17:12:50: This epoch took 58.92 s
+
+2023-06-21 17:12:50
+epoch:  11
+2023-06-21 17:12:54: train loss: 112.2784
+2023-06-21 17:12:54: lr: 0.001
+2023-06-21 17:12:54: This epoch took 3.37 s
+
+2023-06-21 17:12:54
+epoch:  12
+2023-06-21 17:12:58: train loss: 106.7860
+2023-06-21 17:12:58: lr: 0.001
+2023-06-21 17:12:58: This epoch took 4.28 s
+
+2023-06-21 17:12:58
+epoch:  13
+2023-06-21 17:13:03: train loss: 100.9962
+2023-06-21 17:13:03: lr: 0.001
+2023-06-21 17:13:03: This epoch took 4.58 s
+
+2023-06-21 17:13:03
+epoch:  14
+2023-06-21 17:13:07: train loss: 94.9072
+2023-06-21 17:13:07: lr: 0.001
+2023-06-21 17:13:07: This epoch took 4.55 s
+
+2023-06-21 17:13:07
+epoch:  15
+2023-06-21 17:13:12: train loss: 93.9034
+2023-06-21 17:14:03: validation foreground dice: ['0.5202']
+2023-06-21 17:14:03: current mean dice: 0.5202, best mean dice: 0.5202 at epoch 15
+2023-06-21 17:14:03: lr: 0.001
+2023-06-21 17:14:03: This epoch took 55.83 s
+
+2023-06-21 17:14:03
+epoch:  16
+2023-06-21 17:14:08: train loss: 93.3049
+2023-06-21 17:14:08: lr: 0.001
+2023-06-21 17:14:08: This epoch took 4.67 s
+
+2023-06-21 17:14:08
+epoch:  17
+2023-06-21 17:14:12: train loss: 90.3788
+2023-06-21 17:14:12: lr: 0.001
+2023-06-21 17:14:12: This epoch took 4.44 s
+
+2023-06-21 17:14:12
+epoch:  18
+2023-06-21 17:14:16: train loss: 90.4545
+2023-06-21 17:14:17: lr: 0.001
+2023-06-21 17:14:17: This epoch took 4.47 s
+
+2023-06-21 17:14:17
+epoch:  19
+2023-06-21 17:14:21: train loss: 88.0739
+2023-06-21 17:14:21: lr: 0.001
+2023-06-21 17:14:21: This epoch took 4.20 s
+
+2023-06-21 17:14:21
+epoch:  20
+2023-06-21 17:14:25: train loss: 87.8712
+2023-06-21 17:15:17: validation foreground dice: ['0.5219']
+2023-06-21 17:15:17: current mean dice: 0.5219, best mean dice: 0.5219 at epoch 20
+2023-06-21 17:15:17: lr: 0.001
+2023-06-21 17:15:17: This epoch took 56.78 s
+
+2023-06-21 17:15:17
+epoch:  21
+2023-06-21 17:15:22: train loss: 87.7045
+2023-06-21 17:15:22: lr: 0.001
+2023-06-21 17:15:22: This epoch took 4.07 s
+
+2023-06-21 17:15:22
+epoch:  22
+2023-06-21 17:15:26: train loss: 83.7462
+2023-06-21 17:15:26: lr: 0.001
+2023-06-21 17:15:26: This epoch took 4.53 s
+
+2023-06-21 17:15:26
+epoch:  23
+2023-06-21 17:15:31: train loss: 87.5701
+2023-06-21 17:15:31: lr: 0.001
+2023-06-21 17:15:31: This epoch took 4.72 s
+
+2023-06-21 17:15:31
+epoch:  24
+2023-06-21 17:15:35: train loss: 83.1951
+2023-06-21 17:15:35: lr: 0.001
+2023-06-21 17:15:35: This epoch took 4.25 s
+
+2023-06-21 17:15:35
+epoch:  25
+2023-06-21 17:15:39: train loss: 85.1989
+2023-06-21 17:16:32: validation foreground dice: ['0.3850']
+2023-06-21 17:16:32: current mean dice: 0.3850, best mean dice: 0.5219 at epoch 20
+2023-06-21 17:16:32: lr: 0.001
+2023-06-21 17:16:32: This epoch took 56.81 s
+
+2023-06-21 17:16:32
+epoch:  26
+2023-06-21 17:16:37: train loss: 82.4574
+2023-06-21 17:16:37: lr: 0.001
+2023-06-21 17:16:37: This epoch took 4.81 s
+
+2023-06-21 17:16:37
+epoch:  27
+2023-06-21 17:16:41: train loss: 84.3011
+2023-06-21 17:16:41: lr: 0.001
+2023-06-21 17:16:41: This epoch took 4.47 s
+
+2023-06-21 17:16:41
+epoch:  28
+2023-06-21 17:16:46: train loss: 80.5928
+2023-06-21 17:16:46: lr: 0.001
+2023-06-21 17:16:46: This epoch took 4.69 s
+
+2023-06-21 17:16:46
+epoch:  29
+2023-06-21 17:16:50: train loss: 81.1951
+2023-06-21 17:16:50: lr: 0.001
+2023-06-21 17:16:50: This epoch took 4.48 s
+
+2023-06-21 17:16:50
+epoch:  30
+2023-06-21 17:16:55: train loss: 79.7292
+2023-06-21 17:17:51: validation foreground dice: ['0.4693']
+2023-06-21 17:17:51: current mean dice: 0.4693, best mean dice: 0.5219 at epoch 20
+2023-06-21 17:17:51: lr: 0.001
+2023-06-21 17:17:51: This epoch took 60.55 s
+
+2023-06-21 17:17:51
+epoch:  31
+2023-06-21 17:17:55: train loss: 78.9962
+2023-06-21 17:17:55: lr: 0.001
+2023-06-21 17:17:55: This epoch took 4.48 s
+
+2023-06-21 17:17:55
+epoch:  32
+2023-06-21 17:18:00: train loss: 78.1496
+2023-06-21 17:18:00: lr: 0.001
+2023-06-21 17:18:00: This epoch took 4.49 s
+
+2023-06-21 17:18:00
+epoch:  33
+2023-06-21 17:18:05: train loss: 78.0890
+2023-06-21 17:18:05: lr: 0.001
+2023-06-21 17:18:05: This epoch took 4.80 s
+
+2023-06-21 17:18:05
+epoch:  34
+2023-06-21 17:18:09: train loss: 75.5947
+2023-06-21 17:18:09: lr: 0.001
+2023-06-21 17:18:09: This epoch took 4.70 s
+
+2023-06-21 17:18:09
+epoch:  35
+2023-06-21 17:18:14: train loss: 77.3674
+Start generating 2D slices...
+
+2023-06-25 23:42:28: The total number of training data (training + validation): 1034
+2023-06-25 23:42:28: 1031 and 3 are used for training and validation
+model architecture: 2D LightUNet
+model initialization: Normal
+
+experiment timestamp: 2023-06-25 23:42:35
+
+2023-06-25 23:42:35
+epoch:  1
+Start generating 2D slices...
+
+2023-06-25 23:42:50: The total number of training data (training + validation): 1034
+2023-06-25 23:42:50: 1031 and 3 are used for training and validation
+model architecture: 2D LightUNet
+model initialization: Normal
+
+experiment timestamp: 2023-06-25 23:42:54
+
+2023-06-25 23:42:54
+epoch:  1
+2023-06-25 23:43:14: train loss: 873.7576
+2023-06-25 23:43:14: lr: 0.001
+2023-06-25 23:43:14: This epoch took 19.47 s
+
+2023-06-25 23:43:14
+epoch:  2
+2023-06-25 23:43:16: train loss: 736.9394
+2023-06-25 23:43:16: lr: 0.001
+2023-06-25 23:43:16: This epoch took 2.19 s
+
+2023-06-25 23:43:16
+epoch:  3
+2023-06-25 23:43:18: train loss: 578.4167
+2023-06-25 23:43:18: lr: 0.001
+2023-06-25 23:43:18: This epoch took 2.06 s
+
+2023-06-25 23:43:18
+epoch:  4
+2023-06-25 23:43:20: train loss: 420.7045
+2023-06-25 23:43:20: lr: 0.001
+2023-06-25 23:43:20: This epoch took 2.18 s
+
+2023-06-25 23:43:20
+epoch:  5
+2023-06-25 23:43:22: train loss: 295.9924
+2023-06-25 23:43:39: validation foreground dice: ['0.2418']
+2023-06-25 23:43:39: current mean dice: 0.2418, best mean dice: 0.2418 at epoch 5
+2023-06-25 23:43:39: lr: 0.001
+2023-06-25 23:43:39: This epoch took 19.27 s
+
+2023-06-25 23:43:39
+epoch:  6
+2023-06-25 23:43:42: train loss: 213.9848
+2023-06-25 23:43:42: lr: 0.001
+2023-06-25 23:43:42: This epoch took 2.06 s
+
+2023-06-25 23:43:42
+epoch:  7
+2023-06-25 23:43:44: train loss: 168.8182
+2023-06-25 23:43:44: lr: 0.001
+2023-06-25 23:43:44: This epoch took 2.05 s
+
+2023-06-25 23:43:44
+epoch:  8
+2023-06-25 23:43:46: train loss: 142.6591
+2023-06-25 23:43:46: lr: 0.001
+2023-06-25 23:43:46: This epoch took 2.12 s
+
+2023-06-25 23:43:46
+epoch:  9
+2023-06-25 23:43:48: train loss: 128.3314
+2023-06-25 23:43:48: lr: 0.001
+2023-06-25 23:43:48: This epoch took 2.10 s
+
+2023-06-25 23:43:48
+epoch:  10
+2023-06-25 23:43:50: train loss: 117.3617
+2023-06-25 23:44:06: validation foreground dice: ['0.2834']
+2023-06-25 23:44:06: current mean dice: 0.2834, best mean dice: 0.2834 at epoch 10
+2023-06-25 23:44:06: lr: 0.001
+2023-06-25 23:44:06: This epoch took 17.95 s
+
+2023-06-25 23:44:06
+epoch:  11
+2023-06-25 23:44:08: train loss: 112.4451
+2023-06-25 23:44:08: lr: 0.001
+2023-06-25 23:44:08: This epoch took 2.10 s
+
+2023-06-25 23:44:08
+epoch:  12
+2023-06-25 23:44:10: train loss: 108.7765
+2023-06-25 23:44:10: lr: 0.001
+2023-06-25 23:44:10: This epoch took 2.11 s
+
+2023-06-25 23:44:10
+epoch:  13
+2023-06-25 23:44:12: train loss: 101.8295
+2023-06-25 23:44:12: lr: 0.001
+2023-06-25 23:44:12: This epoch took 2.16 s
+
+2023-06-25 23:44:12
+epoch:  14
+2023-06-25 23:44:14: train loss: 96.3958
+2023-06-25 23:44:14: lr: 0.001
+2023-06-25 23:44:14: This epoch took 2.10 s
+
+2023-06-25 23:44:14
+epoch:  15
+2023-06-25 23:44:16: train loss: 95.5246
+2023-06-25 23:44:32: validation foreground dice: ['0.4685']
+2023-06-25 23:44:32: current mean dice: 0.4685, best mean dice: 0.4685 at epoch 15
+2023-06-25 23:44:32: lr: 0.001
+2023-06-25 23:44:32: This epoch took 17.61 s
+
+2023-06-25 23:44:32
+epoch:  16
+2023-06-25 23:44:34: train loss: 95.0322
+2023-06-25 23:44:34: lr: 0.001
+2023-06-25 23:44:34: This epoch took 2.14 s
+
+2023-06-25 23:44:34
+epoch:  17
+2023-06-25 23:44:36: train loss: 92.7500
+2023-06-25 23:44:36: lr: 0.001
+2023-06-25 23:44:36: This epoch took 2.08 s
+
+2023-06-25 23:44:36
+epoch:  18
+2023-06-25 23:44:38: train loss: 91.6723
+2023-06-25 23:44:38: lr: 0.001
+2023-06-25 23:44:38: This epoch took 2.21 s
+
+2023-06-25 23:44:38
+epoch:  19
+2023-06-25 23:44:40: train loss: 89.4110
+2023-06-25 23:44:40: lr: 0.001
+2023-06-25 23:44:40: This epoch took 2.15 s
+
+2023-06-25 23:44:40
+epoch:  20
+2023-06-25 23:44:43: train loss: 89.1023
+2023-06-25 23:44:58: validation foreground dice: ['0.4391']
+2023-06-25 23:44:58: current mean dice: 0.4391, best mean dice: 0.4685 at epoch 15
+2023-06-25 23:44:58: lr: 0.001
+2023-06-25 23:44:58: This epoch took 17.53 s
+
+2023-06-25 23:44:58
+epoch:  21
+2023-06-25 23:45:00: train loss: 89.2027
+2023-06-25 23:45:00: lr: 0.001
+2023-06-25 23:45:00: This epoch took 2.11 s
+
+2023-06-25 23:45:00
+epoch:  22
+2023-06-25 23:45:02: train loss: 84.8674
+2023-06-25 23:45:02: lr: 0.001
+2023-06-25 23:45:02: This epoch took 2.19 s
+
+2023-06-25 23:45:02
+epoch:  23
+2023-06-25 23:45:04: train loss: 88.3182
+2023-06-25 23:45:04: lr: 0.001
+2023-06-25 23:45:04: This epoch took 2.07 s
+
+2023-06-25 23:45:04
+epoch:  24
+2023-06-25 23:45:06: train loss: 83.4886
+2023-06-25 23:45:06: lr: 0.001
+2023-06-25 23:45:06: This epoch took 2.11 s
+
+2023-06-25 23:45:06
+epoch:  25
+2023-06-25 23:45:08: train loss: 86.1212
+2023-06-25 23:45:24: validation foreground dice: ['0.4651']
+2023-06-25 23:45:24: current mean dice: 0.4651, best mean dice: 0.4685 at epoch 15
+2023-06-25 23:45:24: lr: 0.001
+2023-06-25 23:45:24: This epoch took 17.71 s
+
+2023-06-25 23:45:24
+epoch:  26
+2023-06-25 23:45:26: train loss: 82.9470
+2023-06-25 23:45:26: lr: 0.001
+2023-06-25 23:45:26: This epoch took 2.14 s
+
+2023-06-25 23:45:26
+epoch:  27
+2023-06-25 23:45:28: train loss: 85.0833
+2023-06-25 23:45:28: lr: 0.001
+2023-06-25 23:45:28: This epoch took 2.13 s
+
+2023-06-25 23:45:28
+epoch:  28
+2023-06-25 23:45:31: train loss: 82.4621
+2023-06-25 23:45:31: lr: 0.001
+2023-06-25 23:45:31: This epoch took 2.23 s
+
+2023-06-25 23:45:31
+epoch:  29
+2023-06-25 23:45:33: train loss: 81.8864
+2023-06-25 23:45:33: lr: 0.001
+2023-06-25 23:45:33: This epoch took 2.21 s
+
+2023-06-25 23:45:33
+epoch:  30
+2023-06-25 23:45:35: train loss: 80.3996
+2023-06-25 23:45:51: validation foreground dice: ['0.4662']
+2023-06-25 23:45:51: current mean dice: 0.4662, best mean dice: 0.4685 at epoch 15
+2023-06-25 23:45:51: lr: 0.001
+2023-06-25 23:45:51: This epoch took 18.63 s
+
+2023-06-25 23:45:51
+epoch:  31
+2023-06-25 23:45:53: train loss: 79.8106
+2023-06-25 23:45:53: lr: 0.001
+2023-06-25 23:45:53: This epoch took 2.04 s
+
+2023-06-25 23:45:53
+epoch:  32
+2023-06-25 23:45:56: train loss: 78.5549
+2023-06-25 23:45:56: lr: 0.001
+2023-06-25 23:45:56: This epoch took 2.13 s
+
+2023-06-25 23:45:56
+epoch:  33
+2023-06-25 23:45:58: train loss: 78.6042
+2023-06-25 23:45:58: lr: 0.001
+2023-06-25 23:45:58: This epoch took 2.12 s
+
+2023-06-25 23:45:58
+epoch:  34
+2023-06-25 23:46:00: train loss: 75.8693
+2023-06-25 23:46:00: lr: 0.001
+2023-06-25 23:46:00: This epoch took 2.10 s
+
+2023-06-25 23:46:00
+epoch:  35
+2023-06-25 23:46:02: train loss: 77.5739
+2023-06-25 23:46:18: validation foreground dice: ['0.4669']
+2023-06-25 23:46:18: current mean dice: 0.4669, best mean dice: 0.4685 at epoch 15
+2023-06-25 23:46:18: lr: 0.001
+2023-06-25 23:46:18: This epoch took 18.49 s
+
+2023-06-25 23:46:18
+epoch:  36
+2023-06-25 23:46:20: train loss: 77.6818
+2023-06-25 23:46:20: lr: 0.001
+2023-06-25 23:46:20: This epoch took 2.17 s
+
+2023-06-25 23:46:20
+epoch:  37
+2023-06-25 23:46:23: train loss: 78.6061
+2023-06-25 23:46:23: lr: 0.001
+2023-06-25 23:46:23: This epoch took 2.13 s
+
+2023-06-25 23:46:23
+epoch:  38
+2023-06-25 23:46:25: train loss: 75.9318
+2023-06-25 23:46:25: lr: 0.001
+2023-06-25 23:46:25: This epoch took 2.15 s
+
+2023-06-25 23:46:25
+epoch:  39
+2023-06-25 23:46:27: train loss: 77.1146
+2023-06-25 23:46:27: lr: 0.001
+2023-06-25 23:46:27: This epoch took 2.25 s
+
+2023-06-25 23:46:27
+epoch:  40
+2023-06-25 23:46:29: train loss: 77.0852
+2023-06-25 23:46:45: validation foreground dice: ['0.6351']
+2023-06-25 23:46:45: current mean dice: 0.6351, best mean dice: 0.6351 at epoch 40
+2023-06-25 23:46:45: lr: 0.001
+2023-06-25 23:46:45: This epoch took 18.41 s
+
+2023-06-25 23:46:45
+epoch:  41
+2023-06-25 23:46:48: train loss: 76.4517
+2023-06-25 23:46:48: lr: 0.001
+2023-06-25 23:46:48: This epoch took 2.13 s
+
+2023-06-25 23:46:48
+epoch:  42
+2023-06-25 23:46:50: train loss: 75.2481
+2023-06-25 23:46:50: lr: 0.001
+2023-06-25 23:46:50: This epoch took 2.12 s
+
+2023-06-25 23:46:50
+epoch:  43
+2023-06-25 23:46:52: train loss: 73.8021
+2023-06-25 23:46:52: lr: 0.001
+2023-06-25 23:46:52: This epoch took 2.18 s
+
+2023-06-25 23:46:52
+epoch:  44
+2023-06-25 23:46:54: train loss: 75.8182
+2023-06-25 23:46:54: lr: 0.001
+2023-06-25 23:46:54: This epoch took 2.14 s
+
+2023-06-25 23:46:54
+epoch:  45
+2023-06-25 23:46:56: train loss: 74.9091
+2023-06-25 23:47:12: validation foreground dice: ['0.6407']
+2023-06-25 23:47:12: current mean dice: 0.6407, best mean dice: 0.6407 at epoch 45
+2023-06-25 23:47:12: lr: 0.001
+2023-06-25 23:47:12: This epoch took 17.68 s
+
+2023-06-25 23:47:12
+epoch:  46
+2023-06-25 23:47:14: train loss: 72.8362
+2023-06-25 23:47:14: lr: 0.001
+2023-06-25 23:47:14: This epoch took 2.06 s
+
+2023-06-25 23:47:14
+epoch:  47
+2023-06-25 23:47:16: train loss: 74.9527
+2023-06-25 23:47:16: lr: 0.001
+2023-06-25 23:47:16: This epoch took 2.10 s
+
+2023-06-25 23:47:16
+epoch:  48
+2023-06-25 23:47:18: train loss: 72.4583
+2023-06-25 23:47:18: lr: 0.001
+2023-06-25 23:47:18: This epoch took 2.20 s
+
+2023-06-25 23:47:18
+epoch:  49
+2023-06-25 23:47:20: train loss: 73.5890
+2023-06-25 23:47:20: lr: 0.001
+2023-06-25 23:47:20: This epoch took 2.12 s
+
+2023-06-25 23:47:20
+epoch:  50
+2023-06-25 23:47:22: train loss: 73.2680
+2023-06-25 23:47:38: validation foreground dice: ['0.5091']
+2023-06-25 23:47:38: current mean dice: 0.5091, best mean dice: 0.6407 at epoch 45
+2023-06-25 23:47:38: lr: 0.001
+2023-06-25 23:47:38: This epoch took 17.58 s
+
+2023-06-25 23:47:38
+epoch:  51
+2023-06-25 23:47:40: train loss: 74.5975
+2023-06-25 23:47:40: lr: 0.001
+2023-06-25 23:47:40: This epoch took 2.07 s
+
+2023-06-25 23:47:40
+epoch:  52
+2023-06-25 23:47:42: train loss: 74.0123
+2023-06-25 23:47:42: lr: 0.001
+2023-06-25 23:47:42: This epoch took 2.11 s
+
+2023-06-25 23:47:42
+epoch:  53
+2023-06-25 23:47:44: train loss: 71.2519
+2023-06-25 23:47:44: lr: 0.001
+2023-06-25 23:47:44: This epoch took 2.06 s
+
+2023-06-25 23:47:44
+epoch:  54
+2023-06-25 23:47:46: train loss: 71.5530
+2023-06-25 23:47:46: lr: 0.001
+2023-06-25 23:47:46: This epoch took 2.10 s
+
+2023-06-25 23:47:46
+epoch:  55
+2023-06-25 23:47:48: train loss: 72.4290
+2023-06-25 23:48:04: validation foreground dice: ['0.6411']
+2023-06-25 23:48:04: current mean dice: 0.6411, best mean dice: 0.6411 at epoch 55
+2023-06-25 23:48:04: lr: 0.001
+2023-06-25 23:48:04: This epoch took 18.19 s
+
+2023-06-25 23:48:04
+epoch:  56
+2023-06-25 23:48:06: train loss: 71.0805
+2023-06-25 23:48:06: lr: 0.001
+2023-06-25 23:48:06: This epoch took 2.11 s
+
+2023-06-25 23:48:06
+epoch:  57
+2023-06-25 23:48:08: train loss: 70.3759
+2023-06-25 23:48:08: lr: 0.001
+2023-06-25 23:48:08: This epoch took 2.08 s
+
+2023-06-25 23:48:08
+epoch:  58
+2023-06-25 23:48:11: train loss: 72.5502
+2023-06-25 23:48:11: lr: 0.001
+2023-06-25 23:48:11: This epoch took 2.09 s
+
+2023-06-25 23:48:11
+epoch:  59
+2023-06-25 23:48:13: train loss: 70.9470
+2023-06-25 23:48:13: lr: 0.001
+2023-06-25 23:48:13: This epoch took 2.19 s
+
+2023-06-25 23:48:13
+epoch:  60
+2023-06-25 23:48:15: train loss: 71.5739
+2023-06-25 23:48:31: validation foreground dice: ['0.5237']
+2023-06-25 23:48:31: current mean dice: 0.5237, best mean dice: 0.6411 at epoch 55
+2023-06-25 23:48:31: lr: 0.001
+2023-06-25 23:48:32: This epoch took 18.76 s
+
+2023-06-25 23:48:32
+epoch:  61
+2023-06-25 23:48:34: train loss: 71.1316
+2023-06-25 23:48:34: lr: 0.001
+2023-06-25 23:48:34: This epoch took 2.16 s
+
+2023-06-25 23:48:34
+epoch:  62
+2023-06-25 23:48:36: train loss: 69.4347
+2023-06-25 23:48:36: lr: 0.001
+2023-06-25 23:48:36: This epoch took 2.13 s
+
+2023-06-25 23:48:36
+epoch:  63
+2023-06-25 23:48:38: train loss: 69.7992
+2023-06-25 23:48:38: lr: 0.001
+2023-06-25 23:48:38: This epoch took 2.07 s
+
+2023-06-25 23:48:38
+epoch:  64
+2023-06-25 23:48:40: train loss: 71.1269
+2023-06-25 23:48:40: lr: 0.001
+2023-06-25 23:48:40: This epoch took 2.14 s
+
+2023-06-25 23:48:40
+epoch:  65
+2023-06-25 23:48:42: train loss: 70.2557
+2023-06-25 23:48:58: validation foreground dice: ['0.5237']
+2023-06-25 23:48:58: current mean dice: 0.5237, best mean dice: 0.6411 at epoch 55
+2023-06-25 23:48:58: lr: 0.001
+2023-06-25 23:48:58: This epoch took 18.23 s
+
+2023-06-25 23:48:58
+epoch:  66
+2023-06-25 23:49:00: train loss: 69.3494
+2023-06-25 23:49:00: lr: 0.001
+2023-06-25 23:49:00: This epoch took 2.15 s
+
+2023-06-25 23:49:00
+epoch:  67
+2023-06-25 23:49:03: train loss: 69.4801
+2023-06-25 23:49:03: lr: 0.001
+2023-06-25 23:49:03: This epoch took 2.33 s
+
+2023-06-25 23:49:03
+epoch:  68
+2023-06-25 23:49:05: train loss: 68.7216
+2023-06-25 23:49:05: lr: 0.001
+2023-06-25 23:49:05: This epoch took 2.23 s
+
+2023-06-25 23:49:05
+epoch:  69
+2023-06-25 23:49:07: train loss: 69.1534
+2023-06-25 23:49:07: lr: 0.001
+2023-06-25 23:49:07: This epoch took 2.23 s
+
+2023-06-25 23:49:07
+epoch:  70
+2023-06-25 23:49:09: train loss: 70.5578
+2023-06-25 23:49:27: validation foreground dice: ['0.5476']
+2023-06-25 23:49:27: current mean dice: 0.5476, best mean dice: 0.6411 at epoch 55
+2023-06-25 23:49:27: lr: 0.001
+2023-06-25 23:49:27: This epoch took 19.74 s
+
+2023-06-25 23:49:27
+epoch:  71
+2023-06-25 23:49:29: train loss: 67.7945
+2023-06-25 23:49:29: lr: 0.001
+2023-06-25 23:49:29: This epoch took 2.26 s
+
+2023-06-25 23:49:29
+epoch:  72
+2023-06-25 23:49:31: train loss: 67.9186
+2023-06-25 23:49:31: lr: 0.001
+2023-06-25 23:49:31: This epoch took 2.20 s
+
+2023-06-25 23:49:31
+epoch:  73
+2023-06-25 23:49:34: train loss: 69.3589
+2023-06-25 23:49:34: lr: 0.001
+2023-06-25 23:49:34: This epoch took 2.18 s
+
+2023-06-25 23:49:34
+epoch:  74
+2023-06-25 23:49:36: train loss: 67.0909
+2023-06-25 23:49:36: lr: 0.001
+2023-06-25 23:49:36: This epoch took 2.11 s
+
+2023-06-25 23:49:36
+epoch:  75
+2023-06-25 23:49:38: train loss: 68.5710
+2023-06-25 23:49:55: validation foreground dice: ['0.5553']
+2023-06-25 23:49:55: current mean dice: 0.5553, best mean dice: 0.6411 at epoch 55
+2023-06-25 23:49:55: lr: 0.001
+2023-06-25 23:49:55: This epoch took 19.06 s
+
+2023-06-25 23:49:55
+epoch:  76
+2023-06-25 23:49:57: train loss: 68.1856
+2023-06-25 23:49:57: lr: 0.001
+2023-06-25 23:49:57: This epoch took 2.13 s
+
+2023-06-25 23:49:57
+epoch:  77
+2023-06-25 23:49:59: train loss: 67.2301
+2023-06-25 23:49:59: lr: 0.001
+2023-06-25 23:49:59: This epoch took 2.10 s
+
+2023-06-25 23:49:59
+epoch:  78
+2023-06-25 23:50:01: train loss: 67.5777
+2023-06-25 23:50:01: lr: 0.001
+2023-06-25 23:50:01: This epoch took 2.12 s
+
+2023-06-25 23:50:01
+epoch:  79
+2023-06-25 23:50:03: train loss: 66.8939
+2023-06-25 23:50:03: lr: 0.001
+2023-06-25 23:50:03: This epoch took 2.08 s
+
+2023-06-25 23:50:03
+epoch:  80
+2023-06-25 23:50:05: train loss: 67.3608
+2023-06-25 23:50:21: validation foreground dice: ['0.6052']
+2023-06-25 23:50:21: current mean dice: 0.6052, best mean dice: 0.6411 at epoch 55
+2023-06-25 23:50:21: lr: 0.001
+2023-06-25 23:50:21: This epoch took 17.77 s
+
+2023-06-25 23:50:21
+epoch:  81
+2023-06-25 23:50:23: train loss: 67.3958
+2023-06-25 23:50:23: lr: 0.001
+2023-06-25 23:50:23: This epoch took 2.07 s
+
+2023-06-25 23:50:23
+epoch:  82
+2023-06-25 23:50:25: train loss: 67.2159
+2023-06-25 23:50:25: lr: 0.001
+2023-06-25 23:50:25: This epoch took 2.15 s
+
+2023-06-25 23:50:25
+epoch:  83
+2023-06-25 23:50:27: train loss: 67.7311
+2023-06-25 23:50:27: lr: 0.001
+2023-06-25 23:50:27: This epoch took 2.05 s
+
+2023-06-25 23:50:27
+epoch:  84
+2023-06-25 23:50:29: train loss: 67.1174
+2023-06-25 23:50:29: lr: 0.001
+2023-06-25 23:50:29: This epoch took 2.08 s
+
+2023-06-25 23:50:29
+epoch:  85
+2023-06-25 23:50:31: train loss: 66.6032
+2023-06-25 23:50:47: validation foreground dice: ['0.6435']
+2023-06-25 23:50:47: current mean dice: 0.6435, best mean dice: 0.6435 at epoch 85
+2023-06-25 23:50:47: lr: 0.001
+2023-06-25 23:50:47: This epoch took 17.58 s
+
+2023-06-25 23:50:47
+epoch:  86
+2023-06-25 23:50:49: train loss: 68.4669
+2023-06-25 23:50:49: lr: 0.001
+2023-06-25 23:50:49: This epoch took 2.29 s
+
+2023-06-25 23:50:49
+epoch:  87
+2023-06-25 23:50:51: train loss: 67.5975
+2023-06-25 23:50:51: lr: 0.001
+2023-06-25 23:50:51: This epoch took 2.10 s
+
+2023-06-25 23:50:51
+epoch:  88
+2023-06-25 23:50:53: train loss: 68.0133
+2023-06-25 23:50:53: lr: 0.001
+2023-06-25 23:50:53: This epoch took 2.17 s
+
+2023-06-25 23:50:53
+epoch:  89
+2023-06-25 23:50:55: train loss: 67.4356
+2023-06-25 23:50:55: lr: 0.001
+2023-06-25 23:50:55: This epoch took 2.03 s
+
+2023-06-25 23:50:55
+epoch:  90
+2023-06-25 23:50:58: train loss: 66.3220
+2023-06-25 23:51:13: validation foreground dice: ['0.5942']
+2023-06-25 23:51:13: current mean dice: 0.5942, best mean dice: 0.6435 at epoch 85
+2023-06-25 23:51:13: lr: 0.001
+2023-06-25 23:51:13: This epoch took 17.51 s
+
+2023-06-25 23:51:13
+epoch:  91
+2023-06-25 23:51:15: train loss: 67.3267
+2023-06-25 23:51:15: lr: 0.001
+2023-06-25 23:51:15: This epoch took 2.22 s
+
+2023-06-25 23:51:15
+epoch:  92
+2023-06-25 23:51:17: train loss: 66.5985
+2023-06-25 23:51:17: lr: 0.001
+2023-06-25 23:51:17: This epoch took 2.15 s
+
+2023-06-25 23:51:17
+epoch:  93
+2023-06-25 23:51:20: train loss: 66.4413
+2023-06-25 23:51:20: lr: 0.001
+2023-06-25 23:51:20: This epoch took 2.21 s
+
+2023-06-25 23:51:20
+epoch:  94
+2023-06-25 23:51:22: train loss: 67.1269
+2023-06-25 23:51:22: lr: 0.001
+2023-06-25 23:51:22: This epoch took 2.16 s
+
+2023-06-25 23:51:22
+epoch:  95
+2023-06-25 23:51:24: train loss: 64.7396
+2023-06-25 23:51:39: validation foreground dice: ['0.5382']
+2023-06-25 23:51:39: current mean dice: 0.5382, best mean dice: 0.6435 at epoch 85
+2023-06-25 23:51:39: lr: 0.001
+2023-06-25 23:51:39: This epoch took 17.51 s
+
+2023-06-25 23:51:39
+epoch:  96
+2023-06-25 23:51:41: train loss: 66.5521
+2023-06-25 23:51:41: lr: 0.001
+2023-06-25 23:51:41: This epoch took 2.15 s
+
+2023-06-25 23:51:41
+epoch:  97
+2023-06-25 23:51:44: train loss: 67.0900
+2023-06-25 23:51:44: lr: 0.001
+2023-06-25 23:51:44: This epoch took 2.15 s
+
+2023-06-25 23:51:44
+epoch:  98
+2023-06-25 23:51:46: train loss: 68.0133
+2023-06-25 23:51:46: lr: 0.001
+2023-06-25 23:51:46: This epoch took 2.13 s
+
+2023-06-25 23:51:46
+epoch:  99
+2023-06-25 23:51:48: train loss: 65.5379
+2023-06-25 23:51:48: lr: 0.001
+2023-06-25 23:51:48: This epoch took 2.03 s
+
+2023-06-25 23:51:48
+epoch:  100
+2023-06-25 23:51:50: train loss: 66.5360
+2023-06-25 23:52:05: validation foreground dice: ['0.4841']
+2023-06-25 23:52:05: current mean dice: 0.4841, best mean dice: 0.6435 at epoch 85
+2023-06-25 23:52:05: lr: 0.001
+2023-06-25 23:52:05: This epoch took 17.73 s
+
+2023-06-25 23:52:05
+epoch:  101
+2023-06-25 23:52:08: train loss: 65.2462
+2023-06-25 23:52:08: lr: 0.001
+2023-06-25 23:52:08: This epoch took 2.13 s
+
+2023-06-25 23:52:08
+epoch:  102
+2023-06-25 23:52:10: train loss: 66.7509
+2023-06-25 23:52:10: lr: 0.001
+2023-06-25 23:52:10: This epoch took 2.02 s
+
+2023-06-25 23:52:10
+epoch:  103
+2023-06-25 23:52:12: train loss: 66.6449
+2023-06-25 23:52:12: lr: 0.001
+2023-06-25 23:52:12: This epoch took 2.07 s
+
+2023-06-25 23:52:12
+epoch:  104
+2023-06-25 23:52:14: train loss: 66.1468
+2023-06-25 23:52:14: lr: 0.001
+2023-06-25 23:52:14: This epoch took 2.16 s
+
+2023-06-25 23:52:14
+epoch:  105
+2023-06-25 23:52:16: train loss: 65.6174
+2023-06-25 23:52:31: validation foreground dice: ['0.6352']
+2023-06-25 23:52:31: current mean dice: 0.6352, best mean dice: 0.6435 at epoch 85
+2023-06-25 23:52:31: lr: 0.001
+2023-06-25 23:52:31: This epoch took 17.66 s
+
+2023-06-25 23:52:31
+epoch:  106
+2023-06-25 23:52:33: train loss: 64.4867
+2023-06-25 23:52:33: lr: 0.001
+2023-06-25 23:52:33: This epoch took 2.05 s
+
+2023-06-25 23:52:33
+epoch:  107
+2023-06-25 23:52:36: train loss: 65.6487
+2023-06-25 23:52:36: lr: 0.001
+2023-06-25 23:52:36: This epoch took 2.05 s
+
+2023-06-25 23:52:36
+epoch:  108
+2023-06-25 23:52:38: train loss: 64.8930
+2023-06-25 23:52:38: lr: 0.001
+2023-06-25 23:52:38: This epoch took 2.22 s
+
+2023-06-25 23:52:38
+epoch:  109
+2023-06-25 23:52:40: train loss: 64.8930
+2023-06-25 23:52:40: lr: 0.001
+2023-06-25 23:52:40: This epoch took 2.11 s
+
+2023-06-25 23:52:40
+epoch:  110
+2023-06-25 23:52:42: train loss: 64.4659
+2023-06-25 23:52:57: validation foreground dice: ['0.6448']
+2023-06-25 23:52:57: current mean dice: 0.6448, best mean dice: 0.6448 at epoch 110
+2023-06-25 23:52:57: lr: 0.001
+2023-06-25 23:52:57: This epoch took 17.61 s
+
+2023-06-25 23:52:57
+epoch:  111
+2023-06-25 23:53:00: train loss: 65.8438
+2023-06-25 23:53:00: lr: 0.001
+2023-06-25 23:53:00: This epoch took 2.26 s
+
+2023-06-25 23:53:00
+epoch:  112
+2023-06-25 23:53:02: train loss: 64.7585
+2023-06-25 23:53:02: lr: 0.001
+2023-06-25 23:53:02: This epoch took 2.12 s
+
+2023-06-25 23:53:02
+epoch:  113
+2023-06-25 23:53:04: train loss: 65.1307
+2023-06-25 23:53:04: lr: 0.001
+2023-06-25 23:53:04: This epoch took 2.10 s
+
+2023-06-25 23:53:04
+epoch:  114
+2023-06-25 23:53:06: train loss: 64.5208
+2023-06-25 23:53:06: lr: 0.001
+2023-06-25 23:53:06: This epoch took 2.09 s
+
+2023-06-25 23:53:06
+epoch:  115
+2023-06-25 23:53:08: train loss: 64.0161
+2023-06-25 23:53:24: validation foreground dice: ['0.4699']
+2023-06-25 23:53:24: current mean dice: 0.4699, best mean dice: 0.6448 at epoch 110
+2023-06-25 23:53:24: lr: 0.001
+2023-06-25 23:53:24: This epoch took 17.75 s
+
+2023-06-25 23:53:24
+epoch:  116
+2023-06-25 23:53:26: train loss: 64.6723
+2023-06-25 23:53:26: lr: 0.001
+2023-06-25 23:53:26: This epoch took 2.07 s
+
+2023-06-25 23:53:26
+epoch:  117
+2023-06-25 23:53:28: train loss: 63.5123
+2023-06-25 23:53:28: lr: 0.001
+2023-06-25 23:53:28: This epoch took 2.08 s
+
+2023-06-25 23:53:28
+epoch:  118
+2023-06-25 23:53:30: train loss: 63.8542
+2023-06-25 23:53:30: lr: 0.001
+2023-06-25 23:53:30: This epoch took 2.09 s
+
+2023-06-25 23:53:30
+epoch:  119
+2023-06-25 23:53:32: train loss: 65.7083
+2023-06-25 23:53:32: lr: 0.001
+2023-06-25 23:53:32: This epoch took 2.16 s
+
+2023-06-25 23:53:32
+epoch:  120
+2023-06-25 23:53:34: train loss: 65.4527
+2023-06-25 23:53:50: validation foreground dice: ['0.5521']
+2023-06-25 23:53:50: current mean dice: 0.5521, best mean dice: 0.6448 at epoch 110
+2023-06-25 23:53:50: lr: 0.001
+2023-06-25 23:53:50: This epoch took 17.66 s
+
+2023-06-25 23:53:50
+epoch:  121
+2023-06-25 23:53:52: train loss: 64.5464
+2023-06-25 23:53:52: lr: 0.001
+2023-06-25 23:53:52: This epoch took 2.07 s
+
+2023-06-25 23:53:52
+epoch:  122
+2023-06-25 23:53:54: train loss: 64.2917
+2023-06-25 23:53:54: lr: 0.001
+2023-06-25 23:53:54: This epoch took 2.14 s
+
+2023-06-25 23:53:54
+epoch:  123
+2023-06-25 23:53:56: train loss: 64.2509
+2023-06-25 23:53:56: lr: 0.001
+2023-06-25 23:53:56: This epoch took 2.11 s
+
+2023-06-25 23:53:56
+epoch:  124
+2023-06-25 23:53:58: train loss: 64.4811
+2023-06-25 23:53:58: lr: 0.001
+2023-06-25 23:53:58: This epoch took 2.02 s
+
+2023-06-25 23:53:58
+epoch:  125
+2023-06-25 23:54:00: train loss: 64.0133
+2023-06-25 23:54:16: validation foreground dice: ['0.6288']
+2023-06-25 23:54:16: current mean dice: 0.6288, best mean dice: 0.6448 at epoch 110
+2023-06-25 23:54:16: lr: 0.001
+2023-06-25 23:54:16: This epoch took 17.59 s
+
+2023-06-25 23:54:16
+epoch:  126
+2023-06-25 23:54:18: train loss: 64.4148
+2023-06-25 23:54:18: lr: 0.001
+2023-06-25 23:54:18: This epoch took 2.08 s
+
+2023-06-25 23:54:18
+epoch:  127
+2023-06-25 23:54:20: train loss: 63.2642
+2023-06-25 23:54:20: lr: 0.001
+2023-06-25 23:54:20: This epoch took 2.20 s
+
+2023-06-25 23:54:20
+epoch:  128
+2023-06-25 23:54:22: train loss: 63.2159
+2023-06-25 23:54:22: lr: 0.001
+2023-06-25 23:54:22: This epoch took 2.08 s
+
+2023-06-25 23:54:22
+epoch:  129
+2023-06-25 23:54:24: train loss: 62.8778
+2023-06-25 23:54:24: lr: 0.001
+2023-06-25 23:54:24: This epoch took 2.13 s
+
+2023-06-25 23:54:24
+epoch:  130
+2023-06-25 23:54:26: train loss: 64.2443
+2023-06-25 23:54:42: validation foreground dice: ['0.5532']
+2023-06-25 23:54:42: current mean dice: 0.5532, best mean dice: 0.6448 at epoch 110
+2023-06-25 23:54:42: lr: 0.001
+2023-06-25 23:54:42: This epoch took 17.67 s
+
+2023-06-25 23:54:42
+epoch:  131
+2023-06-25 23:54:44: train loss: 65.0530
+2023-06-25 23:54:44: lr: 0.001
+2023-06-25 23:54:44: This epoch took 2.14 s
+
+2023-06-25 23:54:44
+epoch:  132
+2023-06-25 23:54:46: train loss: 65.2737
+2023-06-25 23:54:46: lr: 0.001
+2023-06-25 23:54:46: This epoch took 2.24 s
+
+2023-06-25 23:54:46
+epoch:  133
+2023-06-25 23:54:48: train loss: 63.4328
+2023-06-25 23:54:48: lr: 0.001
+2023-06-25 23:54:48: This epoch took 2.10 s
+
+2023-06-25 23:54:48
+epoch:  134
+2023-06-25 23:54:50: train loss: 62.6146
+2023-06-25 23:54:50: lr: 0.001
+2023-06-25 23:54:50: This epoch took 2.10 s
+
+2023-06-25 23:54:50
+epoch:  135
+2023-06-25 23:54:53: train loss: 63.0947
+2023-06-25 23:55:08: validation foreground dice: ['0.5594']
+2023-06-25 23:55:08: current mean dice: 0.5594, best mean dice: 0.6448 at epoch 110
+2023-06-25 23:55:08: lr: 0.001
+2023-06-25 23:55:08: This epoch took 17.59 s
+
+2023-06-25 23:55:08
+epoch:  136
+2023-06-25 23:55:10: train loss: 63.2282
+2023-06-25 23:55:10: lr: 0.001
+2023-06-25 23:55:10: This epoch took 2.17 s
+
+2023-06-25 23:55:10
+epoch:  137
+2023-06-25 23:55:12: train loss: 62.2131
+2023-06-25 23:55:12: lr: 0.001
+2023-06-25 23:55:12: This epoch took 2.12 s
+
+2023-06-25 23:55:12
+epoch:  138
+2023-06-25 23:55:15: train loss: 63.6222
+2023-06-25 23:55:15: lr: 0.001
+2023-06-25 23:55:15: This epoch took 2.17 s
+
+2023-06-25 23:55:15
+epoch:  139
+2023-06-25 23:55:17: train loss: 63.0303
+2023-06-25 23:55:17: lr: 0.001
+2023-06-25 23:55:17: This epoch took 2.04 s
+
+2023-06-25 23:55:17
+epoch:  140
+2023-06-25 23:55:19: train loss: 63.0691
+2023-06-25 23:55:34: validation foreground dice: ['0.5886']
+2023-06-25 23:55:34: current mean dice: 0.5886, best mean dice: 0.6448 at epoch 110
+2023-06-25 23:55:34: lr: 0.001
+2023-06-25 23:55:34: This epoch took 17.77 s
+
+2023-06-25 23:55:34
+epoch:  141
+2023-06-25 23:55:36: train loss: 62.5038
+2023-06-25 23:55:36: lr: 0.001
+2023-06-25 23:55:36: This epoch took 2.08 s
+
+2023-06-25 23:55:36
+epoch:  142
+2023-06-25 23:55:38: train loss: 63.7547
+2023-06-25 23:55:38: lr: 0.001
+2023-06-25 23:55:38: This epoch took 2.06 s
+
+2023-06-25 23:55:38
+epoch:  143
+2023-06-25 23:55:41: train loss: 62.9081
+2023-06-25 23:55:41: lr: 0.001
+2023-06-25 23:55:41: This epoch took 2.13 s
+
+2023-06-25 23:55:41
+epoch:  144
+2023-06-25 23:55:43: train loss: 64.7547
+2023-06-25 23:55:43: lr: 0.001
+2023-06-25 23:55:43: This epoch took 2.17 s
+
+2023-06-25 23:55:43
+epoch:  145
+2023-06-25 23:55:45: train loss: 62.6496
+2023-06-25 23:56:00: validation foreground dice: ['0.5605']
+2023-06-25 23:56:00: current mean dice: 0.5605, best mean dice: 0.6448 at epoch 110
+2023-06-25 23:56:01: lr: 0.001
+2023-06-25 23:56:01: This epoch took 17.73 s
+
+2023-06-25 23:56:01
+epoch:  146
+2023-06-25 23:56:03: train loss: 63.5672
+2023-06-25 23:56:03: lr: 0.001
+2023-06-25 23:56:03: This epoch took 2.12 s
+
+2023-06-25 23:56:03
+epoch:  147
+2023-06-25 23:56:05: train loss: 63.5464
+2023-06-25 23:56:05: lr: 0.001
+2023-06-25 23:56:05: This epoch took 2.10 s
+
+2023-06-25 23:56:05
+epoch:  148
+2023-06-25 23:56:07: train loss: 63.6004
+2023-06-25 23:56:07: lr: 0.001
+2023-06-25 23:56:07: This epoch took 2.04 s
+
+2023-06-25 23:56:07
+epoch:  149
+2023-06-25 23:56:09: train loss: 61.6449
+2023-06-25 23:56:09: lr: 0.001
+2023-06-25 23:56:09: This epoch took 2.22 s
+
+2023-06-25 23:56:09
+epoch:  150
+2023-06-25 23:56:11: train loss: 62.7462
+2023-06-25 23:56:26: validation foreground dice: ['0.5358']
+2023-06-25 23:56:26: current mean dice: 0.5358, best mean dice: 0.6448 at epoch 110
+2023-06-25 23:56:27: lr: 0.001
+2023-06-25 23:56:27: This epoch took 17.52 s
+
+2023-06-25 23:56:27
+epoch:  151
+2023-06-25 23:56:29: train loss: 62.0189
+2023-06-25 23:56:29: lr: 0.001
+2023-06-25 23:56:29: This epoch took 2.17 s
+
+2023-06-25 23:56:29
+epoch:  152
+2023-06-25 23:56:31: train loss: 63.1828
+2023-06-25 23:56:31: lr: 0.001
+2023-06-25 23:56:31: This epoch took 2.06 s
+
+2023-06-25 23:56:31
+epoch:  153
+2023-06-25 23:56:33: train loss: 64.1165
+2023-06-25 23:56:33: lr: 0.001
+2023-06-25 23:56:33: This epoch took 2.09 s
+
+2023-06-25 23:56:33
+epoch:  154
+2023-06-25 23:56:35: train loss: 62.1809
+2023-06-25 23:56:35: lr: 0.001
+2023-06-25 23:56:35: This epoch took 2.15 s
+
+2023-06-25 23:56:35
+epoch:  155
+2023-06-25 23:56:37: train loss: 61.5824
+2023-06-25 23:56:53: validation foreground dice: ['0.6180']
+2023-06-25 23:56:53: current mean dice: 0.6180, best mean dice: 0.6448 at epoch 110
+2023-06-25 23:56:53: lr: 0.001
+2023-06-25 23:56:53: This epoch took 17.68 s
+
+2023-06-25 23:56:53
+epoch:  156
+2023-06-25 23:56:55: train loss: 63.9489
+2023-06-25 23:56:55: lr: 0.001
+2023-06-25 23:56:55: This epoch took 2.08 s
+
+2023-06-25 23:56:55
+epoch:  157
+2023-06-25 23:56:57: train loss: 61.6809
+2023-06-25 23:56:57: lr: 0.001
+2023-06-25 23:56:57: This epoch took 2.03 s
+
+2023-06-25 23:56:57
+epoch:  158
+2023-06-25 23:56:59: train loss: 62.4943
+2023-06-25 23:56:59: lr: 0.001
+2023-06-25 23:56:59: This epoch took 2.08 s
+
+2023-06-25 23:56:59
+epoch:  159
+2023-06-25 23:57:01: train loss: 62.4744
+2023-06-25 23:57:01: lr: 0.001
+2023-06-25 23:57:01: This epoch took 2.10 s
+
+2023-06-25 23:57:01
+epoch:  160
+2023-06-25 23:57:03: train loss: 62.8362
+2023-06-25 23:57:18: validation foreground dice: ['0.6141']
+2023-06-25 23:57:18: current mean dice: 0.6141, best mean dice: 0.6448 at epoch 110
+2023-06-25 23:57:18: lr: 0.001
+2023-06-25 23:57:18: This epoch took 17.54 s
+
+2023-06-25 23:57:18
+epoch:  161
+2023-06-25 23:57:21: train loss: 62.9896
+2023-06-25 23:57:21: lr: 0.001
+2023-06-25 23:57:21: This epoch took 2.13 s
+
+2023-06-25 23:57:21
+epoch:  162
+2023-06-25 23:57:23: train loss: 61.6932
+2023-06-25 23:57:23: lr: 0.001
+2023-06-25 23:57:23: This epoch took 2.06 s
+
+2023-06-25 23:57:23
+epoch:  163
+2023-06-25 23:57:25: train loss: 61.9744
+2023-06-25 23:57:25: lr: 0.001
+2023-06-25 23:57:25: This epoch took 2.19 s
+
+2023-06-25 23:57:25
+epoch:  164
+2023-06-25 23:57:27: train loss: 61.2964
+2023-06-25 23:57:27: lr: 0.001
+2023-06-25 23:57:27: This epoch took 2.16 s
+
+2023-06-25 23:57:27
+epoch:  165
+2023-06-25 23:57:29: train loss: 62.1989
+2023-06-25 23:57:45: validation foreground dice: ['0.5843']
+2023-06-25 23:57:45: current mean dice: 0.5843, best mean dice: 0.6448 at epoch 110
+2023-06-25 23:57:45: lr: 0.001
+2023-06-25 23:57:45: This epoch took 17.74 s
+
+2023-06-25 23:57:45
+epoch:  166
+2023-06-25 23:57:47: train loss: 62.0426
+2023-06-25 23:57:47: lr: 0.001
+2023-06-25 23:57:47: This epoch took 2.19 s
+
+2023-06-25 23:57:47
+epoch:  167
+2023-06-25 23:57:49: train loss: 62.2405
+2023-06-25 23:57:49: lr: 0.001
+2023-06-25 23:57:49: This epoch took 2.09 s
+
+2023-06-25 23:57:49
+epoch:  168
+2023-06-25 23:57:51: train loss: 61.7879
+2023-06-25 23:57:51: lr: 0.001
+2023-06-25 23:57:51: This epoch took 2.09 s
+
+2023-06-25 23:57:51
+epoch:  169
+2023-06-25 23:57:53: train loss: 62.2386
+2023-06-25 23:57:53: lr: 0.001
+2023-06-25 23:57:53: This epoch took 2.12 s
+
+2023-06-25 23:57:53
+epoch:  170
+2023-06-25 23:57:55: train loss: 61.9716
+2023-06-25 23:58:11: validation foreground dice: ['0.5159']
+2023-06-25 23:58:11: current mean dice: 0.5159, best mean dice: 0.6448 at epoch 110
+2023-06-25 23:58:11: lr: 0.001
+2023-06-25 23:58:11: This epoch took 17.57 s
+
+2023-06-25 23:58:11
+epoch:  171
+2023-06-25 23:58:13: train loss: 61.2396
+2023-06-25 23:58:13: lr: 0.001
+2023-06-25 23:58:13: This epoch took 2.09 s
+
+2023-06-25 23:58:13
+epoch:  172
+2023-06-25 23:58:15: train loss: 60.7585
+2023-06-25 23:58:15: lr: 0.001
+2023-06-25 23:58:15: This epoch took 2.12 s
+
+2023-06-25 23:58:15
+epoch:  173
+2023-06-25 23:58:17: train loss: 62.1146
+2023-06-25 23:58:17: lr: 0.001
+2023-06-25 23:58:17: This epoch took 2.10 s
+
+2023-06-25 23:58:17
+epoch:  174
+2023-06-25 23:58:19: train loss: 62.6364
+2023-06-25 23:58:19: lr: 0.001
+2023-06-25 23:58:19: This epoch took 2.16 s
+
+2023-06-25 23:58:19
+epoch:  175
+2023-06-25 23:58:21: train loss: 61.8182
+2023-06-25 23:58:37: validation foreground dice: ['0.4880']
+2023-06-25 23:58:37: current mean dice: 0.4880, best mean dice: 0.6448 at epoch 110
+2023-06-25 23:58:37: lr: 0.001
+2023-06-25 23:58:37: This epoch took 17.67 s
+
+2023-06-25 23:58:37
+epoch:  176
+2023-06-25 23:58:39: train loss: 61.4242
+2023-06-25 23:58:39: lr: 0.001
+2023-06-25 23:58:39: This epoch took 2.08 s
+
+2023-06-25 23:58:39
+epoch:  177
+2023-06-25 23:58:41: train loss: 62.3239
+2023-06-25 23:58:41: lr: 0.001
+2023-06-25 23:58:41: This epoch took 2.26 s
+
+2023-06-25 23:58:41
+epoch:  178
+2023-06-25 23:58:43: train loss: 60.8731
+2023-06-25 23:58:43: lr: 0.001
+2023-06-25 23:58:43: This epoch took 2.10 s
+
+2023-06-25 23:58:43
+epoch:  179
+2023-06-25 23:58:46: train loss: 61.2765
+2023-06-25 23:58:46: lr: 0.001
+2023-06-25 23:58:46: This epoch took 2.17 s
+
+2023-06-25 23:58:46
+epoch:  180
+2023-06-25 23:58:48: train loss: 61.6089
+2023-06-25 23:59:03: validation foreground dice: ['0.5371']
+2023-06-25 23:59:03: current mean dice: 0.5371, best mean dice: 0.6448 at epoch 110
+2023-06-25 23:59:03: lr: 0.001
+2023-06-25 23:59:03: This epoch took 17.52 s
+
+2023-06-25 23:59:03
+epoch:  181
+2023-06-25 23:59:05: train loss: 63.2396
+2023-06-25 23:59:05: lr: 0.001
+2023-06-25 23:59:05: This epoch took 2.13 s
+
+2023-06-25 23:59:05
+epoch:  182
+2023-06-25 23:59:07: train loss: 60.9716
+2023-06-25 23:59:07: lr: 0.001
+2023-06-25 23:59:07: This epoch took 2.13 s
+
+2023-06-25 23:59:07
+epoch:  183
+2023-06-25 23:59:09: train loss: 60.2036
+2023-06-25 23:59:09: lr: 0.001
+2023-06-25 23:59:09: This epoch took 2.10 s
+
+2023-06-25 23:59:09
+epoch:  184
+2023-06-25 23:59:12: train loss: 63.4157
+2023-06-25 23:59:12: lr: 0.001
+2023-06-25 23:59:12: This epoch took 2.20 s
+
+2023-06-25 23:59:12
+epoch:  185
+2023-06-25 23:59:14: train loss: 60.8741
+2023-06-25 23:59:29: validation foreground dice: ['0.5820']
+2023-06-25 23:59:29: current mean dice: 0.5820, best mean dice: 0.6448 at epoch 110
+2023-06-25 23:59:30: lr: 0.001
+2023-06-25 23:59:30: This epoch took 17.84 s
+
+2023-06-25 23:59:30
+epoch:  186
+2023-06-25 23:59:32: train loss: 60.7756
+2023-06-25 23:59:32: lr: 0.001
+2023-06-25 23:59:32: This epoch took 2.23 s
+
+2023-06-25 23:59:32
+epoch:  187
+2023-06-25 23:59:34: train loss: 61.1127
+2023-06-25 23:59:34: lr: 0.001
+2023-06-25 23:59:34: This epoch took 2.14 s
+
+2023-06-25 23:59:34
+epoch:  188
+2023-06-25 23:59:36: train loss: 60.5814
+2023-06-25 23:59:36: lr: 0.001
+2023-06-25 23:59:36: This epoch took 2.22 s
+
+2023-06-25 23:59:36
+epoch:  189
+2023-06-25 23:59:38: train loss: 61.3428
+2023-06-25 23:59:38: lr: 0.001
+2023-06-25 23:59:38: This epoch took 2.17 s
+
+2023-06-25 23:59:38
+epoch:  190
+2023-06-25 23:59:40: train loss: 60.0701
+2023-06-25 23:59:56: validation foreground dice: ['0.5558']
+2023-06-25 23:59:56: current mean dice: 0.5558, best mean dice: 0.6448 at epoch 110
+2023-06-25 23:59:56: lr: 0.001
+2023-06-25 23:59:56: This epoch took 17.72 s
+
+2023-06-25 23:59:56
+epoch:  191
+2023-06-25 23:59:58: train loss: 60.3428
+2023-06-25 23:59:58: lr: 0.001
+2023-06-25 23:59:58: This epoch took 2.13 s
+
+2023-06-25 23:59:58
+epoch:  192
+2023-06-26 00:00:00: train loss: 61.2509
+2023-06-26 00:00:00: lr: 0.001
+2023-06-26 00:00:00: This epoch took 2.18 s
+
+2023-06-26 00:00:00
+epoch:  193
+2023-06-26 00:00:02: train loss: 60.6913
+2023-06-26 00:00:02: lr: 0.001
+2023-06-26 00:00:02: This epoch took 2.13 s
+
+2023-06-26 00:00:02
+epoch:  194
+2023-06-26 00:00:05: train loss: 60.4716
+2023-06-26 00:00:05: lr: 0.001
+2023-06-26 00:00:05: This epoch took 2.25 s
+
+2023-06-26 00:00:05
+epoch:  195
+2023-06-26 00:00:07: train loss: 60.4612
+2023-06-26 00:00:22: validation foreground dice: ['0.6091']
+2023-06-26 00:00:22: current mean dice: 0.6091, best mean dice: 0.6448 at epoch 110
+2023-06-26 00:00:22: lr: 0.001
+2023-06-26 00:00:22: This epoch took 17.77 s
+
+2023-06-26 00:00:22
+epoch:  196
+2023-06-26 00:00:25: train loss: 61.1250
+2023-06-26 00:00:25: lr: 0.001
+2023-06-26 00:00:25: This epoch took 2.16 s
+
+2023-06-26 00:00:25
+epoch:  197
+2023-06-26 00:00:27: train loss: 60.8627
+2023-06-26 00:00:27: lr: 0.001
+2023-06-26 00:00:27: This epoch took 2.15 s
+
+2023-06-26 00:00:27
+epoch:  198
+2023-06-26 00:00:29: train loss: 60.6193
+2023-06-26 00:00:29: lr: 0.001
+2023-06-26 00:00:29: This epoch took 2.07 s
+
+2023-06-26 00:00:29
+epoch:  199
+2023-06-26 00:00:31: train loss: 61.9081
+2023-06-26 00:00:31: lr: 0.001
+2023-06-26 00:00:31: This epoch took 2.17 s
+
+2023-06-26 00:00:31
+epoch:  200
+2023-06-26 00:00:33: train loss: 61.2415
+2023-06-26 00:00:49: validation foreground dice: ['0.5497']
+2023-06-26 00:00:49: current mean dice: 0.5497, best mean dice: 0.6448 at epoch 110
+2023-06-26 00:00:49: lr: 0.001
+2023-06-26 00:00:49: This epoch took 17.78 s
+
+2023-06-26 00:00:49
+epoch:  201
+2023-06-26 00:00:51: train loss: 60.2405
+2023-06-26 00:00:51: lr: 0.001
+2023-06-26 00:00:51: This epoch took 2.07 s
+
+2023-06-26 00:00:51
+epoch:  202
+2023-06-26 00:00:53: train loss: 59.5312
+2023-06-26 00:00:53: lr: 0.001
+2023-06-26 00:00:53: This epoch took 2.11 s
+
+2023-06-26 00:00:53
+epoch:  203
+2023-06-26 00:00:55: train loss: 60.9081
+2023-06-26 00:00:55: lr: 0.001
+2023-06-26 00:00:55: This epoch took 2.08 s
+
+2023-06-26 00:00:55
+epoch:  204
+2023-06-26 00:00:57: train loss: 60.5521
+2023-06-26 00:00:57: lr: 0.001
+2023-06-26 00:00:57: This epoch took 2.11 s
+
+2023-06-26 00:00:57
+epoch:  205
+2023-06-26 00:00:59: train loss: 61.3106
+2023-06-26 00:01:15: validation foreground dice: ['0.5894']
+2023-06-26 00:01:15: current mean dice: 0.5894, best mean dice: 0.6448 at epoch 110
+2023-06-26 00:01:15: lr: 0.001
+2023-06-26 00:01:15: This epoch took 17.70 s
+
+2023-06-26 00:01:15
+epoch:  206
+2023-06-26 00:01:17: train loss: 60.5663
+2023-06-26 00:01:17: lr: 0.001
+2023-06-26 00:01:17: This epoch took 2.13 s
+
+2023-06-26 00:01:17
+epoch:  207
+2023-06-26 00:01:19: train loss: 60.1070
+2023-06-26 00:01:19: lr: 0.001
+2023-06-26 00:01:19: This epoch took 2.23 s
+
+2023-06-26 00:01:19
+epoch:  208
+2023-06-26 00:01:21: train loss: 60.4905
+2023-06-26 00:01:21: lr: 0.001
+2023-06-26 00:01:21: This epoch took 2.05 s
+
+2023-06-26 00:01:21
+epoch:  209
+2023-06-26 00:01:23: train loss: 59.9375
+2023-06-26 00:01:23: lr: 0.001
+2023-06-26 00:01:23: This epoch took 2.10 s
+
+2023-06-26 00:01:23
+epoch:  210
+2023-06-26 00:01:25: train loss: 60.6619
+2023-06-26 00:01:41: validation foreground dice: ['0.6096']
+2023-06-26 00:01:41: current mean dice: 0.6096, best mean dice: 0.6448 at epoch 110
+2023-06-26 00:01:41: lr: 0.001
+2023-06-26 00:01:41: This epoch took 17.44 s
+
+2023-06-26 00:01:41
+epoch:  211
+2023-06-26 00:01:43: train loss: 59.8409
+2023-06-26 00:01:43: lr: 0.001
+2023-06-26 00:01:43: This epoch took 2.10 s
+
+2023-06-26 00:01:43
+epoch:  212
+2023-06-26 00:01:45: train loss: 60.3608
+2023-06-26 00:01:45: lr: 0.001
+2023-06-26 00:01:45: This epoch took 2.06 s
+
+2023-06-26 00:01:45
+epoch:  213
+2023-06-26 00:01:47: train loss: 59.9119
+2023-06-26 00:01:47: lr: 0.001
+2023-06-26 00:01:47: This epoch took 2.02 s
+
+2023-06-26 00:01:47
+epoch:  214
+2023-06-26 00:01:49: train loss: 60.3750
+2023-06-26 00:01:49: lr: 0.001
+2023-06-26 00:01:49: This epoch took 2.11 s
+
+2023-06-26 00:01:49
+epoch:  215
+2023-06-26 00:01:51: train loss: 59.8277
+2023-06-26 00:02:06: validation foreground dice: ['0.5845']
+2023-06-26 00:02:06: current mean dice: 0.5845, best mean dice: 0.6448 at epoch 110
+2023-06-26 00:02:07: lr: 0.001
+2023-06-26 00:02:07: This epoch took 17.44 s
+
+2023-06-26 00:02:07
+epoch:  216
+2023-06-26 00:02:09: train loss: 60.7036
+2023-06-26 00:02:09: lr: 0.001
+2023-06-26 00:02:09: This epoch took 2.15 s
+
+2023-06-26 00:02:09
+epoch:  217
+2023-06-26 00:02:11: train loss: 60.8504
+2023-06-26 00:02:11: lr: 0.001
+2023-06-26 00:02:11: This epoch took 2.11 s
+
+2023-06-26 00:02:11
+epoch:  218
+2023-06-26 00:02:13: train loss: 60.2699
+2023-06-26 00:02:13: lr: 0.001
+2023-06-26 00:02:13: This epoch took 2.06 s
+
+2023-06-26 00:02:13
+epoch:  219
+2023-06-26 00:02:15: train loss: 60.9119
+2023-06-26 00:02:15: lr: 0.001
+2023-06-26 00:02:15: This epoch took 2.07 s
+
+2023-06-26 00:02:15
+epoch:  220
+2023-06-26 00:02:17: train loss: 60.2036
+2023-06-26 00:02:32: validation foreground dice: ['0.6226']
+2023-06-26 00:02:32: current mean dice: 0.6226, best mean dice: 0.6448 at epoch 110
+2023-06-26 00:02:33: lr: 0.001
+2023-06-26 00:02:33: This epoch took 17.57 s
+
+2023-06-26 00:02:33
+epoch:  221
+2023-06-26 00:02:35: train loss: 60.5767
+2023-06-26 00:02:35: lr: 0.001
+2023-06-26 00:02:35: This epoch took 2.25 s
+
+2023-06-26 00:02:35
+epoch:  222
+2023-06-26 00:02:37: train loss: 62.0218
+2023-06-26 00:02:37: lr: 0.001
+2023-06-26 00:02:37: This epoch took 2.13 s
+
+2023-06-26 00:02:37
+epoch:  223
+2023-06-26 00:02:39: train loss: 60.4943
+2023-06-26 00:02:39: lr: 0.001
+2023-06-26 00:02:39: This epoch took 2.05 s
+
+2023-06-26 00:02:39
+epoch:  224
+2023-06-26 00:02:41: train loss: 60.1799
+2023-06-26 00:02:41: lr: 0.001
+2023-06-26 00:02:41: This epoch took 2.12 s
+
+2023-06-26 00:02:41
+epoch:  225
+2023-06-26 00:02:43: train loss: 60.1042
+2023-06-26 00:02:59: validation foreground dice: ['0.6381']
+2023-06-26 00:02:59: current mean dice: 0.6381, best mean dice: 0.6448 at epoch 110
+2023-06-26 00:02:59: lr: 0.001
+2023-06-26 00:02:59: This epoch took 17.69 s
+
+2023-06-26 00:02:59
+epoch:  226
+2023-06-26 00:03:01: train loss: 60.4110
+2023-06-26 00:03:01: lr: 0.001
+2023-06-26 00:03:01: This epoch took 2.07 s
+
+2023-06-26 00:03:01
+epoch:  227
+2023-06-26 00:03:03: train loss: 60.9044
+2023-06-26 00:03:03: lr: 0.001
+2023-06-26 00:03:03: This epoch took 2.18 s
+
+2023-06-26 00:03:03
+epoch:  228
+2023-06-26 00:03:05: train loss: 60.9006
+2023-06-26 00:03:05: lr: 0.001
+2023-06-26 00:03:05: This epoch took 2.17 s
+
+2023-06-26 00:03:05
+epoch:  229
+2023-06-26 00:03:07: train loss: 59.3428
+2023-06-26 00:03:07: lr: 0.001
+2023-06-26 00:03:07: This epoch took 2.19 s
+
+2023-06-26 00:03:07
+epoch:  230
+2023-06-26 00:03:09: train loss: 60.7159
+2023-06-26 00:03:25: validation foreground dice: ['0.5813']
+2023-06-26 00:03:25: current mean dice: 0.5813, best mean dice: 0.6448 at epoch 110
+2023-06-26 00:03:25: lr: 0.001
+2023-06-26 00:03:25: This epoch took 17.56 s
+
+2023-06-26 00:03:25
+epoch:  231
+2023-06-26 00:03:27: train loss: 60.0682
+2023-06-26 00:03:27: lr: 0.001
+2023-06-26 00:03:27: This epoch took 2.12 s
+
+2023-06-26 00:03:27
+epoch:  232
+2023-06-26 00:03:29: train loss: 60.7604
+2023-06-26 00:03:29: lr: 0.001
+2023-06-26 00:03:29: This epoch took 2.14 s
+
+2023-06-26 00:03:29
+epoch:  233
+2023-06-26 00:03:31: train loss: 60.5578
+2023-06-26 00:03:31: lr: 0.001
+2023-06-26 00:03:31: This epoch took 2.11 s
+
+2023-06-26 00:03:31
+epoch:  234
+2023-06-26 00:03:33: train loss: 59.7273
+2023-06-26 00:03:33: lr: 0.001
+2023-06-26 00:03:33: This epoch took 2.09 s
+
+2023-06-26 00:03:33
+epoch:  235
+2023-06-26 00:03:35: train loss: 60.5900
+2023-06-26 00:03:51: validation foreground dice: ['0.5530']
+2023-06-26 00:03:51: current mean dice: 0.5530, best mean dice: 0.6448 at epoch 110
+2023-06-26 00:03:51: lr: 0.001
+2023-06-26 00:03:51: This epoch took 17.67 s
+
+2023-06-26 00:03:51
+epoch:  236
+2023-06-26 00:03:53: train loss: 60.0985
+2023-06-26 00:03:53: lr: 0.001
+2023-06-26 00:03:53: This epoch took 2.15 s
+
+2023-06-26 00:03:53
+epoch:  237
+2023-06-26 00:03:55: train loss: 59.1932
+2023-06-26 00:03:55: lr: 0.001
+2023-06-26 00:03:55: This epoch took 2.08 s
+
+2023-06-26 00:03:55
+epoch:  238
+2023-06-26 00:03:58: train loss: 60.0985
+2023-06-26 00:03:58: lr: 0.001
+2023-06-26 00:03:58: This epoch took 2.26 s
+
+2023-06-26 00:03:58
+epoch:  239
+2023-06-26 00:04:00: train loss: 60.5767
+2023-06-26 00:04:00: lr: 0.001
+2023-06-26 00:04:00: This epoch took 2.04 s
+
+2023-06-26 00:04:00
+epoch:  240
+2023-06-26 00:04:02: train loss: 60.2064
+2023-06-26 00:04:17: validation foreground dice: ['0.5951']
+2023-06-26 00:04:17: current mean dice: 0.5951, best mean dice: 0.6448 at epoch 110
+2023-06-26 00:04:17: lr: 0.001
+2023-06-26 00:04:17: This epoch took 17.50 s
+
+2023-06-26 00:04:17
+epoch:  241
+2023-06-26 00:04:19: train loss: 59.9290
+2023-06-26 00:04:19: lr: 0.001
+2023-06-26 00:04:19: This epoch took 2.11 s
+
+2023-06-26 00:04:19
+epoch:  242
+2023-06-26 00:04:21: train loss: 60.4242
+2023-06-26 00:04:21: lr: 0.001
+2023-06-26 00:04:21: This epoch took 2.07 s
+
+2023-06-26 00:04:21
+epoch:  243
+2023-06-26 00:04:23: train loss: 59.2831
+2023-06-26 00:04:23: lr: 0.001
+2023-06-26 00:04:23: This epoch took 2.21 s
+
+2023-06-26 00:04:23
+epoch:  244
+2023-06-26 00:04:26: train loss: 59.7794
+2023-06-26 00:04:26: lr: 0.001
+2023-06-26 00:04:26: This epoch took 2.12 s
+
+2023-06-26 00:04:26
+epoch:  245
+2023-06-26 00:04:28: train loss: 60.2197
+2023-06-26 00:04:43: validation foreground dice: ['0.6221']
+2023-06-26 00:04:43: current mean dice: 0.6221, best mean dice: 0.6448 at epoch 110
+2023-06-26 00:04:43: lr: 0.001
+2023-06-26 00:04:43: This epoch took 17.60 s
+
+2023-06-26 00:04:43
+epoch:  246
+2023-06-26 00:04:45: train loss: 59.9602
+2023-06-26 00:04:45: lr: 0.001
+2023-06-26 00:04:45: This epoch took 2.15 s
+
+2023-06-26 00:04:45
+epoch:  247
+2023-06-26 00:04:48: train loss: 59.9943
+2023-06-26 00:04:48: lr: 0.001
+2023-06-26 00:04:48: This epoch took 2.20 s
+
+2023-06-26 00:04:48
+epoch:  248
+2023-06-26 00:04:50: train loss: 58.8295
+2023-06-26 00:04:50: lr: 0.001
+2023-06-26 00:04:50: This epoch took 2.11 s
+
+2023-06-26 00:04:50
+epoch:  249
+2023-06-26 00:04:52: train loss: 59.4650
+2023-06-26 00:04:52: lr: 0.001
+2023-06-26 00:04:52: This epoch took 2.03 s
+
+2023-06-26 00:04:52
+epoch:  250
+2023-06-26 00:04:54: train loss: 60.9366
+2023-06-26 00:05:09: validation foreground dice: ['0.5832']
+2023-06-26 00:05:09: current mean dice: 0.5832, best mean dice: 0.6448 at epoch 110
+2023-06-26 00:05:09: lr: 0.001
+2023-06-26 00:05:09: This epoch took 17.46 s
+
+2023-06-26 00:05:09
+epoch:  251
+2023-06-26 00:05:11: train loss: 59.5142
+2023-06-26 00:05:11: lr: 0.001
+2023-06-26 00:05:11: This epoch took 2.09 s
+
+2023-06-26 00:05:11
+epoch:  252
+2023-06-26 00:05:13: train loss: 60.2424
+2023-06-26 00:05:13: lr: 0.001
+2023-06-26 00:05:13: This epoch took 2.10 s
+
+2023-06-26 00:05:13
+epoch:  253
+2023-06-26 00:05:16: train loss: 60.0653
+2023-06-26 00:05:16: lr: 0.001
+2023-06-26 00:05:16: This epoch took 2.19 s
+
+2023-06-26 00:05:16
+epoch:  254
+2023-06-26 00:05:18: train loss: 59.4697
+2023-06-26 00:05:18: lr: 0.001
+2023-06-26 00:05:18: This epoch took 2.19 s
+
+2023-06-26 00:05:18
+epoch:  255
+2023-06-26 00:05:20: train loss: 59.2604
+2023-06-26 00:05:35: validation foreground dice: ['0.5297']
+2023-06-26 00:05:35: current mean dice: 0.5297, best mean dice: 0.6448 at epoch 110
+2023-06-26 00:05:35: lr: 0.001
+2023-06-26 00:05:35: This epoch took 17.62 s
+
+2023-06-26 00:05:35
+epoch:  256
+2023-06-26 00:05:37: train loss: 59.7140
+2023-06-26 00:05:37: lr: 0.001
+2023-06-26 00:05:37: This epoch took 2.11 s
+
+2023-06-26 00:05:37
+epoch:  257
+2023-06-26 00:05:40: train loss: 59.2339
+2023-06-26 00:05:40: lr: 0.001
+2023-06-26 00:05:40: This epoch took 2.10 s
+
+2023-06-26 00:05:40
+epoch:  258
+2023-06-26 00:05:42: train loss: 59.7235
+2023-06-26 00:05:42: lr: 0.001
+2023-06-26 00:05:42: This epoch took 2.16 s
+
+2023-06-26 00:05:42
+epoch:  259
+2023-06-26 00:05:44: train loss: 58.6269
+2023-06-26 00:05:44: lr: 0.001
+2023-06-26 00:05:44: This epoch took 2.09 s
+
+2023-06-26 00:05:44
+epoch:  260
+2023-06-26 00:05:46: train loss: 59.3447
+2023-06-26 00:06:01: validation foreground dice: ['0.6390']
+2023-06-26 00:06:01: current mean dice: 0.6390, best mean dice: 0.6448 at epoch 110
+2023-06-26 00:06:01: lr: 0.001
+2023-06-26 00:06:01: This epoch took 17.60 s
+
+2023-06-26 00:06:01
+epoch:  261
+2023-06-26 00:06:04: train loss: 59.1515
+2023-06-26 00:06:04: lr: 0.001
+2023-06-26 00:06:04: This epoch took 2.19 s
+
+2023-06-26 00:06:04
+epoch:  262
+2023-06-26 00:06:06: train loss: 58.4858
+2023-06-26 00:06:06: lr: 0.001
+2023-06-26 00:06:06: This epoch took 2.16 s
+
+2023-06-26 00:06:06
+epoch:  263
+2023-06-26 00:06:08: train loss: 59.1354
+2023-06-26 00:06:08: lr: 0.001
+2023-06-26 00:06:08: This epoch took 2.16 s
+
+2023-06-26 00:06:08
+epoch:  264
+2023-06-26 00:06:10: train loss: 59.6108
+2023-06-26 00:06:10: lr: 0.001
+2023-06-26 00:06:10: This epoch took 2.14 s
+
+2023-06-26 00:06:10
+epoch:  265
+2023-06-26 00:06:12: train loss: 59.8153
+2023-06-26 00:06:28: validation foreground dice: ['0.5739']
+2023-06-26 00:06:28: current mean dice: 0.5739, best mean dice: 0.6448 at epoch 110
+2023-06-26 00:06:28: lr: 0.001
+2023-06-26 00:06:28: This epoch took 17.67 s
+
+2023-06-26 00:06:28
+epoch:  266
+2023-06-26 00:06:30: train loss: 59.6042
+2023-06-26 00:06:30: lr: 0.001
+2023-06-26 00:06:30: This epoch took 2.10 s
+
+2023-06-26 00:06:30
+epoch:  267
+2023-06-26 00:06:32: train loss: 60.9612
+2023-06-26 00:06:32: lr: 0.001
+2023-06-26 00:06:32: This epoch took 2.19 s
+
+2023-06-26 00:06:32
+epoch:  268
+2023-06-26 00:06:34: train loss: 58.7869
+2023-06-26 00:06:34: lr: 0.001
+2023-06-26 00:06:34: This epoch took 2.09 s
+
+2023-06-26 00:06:34
+epoch:  269
+2023-06-26 00:06:36: train loss: 59.7576
+2023-06-26 00:06:36: lr: 0.001
+2023-06-26 00:06:36: This epoch took 2.15 s
+
+2023-06-26 00:06:36
+epoch:  270
+2023-06-26 00:06:38: train loss: 59.7339
+2023-06-26 00:06:54: validation foreground dice: ['0.5692']
+2023-06-26 00:06:54: current mean dice: 0.5692, best mean dice: 0.6448 at epoch 110
+2023-06-26 00:06:54: lr: 0.001
+2023-06-26 00:06:54: This epoch took 17.63 s
+
+2023-06-26 00:06:54
+epoch:  271
+2023-06-26 00:06:56: train loss: 58.7112
+2023-06-26 00:06:56: lr: 0.001
+2023-06-26 00:06:56: This epoch took 2.16 s
+
+2023-06-26 00:06:56
+epoch:  272
+2023-06-26 00:06:58: train loss: 59.1373
+2023-06-26 00:06:58: lr: 0.001
+2023-06-26 00:06:58: This epoch took 2.09 s
+
+2023-06-26 00:06:58
+epoch:  273
+2023-06-26 00:07:00: train loss: 58.6998
+2023-06-26 00:07:00: lr: 0.001
+2023-06-26 00:07:00: This epoch took 2.15 s
+
+2023-06-26 00:07:00
+epoch:  274
+2023-06-26 00:07:02: train loss: 58.8561
+2023-06-26 00:07:02: lr: 0.001
+2023-06-26 00:07:02: This epoch took 2.11 s
+
+2023-06-26 00:07:02
+epoch:  275
+2023-06-26 00:07:04: train loss: 59.4527
+2023-06-26 00:07:20: validation foreground dice: ['0.6029']
+2023-06-26 00:07:20: current mean dice: 0.6029, best mean dice: 0.6448 at epoch 110
+2023-06-26 00:07:20: lr: 0.001
+2023-06-26 00:07:20: This epoch took 17.50 s
+
+2023-06-26 00:07:20
+epoch:  276
+2023-06-26 00:07:22: train loss: 59.0407
+2023-06-26 00:07:22: lr: 0.001
+2023-06-26 00:07:22: This epoch took 2.04 s
+
+2023-06-26 00:07:22
+epoch:  277
+2023-06-26 00:07:24: train loss: 59.7178
+2023-06-26 00:07:24: lr: 0.001
+2023-06-26 00:07:24: This epoch took 2.13 s
+
+2023-06-26 00:07:24
+epoch:  278
+2023-06-26 00:07:26: train loss: 59.0701
+2023-06-26 00:07:26: lr: 0.001
+2023-06-26 00:07:26: This epoch took 2.08 s
+
+2023-06-26 00:07:26
+epoch:  279
+2023-06-26 00:07:28: train loss: 59.3977
+2023-06-26 00:07:28: lr: 0.001
+2023-06-26 00:07:28: This epoch took 2.14 s
+
+2023-06-26 00:07:28
+epoch:  280
+2023-06-26 00:07:30: train loss: 59.2803
+2023-06-26 00:07:47: validation foreground dice: ['0.5827']
+2023-06-26 00:07:47: current mean dice: 0.5827, best mean dice: 0.6448 at epoch 110
+2023-06-26 00:07:47: lr: 0.001
+2023-06-26 00:07:47: This epoch took 18.74 s
+
+2023-06-26 00:07:47
+epoch:  281
+2023-06-26 00:07:49: train loss: 59.5341
+2023-06-26 00:07:49: lr: 0.001
+2023-06-26 00:07:49: This epoch took 2.10 s
+
+2023-06-26 00:07:49
+epoch:  282
+2023-06-26 00:07:51: train loss: 58.7973
+2023-06-26 00:07:51: lr: 0.001
+2023-06-26 00:07:51: This epoch took 2.12 s
+
+2023-06-26 00:07:51
+epoch:  283
+2023-06-26 00:07:53: train loss: 59.1259
+2023-06-26 00:07:53: lr: 0.001
+2023-06-26 00:07:53: This epoch took 2.18 s
+
+2023-06-26 00:07:53
+epoch:  284
+2023-06-26 00:07:56: train loss: 59.3655
+2023-06-26 00:07:56: lr: 0.001
+2023-06-26 00:07:56: This epoch took 2.18 s
+
+2023-06-26 00:07:56
+epoch:  285
+2023-06-26 00:07:58: train loss: 58.8210
+2023-06-26 00:08:14: validation foreground dice: ['0.5798']
+2023-06-26 00:08:14: current mean dice: 0.5798, best mean dice: 0.6448 at epoch 110
+2023-06-26 00:08:14: lr: 0.001
+2023-06-26 00:08:14: This epoch took 17.96 s
+
+2023-06-26 00:08:14
+epoch:  286
+2023-06-26 00:08:16: train loss: 59.8598
+2023-06-26 00:08:16: lr: 0.001
+2023-06-26 00:08:16: This epoch took 2.17 s
+
+2023-06-26 00:08:16
+epoch:  287
+2023-06-26 00:08:18: train loss: 58.6534
+2023-06-26 00:08:18: lr: 0.001
+2023-06-26 00:08:18: This epoch took 2.18 s
+
+2023-06-26 00:08:18
+epoch:  288
+2023-06-26 00:08:20: train loss: 59.8087
+2023-06-26 00:08:20: lr: 0.001
+2023-06-26 00:08:20: This epoch took 2.08 s
+
+2023-06-26 00:08:20
+epoch:  289
+2023-06-26 00:08:22: train loss: 58.6648
+2023-06-26 00:08:22: lr: 0.001
+2023-06-26 00:08:22: This epoch took 2.02 s
+
+2023-06-26 00:08:22
+epoch:  290
+2023-06-26 00:08:24: train loss: 59.1951
+Start generating 2D slices...
+
+2023-06-26 00:08:59: The total number of training data (training + validation): 1034
+2023-06-26 00:08:59: 1031 and 3 are used for training and validation
+model architecture: 2D LightUNet
+model initialization: Normal
+
+experiment timestamp: 2023-06-26 00:09:02
+
+2023-06-26 00:09:02
+epoch:  1
+2023-06-26 00:09:05: train loss: 880.0303
+2023-06-26 00:09:05: lr: 0.0005
+2023-06-26 00:09:05: This epoch took 2.62 s
+
+2023-06-26 00:09:05
+epoch:  2
+2023-06-26 00:09:07: train loss: 792.1212
+2023-06-26 00:09:07: lr: 0.0005
+2023-06-26 00:09:07: This epoch took 2.14 s
+
+2023-06-26 00:09:07
+epoch:  3
+2023-06-26 00:09:09: train loss: 718.3333
+2023-06-26 00:09:09: lr: 0.0005
+2023-06-26 00:09:09: This epoch took 2.14 s
+
+2023-06-26 00:09:09
+epoch:  4
+2023-06-26 00:09:11: train loss: 638.0909
+2023-06-26 00:09:11: lr: 0.0005
+2023-06-26 00:09:11: This epoch took 2.15 s
+
+2023-06-26 00:09:11
+epoch:  5
+2023-06-26 00:09:13: train loss: 557.9394
+2023-06-26 00:09:13: lr: 0.0005
+2023-06-26 00:09:13: This epoch took 2.06 s
+
+2023-06-26 00:09:13
+epoch:  6
+2023-06-26 00:09:16: train loss: 473.4697
+2023-06-26 00:09:16: lr: 0.0005
+2023-06-26 00:09:16: This epoch took 2.24 s
+
+2023-06-26 00:09:16
+epoch:  7
+2023-06-26 00:09:18: train loss: 394.0985
+2023-06-26 00:09:18: lr: 0.0005
+2023-06-26 00:09:18: This epoch took 2.12 s
+
+2023-06-26 00:09:18
+epoch:  8
+2023-06-26 00:09:20: train loss: 329.4015
+2023-06-26 00:09:20: lr: 0.0005
+2023-06-26 00:09:20: This epoch took 2.09 s
+
+2023-06-26 00:09:20
+epoch:  9
+2023-06-26 00:09:22: train loss: 276.1591
+2023-06-26 00:09:22: lr: 0.0005
+2023-06-26 00:09:22: This epoch took 2.22 s
+
+2023-06-26 00:09:22
+epoch:  10
+2023-06-26 00:09:24: train loss: 235.2235
+2023-06-26 00:09:24: lr: 0.0005
+2023-06-26 00:09:24: This epoch took 2.19 s
+
+2023-06-26 00:09:24
+epoch:  11
+2023-06-26 00:09:26: train loss: 200.4242
+2023-06-26 00:09:26: lr: 0.0005
+2023-06-26 00:09:26: This epoch took 2.13 s
+
+2023-06-26 00:09:26
+epoch:  12
+2023-06-26 00:09:28: train loss: 175.4129
+2023-06-26 00:09:28: lr: 0.0005
+2023-06-26 00:09:28: This epoch took 2.07 s
+
+2023-06-26 00:09:28
+epoch:  13
+2023-06-26 00:09:31: train loss: 160.1629
+2023-06-26 00:09:31: lr: 0.0005
+2023-06-26 00:09:31: This epoch took 2.14 s
+
+2023-06-26 00:09:31
+epoch:  14
+2023-06-26 00:09:33: train loss: 143.8561
+2023-06-26 00:09:33: lr: 0.0005
+2023-06-26 00:09:33: This epoch took 2.23 s
+
+2023-06-26 00:09:33
+epoch:  15
+2023-06-26 00:09:35: train loss: 130.0076
+2023-06-26 00:09:35: lr: 0.0005
+2023-06-26 00:09:35: This epoch took 2.04 s
+
+2023-06-26 00:09:35
+epoch:  16
+2023-06-26 00:09:37: train loss: 120.7273
+2023-06-26 00:09:37: lr: 0.0005
+2023-06-26 00:09:37: This epoch took 2.05 s
+
+2023-06-26 00:09:37
+epoch:  17
+2023-06-26 00:09:39: train loss: 115.1307
+2023-06-26 00:09:39: lr: 0.0005
+2023-06-26 00:09:39: This epoch took 2.13 s
+
+2023-06-26 00:09:39
+epoch:  18
+2023-06-26 00:09:41: train loss: 112.7311
+2023-06-26 00:09:41: lr: 0.0005
+2023-06-26 00:09:41: This epoch took 2.17 s
+
+2023-06-26 00:09:41
+epoch:  19
+2023-06-26 00:09:43: train loss: 105.7348
+2023-06-26 00:09:43: lr: 0.0005
+2023-06-26 00:09:43: This epoch took 2.21 s
+
+2023-06-26 00:09:43
+epoch:  20
+2023-06-26 00:09:46: train loss: 101.3636
+2023-06-26 00:09:46: lr: 0.0005
+2023-06-26 00:09:46: This epoch took 2.09 s
+
+2023-06-26 00:09:46
+epoch:  21
+2023-06-26 00:09:48: train loss: 99.8788
+2023-06-26 00:09:48: lr: 0.0005
+2023-06-26 00:09:48: This epoch took 2.13 s
+
+2023-06-26 00:09:48
+epoch:  22
+2023-06-26 00:09:50: train loss: 96.5871
+2023-06-26 00:09:50: lr: 0.0005
+2023-06-26 00:09:50: This epoch took 2.12 s
+
+2023-06-26 00:09:50
+epoch:  23
+2023-06-26 00:09:52: train loss: 96.0663
+2023-06-26 00:09:52: lr: 0.0005
+2023-06-26 00:09:52: This epoch took 2.09 s
+
+2023-06-26 00:09:52
+epoch:  24
+2023-06-26 00:09:54: train loss: 91.1193
+2023-06-26 00:09:54: lr: 0.0005
+2023-06-26 00:09:54: This epoch took 2.24 s
+
+2023-06-26 00:09:54
+epoch:  25
+2023-06-26 00:09:56: train loss: 92.8504
+2023-06-26 00:09:56: lr: 0.0005
+2023-06-26 00:09:56: This epoch took 2.13 s
+
+2023-06-26 00:09:56
+epoch:  26
+2023-06-26 00:09:58: train loss: 87.8655
+2023-06-26 00:09:58: lr: 0.0005
+2023-06-26 00:09:58: This epoch took 2.19 s
+
+2023-06-26 00:09:58
+epoch:  27
+2023-06-26 00:10:01: train loss: 89.2557
+2023-06-26 00:10:01: lr: 0.0005
+2023-06-26 00:10:01: This epoch took 2.12 s
+
+2023-06-26 00:10:01
+epoch:  28
+2023-06-26 00:10:03: train loss: 86.5985
+2023-06-26 00:10:03: lr: 0.0005
+2023-06-26 00:10:03: This epoch took 2.16 s
+
+2023-06-26 00:10:03
+epoch:  29
+2023-06-26 00:10:05: train loss: 84.7008
+2023-06-26 00:10:05: lr: 0.0005
+2023-06-26 00:10:05: This epoch took 2.22 s
+
+2023-06-26 00:10:05
+epoch:  30
+2023-06-26 00:10:07: train loss: 86.6913
+2023-06-26 00:10:07: lr: 0.0005
+2023-06-26 00:10:07: This epoch took 2.26 s
+
+2023-06-26 00:10:07
+epoch:  31
+2023-06-26 00:10:09: train loss: 84.6345
+2023-06-26 00:10:09: lr: 0.0005
+2023-06-26 00:10:09: This epoch took 2.13 s
+
+2023-06-26 00:10:09
+epoch:  32
+2023-06-26 00:10:11: train loss: 80.6269
+2023-06-26 00:10:11: lr: 0.0005
+2023-06-26 00:10:11: This epoch took 2.06 s
+
+2023-06-26 00:10:11
+epoch:  33
+2023-06-26 00:10:14: train loss: 81.6951
+2023-06-26 00:10:14: lr: 0.0005
+2023-06-26 00:10:14: This epoch took 2.12 s
+
+2023-06-26 00:10:14
+epoch:  34
+2023-06-26 00:10:16: train loss: 80.5663
+2023-06-26 00:10:16: lr: 0.0005
+2023-06-26 00:10:16: This epoch took 2.13 s
+
+2023-06-26 00:10:16
+epoch:  35
+2023-06-26 00:10:18: train loss: 80.1269
+2023-06-26 00:10:18: lr: 0.0005
+2023-06-26 00:10:18: This epoch took 2.03 s
+
+2023-06-26 00:10:18
+epoch:  36
+2023-06-26 00:10:20: train loss: 78.6383
+2023-06-26 00:10:20: lr: 0.0005
+2023-06-26 00:10:20: This epoch took 2.11 s
+
+2023-06-26 00:10:20
+epoch:  37
+2023-06-26 00:10:22: train loss: 76.6420
+2023-06-26 00:10:22: lr: 0.0005
+2023-06-26 00:10:22: This epoch took 2.09 s
+
+2023-06-26 00:10:22
+epoch:  38
+2023-06-26 00:10:24: train loss: 77.0606
+2023-06-26 00:10:24: lr: 0.0005
+2023-06-26 00:10:24: This epoch took 2.15 s
+
+2023-06-26 00:10:24
+epoch:  39
+2023-06-26 00:10:26: train loss: 78.0511
+2023-06-26 00:10:26: lr: 0.0005
+2023-06-26 00:10:26: This epoch took 2.19 s
+
+2023-06-26 00:10:26
+epoch:  40
+2023-06-26 00:10:28: train loss: 77.1496
+2023-06-26 00:10:28: lr: 0.0005
+2023-06-26 00:10:28: This epoch took 2.10 s
+
+2023-06-26 00:10:28
+epoch:  41
+2023-06-26 00:10:31: train loss: 78.4053
+2023-06-26 00:10:31: lr: 0.0005
+2023-06-26 00:10:31: This epoch took 2.18 s
+
+2023-06-26 00:10:31
+epoch:  42
+2023-06-26 00:10:33: train loss: 75.0189
+2023-06-26 00:10:33: lr: 0.0005
+2023-06-26 00:10:33: This epoch took 2.19 s
+
+2023-06-26 00:10:33
+epoch:  43
+2023-06-26 00:10:35: train loss: 75.1468
+2023-06-26 00:10:35: lr: 0.0005
+2023-06-26 00:10:35: This epoch took 2.05 s
+
+2023-06-26 00:10:35
+epoch:  44
+2023-06-26 00:10:37: train loss: 73.8087
+2023-06-26 00:10:37: lr: 0.0005
+2023-06-26 00:10:37: This epoch took 2.09 s
+
+2023-06-26 00:10:37
+epoch:  45
+2023-06-26 00:10:39: train loss: 75.5246
+2023-06-26 00:10:39: lr: 0.0005
+2023-06-26 00:10:39: This epoch took 2.13 s
+
+2023-06-26 00:10:39
+epoch:  46
+2023-06-26 00:10:41: train loss: 74.3163
+2023-06-26 00:10:41: lr: 0.0005
+2023-06-26 00:10:41: This epoch took 2.24 s
+
+2023-06-26 00:10:41
+epoch:  47
+2023-06-26 00:10:43: train loss: 72.8674
+2023-06-26 00:10:43: lr: 0.0005
+2023-06-26 00:10:43: This epoch took 2.12 s
+
+2023-06-26 00:10:43
+epoch:  48
+2023-06-26 00:10:45: train loss: 73.9848
+2023-06-26 00:10:45: lr: 0.0005
+2023-06-26 00:10:45: This epoch took 2.15 s
+
+2023-06-26 00:10:45
+epoch:  49
+2023-06-26 00:10:48: train loss: 73.7178
+2023-06-26 00:10:48: lr: 0.0005
+2023-06-26 00:10:48: This epoch took 2.16 s
+
+2023-06-26 00:10:48
+epoch:  50
+2023-06-26 00:10:50: train loss: 73.8324
+2023-06-26 00:10:50: lr: 0.0005
+2023-06-26 00:10:50: This epoch took 2.15 s
+
+2023-06-26 00:10:50
+epoch:  51
+2023-06-26 00:10:52: train loss: 73.8892
+2023-06-26 00:10:52: lr: 0.0005
+2023-06-26 00:10:52: This epoch took 2.10 s
+
+2023-06-26 00:10:52
+epoch:  52
+2023-06-26 00:10:54: train loss: 71.0379
+2023-06-26 00:10:54: lr: 0.0005
+2023-06-26 00:10:54: This epoch took 2.09 s
+
+2023-06-26 00:10:54
+epoch:  53
+2023-06-26 00:10:56: train loss: 72.0256
+2023-06-26 00:10:56: lr: 0.0005
+2023-06-26 00:10:56: This epoch took 2.10 s
+
+2023-06-26 00:10:56
+epoch:  54
+2023-06-26 00:10:58: train loss: 74.1468
+2023-06-26 00:10:58: lr: 0.0005
+2023-06-26 00:10:58: This epoch took 2.11 s
+
+2023-06-26 00:10:58
+epoch:  55
+2023-06-26 00:11:00: train loss: 70.9394
+2023-06-26 00:11:00: lr: 0.0005
+2023-06-26 00:11:00: This epoch took 2.05 s
+
+2023-06-26 00:11:00
+epoch:  56
+2023-06-26 00:11:02: train loss: 72.1932
+2023-06-26 00:11:02: lr: 0.0005
+2023-06-26 00:11:02: This epoch took 2.16 s
+
+2023-06-26 00:11:02
+epoch:  57
+2023-06-26 00:11:05: train loss: 73.0019
+2023-06-26 00:11:05: lr: 0.0005
+2023-06-26 00:11:05: This epoch took 2.14 s
+
+2023-06-26 00:11:05
+epoch:  58
+2023-06-26 00:11:07: train loss: 70.0473
+2023-06-26 00:11:07: lr: 0.0005
+2023-06-26 00:11:07: This epoch took 2.13 s
+
+2023-06-26 00:11:07
+epoch:  59
+2023-06-26 00:11:09: train loss: 70.3769
+2023-06-26 00:11:09: lr: 0.0005
+2023-06-26 00:11:09: This epoch took 2.13 s
+
+2023-06-26 00:11:09
+epoch:  60
+2023-06-26 00:11:11: train loss: 71.3021
+2023-06-26 00:11:11: lr: 0.0005
+2023-06-26 00:11:11: This epoch took 2.12 s
+
+2023-06-26 00:11:11
+epoch:  61
+2023-06-26 00:11:13: train loss: 70.2898
+2023-06-26 00:11:13: lr: 0.0005
+2023-06-26 00:11:13: This epoch took 2.05 s
+
+2023-06-26 00:11:13
+epoch:  62
+2023-06-26 00:11:15: train loss: 70.0388
+2023-06-26 00:11:15: lr: 0.0005
+2023-06-26 00:11:15: This epoch took 2.24 s
+
+2023-06-26 00:11:15
+epoch:  63
+2023-06-26 00:11:17: train loss: 72.0634
+2023-06-26 00:11:17: lr: 0.0005
+2023-06-26 00:11:17: This epoch took 2.22 s
+
+2023-06-26 00:11:17
+epoch:  64
+2023-06-26 00:11:20: train loss: 71.6581
+2023-06-26 00:11:20: lr: 0.0005
+2023-06-26 00:11:20: This epoch took 2.16 s
+
+2023-06-26 00:11:20
+epoch:  65
+2023-06-26 00:11:22: train loss: 69.7509
+2023-06-26 00:11:22: lr: 0.0005
+2023-06-26 00:11:22: This epoch took 2.11 s
+
+2023-06-26 00:11:22
+epoch:  66
+2023-06-26 00:11:24: train loss: 68.6316
+2023-06-26 00:11:24: lr: 0.0005
+2023-06-26 00:11:24: This epoch took 2.16 s
+
+2023-06-26 00:11:24
+epoch:  67
+2023-06-26 00:11:26: train loss: 69.2225
+2023-06-26 00:11:26: lr: 0.0005
+2023-06-26 00:11:26: This epoch took 2.12 s
+
+2023-06-26 00:11:26
+epoch:  68
+2023-06-26 00:11:28: train loss: 67.8883
+2023-06-26 00:11:28: lr: 0.0005
+2023-06-26 00:11:28: This epoch took 2.13 s
+
+2023-06-26 00:11:28
+epoch:  69
+2023-06-26 00:11:30: train loss: 68.2027
+2023-06-26 00:11:30: lr: 0.0005
+2023-06-26 00:11:30: This epoch took 2.00 s
+
+2023-06-26 00:11:30
+epoch:  70
+2023-06-26 00:11:32: train loss: 69.7973
+2023-06-26 00:11:32: lr: 0.0005
+2023-06-26 00:11:32: This epoch took 2.16 s
+
+2023-06-26 00:11:32
+epoch:  71
+2023-06-26 00:11:35: train loss: 68.4432
+2023-06-26 00:11:35: lr: 0.0005
+2023-06-26 00:11:35: This epoch took 2.32 s
+
+2023-06-26 00:11:35
+epoch:  72
+2023-06-26 00:11:37: train loss: 68.1676
+2023-06-26 00:11:37: lr: 0.0005
+2023-06-26 00:11:37: This epoch took 2.27 s
+
+2023-06-26 00:11:37
+epoch:  73
+2023-06-26 00:11:39: train loss: 68.8778
+2023-06-26 00:11:39: lr: 0.0005
+2023-06-26 00:11:39: This epoch took 2.30 s
+
+2023-06-26 00:11:39
+epoch:  74
+2023-06-26 00:11:41: train loss: 69.5388
+2023-06-26 00:11:41: lr: 0.0005
+2023-06-26 00:11:41: This epoch took 2.23 s
+
+2023-06-26 00:11:41
+epoch:  75
+2023-06-26 00:11:44: train loss: 69.2159
+2023-06-26 00:11:44: lr: 0.0005
+2023-06-26 00:11:44: This epoch took 2.31 s
+
+2023-06-26 00:11:44
+epoch:  76
+2023-06-26 00:11:46: train loss: 67.8201
+2023-06-26 00:11:46: lr: 0.0005
+2023-06-26 00:11:46: This epoch took 2.30 s
+
+2023-06-26 00:11:46
+epoch:  77
+2023-06-26 00:11:48: train loss: 67.4470
+2023-06-26 00:11:48: lr: 0.0005
+2023-06-26 00:11:48: This epoch took 2.22 s
+
+2023-06-26 00:11:48
+epoch:  78
+2023-06-26 00:11:51: train loss: 66.4366
+2023-06-26 00:11:51: lr: 0.0005
+2023-06-26 00:11:51: This epoch took 2.32 s
+
+2023-06-26 00:11:51
+epoch:  79
+2023-06-26 00:11:53: train loss: 66.1752
+2023-06-26 00:11:53: lr: 0.0005
+2023-06-26 00:11:53: This epoch took 2.28 s
+
+2023-06-26 00:11:53
+epoch:  80
+2023-06-26 00:11:55: train loss: 67.3172
+2023-06-26 00:11:55: lr: 0.0005
+2023-06-26 00:11:55: This epoch took 2.27 s
+
+2023-06-26 00:11:55
+epoch:  81
+2023-06-26 00:11:57: train loss: 65.7197
+2023-06-26 00:11:57: lr: 0.0005
+2023-06-26 00:11:57: This epoch took 2.15 s
+
+2023-06-26 00:11:57
+epoch:  82
+2023-06-26 00:11:59: train loss: 66.9479
+2023-06-26 00:11:59: lr: 0.0005
+2023-06-26 00:11:59: This epoch took 2.22 s
+
+2023-06-26 00:11:59
+epoch:  83
+2023-06-26 00:12:02: train loss: 67.3797
+2023-06-26 00:12:02: lr: 0.0005
+2023-06-26 00:12:02: This epoch took 2.19 s
+
+2023-06-26 00:12:02
+epoch:  84
+2023-06-26 00:12:04: train loss: 66.5076
+2023-06-26 00:12:04: lr: 0.0005
+2023-06-26 00:12:04: This epoch took 2.13 s
+
+2023-06-26 00:12:04
+epoch:  85
+2023-06-26 00:12:06: train loss: 66.5890
+2023-06-26 00:12:06: lr: 0.0005
+2023-06-26 00:12:06: This epoch took 2.13 s
+
+2023-06-26 00:12:06
+epoch:  86
+2023-06-26 00:12:08: train loss: 65.5161
+2023-06-26 00:12:08: lr: 0.0005
+2023-06-26 00:12:08: This epoch took 2.16 s
+
+2023-06-26 00:12:08
+epoch:  87
+2023-06-26 00:12:10: train loss: 67.6477
+2023-06-26 00:12:10: lr: 0.0005
+2023-06-26 00:12:10: This epoch took 2.19 s
+
+2023-06-26 00:12:10
+epoch:  88
+2023-06-26 00:12:12: train loss: 66.0587
+2023-06-26 00:12:12: lr: 0.0005
+2023-06-26 00:12:12: This epoch took 2.10 s
+
+2023-06-26 00:12:12
+epoch:  89
+2023-06-26 00:12:14: train loss: 65.7955
+2023-06-26 00:12:14: lr: 0.0005
+2023-06-26 00:12:14: This epoch took 2.07 s
+
+2023-06-26 00:12:14
+epoch:  90
+2023-06-26 00:12:17: train loss: 65.1562
+2023-06-26 00:12:17: lr: 0.0005
+2023-06-26 00:12:17: This epoch took 2.16 s
+
+2023-06-26 00:12:17
+epoch:  91
+2023-06-26 00:12:19: train loss: 66.4100
+2023-06-26 00:12:19: lr: 0.0005
+2023-06-26 00:12:19: This epoch took 2.08 s
+
+2023-06-26 00:12:19
+epoch:  92
+2023-06-26 00:12:21: train loss: 66.1847
+2023-06-26 00:12:21: lr: 0.0005
+2023-06-26 00:12:21: This epoch took 2.19 s
+
+2023-06-26 00:12:21
+epoch:  93
+2023-06-26 00:12:23: train loss: 64.9167
+2023-06-26 00:12:23: lr: 0.0005
+2023-06-26 00:12:23: This epoch took 2.19 s
+
+2023-06-26 00:12:23
+epoch:  94
+2023-06-26 00:12:25: train loss: 66.1837
+2023-06-26 00:12:25: lr: 0.0005
+2023-06-26 00:12:25: This epoch took 2.08 s
+
+2023-06-26 00:12:25
+epoch:  95
+2023-06-26 00:12:27: train loss: 65.3551
+2023-06-26 00:12:27: lr: 0.0005
+2023-06-26 00:12:27: This epoch took 2.13 s
+
+2023-06-26 00:12:27
+epoch:  96
+2023-06-26 00:12:29: train loss: 65.8305
+2023-06-26 00:12:29: lr: 0.0005
+2023-06-26 00:12:29: This epoch took 2.14 s
+
+2023-06-26 00:12:29
+epoch:  97
+2023-06-26 00:12:31: train loss: 65.1420
+2023-06-26 00:12:31: lr: 0.0005
+2023-06-26 00:12:31: This epoch took 2.07 s
+
+2023-06-26 00:12:31
+epoch:  98
+2023-06-26 00:12:34: train loss: 64.7822
+2023-06-26 00:12:34: lr: 0.0005
+2023-06-26 00:12:34: This epoch took 2.16 s
+
+2023-06-26 00:12:34
+epoch:  99
+2023-06-26 00:12:36: train loss: 65.5275
+2023-06-26 00:12:36: lr: 0.0005
+2023-06-26 00:12:36: This epoch took 2.07 s
+
+2023-06-26 00:12:36
+epoch:  100
+2023-06-26 00:12:38: train loss: 65.7235
+2023-06-26 00:12:38: lr: 0.0005
+2023-06-26 00:12:38: This epoch took 2.10 s
+
+2023-06-26 00:12:38
+epoch:  101
+2023-06-26 00:12:40: train loss: 65.5294
+2023-06-26 00:12:40: lr: 0.0005
+2023-06-26 00:12:40: This epoch took 2.15 s
+
+2023-06-26 00:12:40
+epoch:  102
+2023-06-26 00:12:42: train loss: 64.6383
+2023-06-26 00:12:42: lr: 0.0005
+2023-06-26 00:12:42: This epoch took 2.18 s
+
+2023-06-26 00:12:42
+epoch:  103
+2023-06-26 00:12:44: train loss: 65.3570
+2023-06-26 00:12:44: lr: 0.0005
+2023-06-26 00:12:44: This epoch took 2.16 s
+
+2023-06-26 00:12:44
+epoch:  104
+2023-06-26 00:12:47: train loss: 63.4981
+2023-06-26 00:12:47: lr: 0.0005
+2023-06-26 00:12:47: This epoch took 2.26 s
+
+2023-06-26 00:12:47
+epoch:  105
+2023-06-26 00:12:49: train loss: 64.5767
+2023-06-26 00:13:04: validation foreground dice: ['0.5924']
+2023-06-26 00:13:04: current mean dice: 0.5924, best mean dice: 0.5924 at epoch 105
+2023-06-26 00:13:04: lr: 0.0005
+2023-06-26 00:13:04: This epoch took 17.67 s
+
+2023-06-26 00:13:04
+epoch:  106
+2023-06-26 00:13:06: train loss: 66.2292
+2023-06-26 00:13:06: lr: 0.0005
+2023-06-26 00:13:06: This epoch took 2.21 s
+
+2023-06-26 00:13:06
+epoch:  107
+2023-06-26 00:13:09: train loss: 66.9943
+2023-06-26 00:13:09: lr: 0.0005
+2023-06-26 00:13:09: This epoch took 2.19 s
+
+2023-06-26 00:13:09
+epoch:  108
+2023-06-26 00:13:11: train loss: 64.3494
+2023-06-26 00:13:11: lr: 0.0005
+2023-06-26 00:13:11: This epoch took 2.07 s
+
+2023-06-26 00:13:11
+epoch:  109
+2023-06-26 00:13:13: train loss: 65.8267
+2023-06-26 00:13:13: lr: 0.0005
+2023-06-26 00:13:13: This epoch took 2.12 s
+
+2023-06-26 00:13:13
+epoch:  110
+2023-06-26 00:13:15: train loss: 64.4441
+2023-06-26 00:13:30: validation foreground dice: ['0.5785']
+2023-06-26 00:13:30: current mean dice: 0.5785, best mean dice: 0.5924 at epoch 105
+2023-06-26 00:13:30: lr: 0.0005
+2023-06-26 00:13:30: This epoch took 17.46 s
+
+2023-06-26 00:13:30
+epoch:  111
+2023-06-26 00:13:32: train loss: 65.4110
+2023-06-26 00:13:32: lr: 0.0005
+2023-06-26 00:13:32: This epoch took 2.17 s
+
+2023-06-26 00:13:32
+epoch:  112
+2023-06-26 00:13:35: train loss: 64.8409
+2023-06-26 00:13:35: lr: 0.0005
+2023-06-26 00:13:35: This epoch took 2.14 s
+
+2023-06-26 00:13:35
+epoch:  113
+2023-06-26 00:13:37: train loss: 64.9157
+2023-06-26 00:13:37: lr: 0.0005
+2023-06-26 00:13:37: This epoch took 2.14 s
+
+2023-06-26 00:13:37
+epoch:  114
+2023-06-26 00:13:39: train loss: 63.8646
+2023-06-26 00:13:39: lr: 0.0005
+2023-06-26 00:13:39: This epoch took 2.10 s
+
+2023-06-26 00:13:39
+epoch:  115
+2023-06-26 00:13:41: train loss: 63.7206
+2023-06-26 00:13:56: validation foreground dice: ['0.6326']
+2023-06-26 00:13:56: current mean dice: 0.6326, best mean dice: 0.6326 at epoch 115
+2023-06-26 00:13:56: lr: 0.0005
+2023-06-26 00:13:56: This epoch took 17.50 s
+
+2023-06-26 00:13:56
+epoch:  116
+2023-06-26 00:13:58: train loss: 64.5369
+2023-06-26 00:13:58: lr: 0.0005
+2023-06-26 00:13:58: This epoch took 2.07 s
+
+2023-06-26 00:13:58
+epoch:  117
+2023-06-26 00:14:01: train loss: 63.8002
+2023-06-26 00:14:01: lr: 0.0005
+2023-06-26 00:14:01: This epoch took 2.18 s
+
+2023-06-26 00:14:01
+epoch:  118
+2023-06-26 00:14:03: train loss: 64.2633
+2023-06-26 00:14:03: lr: 0.0005
+2023-06-26 00:14:03: This epoch took 2.17 s
+
+2023-06-26 00:14:03
+epoch:  119
+2023-06-26 00:14:05: train loss: 63.9441
+2023-06-26 00:14:05: lr: 0.0005
+2023-06-26 00:14:05: This epoch took 2.08 s
+
+2023-06-26 00:14:05
+epoch:  120
+2023-06-26 00:14:07: train loss: 64.2348
+2023-06-26 00:14:22: validation foreground dice: ['0.5670']
+2023-06-26 00:14:22: current mean dice: 0.5670, best mean dice: 0.6326 at epoch 115
+2023-06-26 00:14:22: lr: 0.0005
+2023-06-26 00:14:22: This epoch took 17.52 s
+
+2023-06-26 00:14:22
+epoch:  121
+2023-06-26 00:14:25: train loss: 63.4981
+2023-06-26 00:14:25: lr: 0.0005
+2023-06-26 00:14:25: This epoch took 2.22 s
+
+2023-06-26 00:14:25
+epoch:  122
+2023-06-26 00:14:27: train loss: 63.4962
+2023-06-26 00:14:27: lr: 0.0005
+2023-06-26 00:14:27: This epoch took 2.05 s
+
+2023-06-26 00:14:27
+epoch:  123
+2023-06-26 00:14:29: train loss: 63.2178
+2023-06-26 00:14:29: lr: 0.0005
+2023-06-26 00:14:29: This epoch took 2.15 s
+
+2023-06-26 00:14:29
+epoch:  124
+2023-06-26 00:14:31: train loss: 62.7434
+2023-06-26 00:14:31: lr: 0.0005
+2023-06-26 00:14:31: This epoch took 2.10 s
+
+2023-06-26 00:14:31
+epoch:  125
+2023-06-26 00:14:33: train loss: 62.2519
+2023-06-26 00:14:48: validation foreground dice: ['0.5980']
+2023-06-26 00:14:48: current mean dice: 0.5980, best mean dice: 0.6326 at epoch 115
+2023-06-26 00:14:48: lr: 0.0005
+2023-06-26 00:14:48: This epoch took 17.31 s
+
+2023-06-26 00:14:48
+epoch:  126
+2023-06-26 00:14:50: train loss: 62.4886
+2023-06-26 00:14:50: lr: 0.0005
+2023-06-26 00:14:50: This epoch took 2.12 s
+
+2023-06-26 00:14:50
+epoch:  127
+2023-06-26 00:14:52: train loss: 62.9688
+2023-06-26 00:14:52: lr: 0.0005
+2023-06-26 00:14:52: This epoch took 2.20 s
+
+2023-06-26 00:14:52
+epoch:  128
+2023-06-26 00:14:55: train loss: 63.5312
+2023-06-26 00:14:55: lr: 0.0005
+2023-06-26 00:14:55: This epoch took 2.20 s
+
+2023-06-26 00:14:55
+epoch:  129
+2023-06-26 00:14:57: train loss: 64.7604
+2023-06-26 00:14:57: lr: 0.0005
+2023-06-26 00:14:57: This epoch took 2.04 s
+
+2023-06-26 00:14:57
+epoch:  130
+2023-06-26 00:14:59: train loss: 62.5644
+2023-06-26 00:15:14: validation foreground dice: ['0.5152']
+2023-06-26 00:15:14: current mean dice: 0.5152, best mean dice: 0.6326 at epoch 115
+2023-06-26 00:15:14: lr: 0.0005
+2023-06-26 00:15:14: This epoch took 17.25 s
+
+2023-06-26 00:15:14
+epoch:  131
+2023-06-26 00:15:16: train loss: 62.7311
+2023-06-26 00:15:16: lr: 0.0005
+2023-06-26 00:15:16: This epoch took 2.09 s
+
+2023-06-26 00:15:16
+epoch:  132
+2023-06-26 00:15:18: train loss: 63.0587
+2023-06-26 00:15:18: lr: 0.0005
+2023-06-26 00:15:18: This epoch took 2.13 s
+
+2023-06-26 00:15:18
+epoch:  133
+2023-06-26 00:15:20: train loss: 63.5795
+2023-06-26 00:15:20: lr: 0.0005
+2023-06-26 00:15:20: This epoch took 2.11 s
+
+2023-06-26 00:15:20
+epoch:  134
+2023-06-26 00:15:22: train loss: 63.3059
+2023-06-26 00:15:22: lr: 0.0005
+2023-06-26 00:15:22: This epoch took 2.04 s
+
+2023-06-26 00:15:22
+epoch:  135
+2023-06-26 00:15:24: train loss: 62.7784
+2023-06-26 00:15:40: validation foreground dice: ['0.6162']
+2023-06-26 00:15:40: current mean dice: 0.6162, best mean dice: 0.6326 at epoch 115
+2023-06-26 00:15:40: lr: 0.0005
+2023-06-26 00:15:40: This epoch took 17.34 s
+
+2023-06-26 00:15:40
+epoch:  136
+2023-06-26 00:15:42: train loss: 62.4773
+2023-06-26 00:15:42: lr: 0.0005
+2023-06-26 00:15:42: This epoch took 2.12 s
+
+2023-06-26 00:15:42
+epoch:  137
+2023-06-26 00:15:44: train loss: 62.3333
+2023-06-26 00:15:44: lr: 0.0005
+2023-06-26 00:15:44: This epoch took 2.08 s
+
+2023-06-26 00:15:44
+epoch:  138
+2023-06-26 00:15:46: train loss: 61.8826
+2023-06-26 00:15:46: lr: 0.0005
+2023-06-26 00:15:46: This epoch took 2.12 s
+
+2023-06-26 00:15:46
+epoch:  139
+2023-06-26 00:15:48: train loss: 63.5227
+2023-06-26 00:15:48: lr: 0.0005
+2023-06-26 00:15:48: This epoch took 2.20 s
+
+2023-06-26 00:15:48
+epoch:  140
+2023-06-26 00:15:50: train loss: 62.3324
+2023-06-26 00:16:06: validation foreground dice: ['0.5031']
+2023-06-26 00:16:06: current mean dice: 0.5031, best mean dice: 0.6326 at epoch 115
+2023-06-26 00:16:06: lr: 0.0005
+2023-06-26 00:16:06: This epoch took 17.41 s
+
+2023-06-26 00:16:06
+epoch:  141
+2023-06-26 00:16:08: train loss: 63.8636
+2023-06-26 00:16:08: lr: 0.0005
+2023-06-26 00:16:08: This epoch took 2.19 s
+
+2023-06-26 00:16:08
+epoch:  142
+2023-06-26 00:16:10: train loss: 62.5881
+2023-06-26 00:16:10: lr: 0.0005
+2023-06-26 00:16:10: This epoch took 2.04 s
+
+2023-06-26 00:16:10
+epoch:  143
+2023-06-26 00:16:12: train loss: 62.0208
+2023-06-26 00:16:12: lr: 0.0005
+2023-06-26 00:16:12: This epoch took 2.19 s
+
+2023-06-26 00:16:12
+epoch:  144
+2023-06-26 00:16:14: train loss: 62.6525
+2023-06-26 00:16:14: lr: 0.0005
+2023-06-26 00:16:14: This epoch took 2.10 s
+
+2023-06-26 00:16:14
+epoch:  145
+2023-06-26 00:16:16: train loss: 62.0407
+2023-06-26 00:16:32: validation foreground dice: ['0.6194']
+2023-06-26 00:16:32: current mean dice: 0.6194, best mean dice: 0.6326 at epoch 115
+2023-06-26 00:16:32: lr: 0.0005
+2023-06-26 00:16:32: This epoch took 17.55 s
+
+2023-06-26 00:16:32
+epoch:  146
+2023-06-26 00:16:34: train loss: 61.7907
+2023-06-26 00:16:34: lr: 0.0005
+2023-06-26 00:16:34: This epoch took 2.04 s
+
+2023-06-26 00:16:34
+epoch:  147
+2023-06-26 00:16:36: train loss: 62.6705
+2023-06-26 00:16:36: lr: 0.0005
+2023-06-26 00:16:36: This epoch took 2.15 s
+
+2023-06-26 00:16:36
+epoch:  148
+2023-06-26 00:16:38: train loss: 62.3513
+2023-06-26 00:16:38: lr: 0.0005
+2023-06-26 00:16:38: This epoch took 2.08 s
+
+2023-06-26 00:16:38
+epoch:  149
+2023-06-26 00:16:40: train loss: 62.1231
+2023-06-26 00:16:40: lr: 0.0005
+2023-06-26 00:16:40: This epoch took 2.20 s
+
+2023-06-26 00:16:40
+epoch:  150
+2023-06-26 00:16:42: train loss: 62.1203
+2023-06-26 00:16:58: validation foreground dice: ['0.6028']
+2023-06-26 00:16:58: current mean dice: 0.6028, best mean dice: 0.6326 at epoch 115
+2023-06-26 00:16:58: lr: 0.0005
+2023-06-26 00:16:58: This epoch took 17.54 s
+
+2023-06-26 00:16:58
+epoch:  151
+2023-06-26 00:17:00: train loss: 63.0208
+2023-06-26 00:17:00: lr: 0.0005
+2023-06-26 00:17:00: This epoch took 2.10 s
+
+2023-06-26 00:17:00
+epoch:  152
+2023-06-26 00:17:02: train loss: 62.2727
+2023-06-26 00:17:02: lr: 0.0005
+2023-06-26 00:17:02: This epoch took 2.03 s
+
+2023-06-26 00:17:02
+epoch:  153
+2023-06-26 00:17:04: train loss: 63.3712
+2023-06-26 00:17:04: lr: 0.0005
+2023-06-26 00:17:04: This epoch took 2.10 s
+
+2023-06-26 00:17:04
+epoch:  154
+2023-06-26 00:17:06: train loss: 62.3125
+2023-06-26 00:17:06: lr: 0.0005
+2023-06-26 00:17:06: This epoch took 2.19 s
+
+2023-06-26 00:17:06
+epoch:  155
+2023-06-26 00:17:08: train loss: 62.5805
+2023-06-26 00:17:24: validation foreground dice: ['0.6037']
+2023-06-26 00:17:24: current mean dice: 0.6037, best mean dice: 0.6326 at epoch 115
+2023-06-26 00:17:24: lr: 0.0005
+2023-06-26 00:17:24: This epoch took 17.61 s
+
+2023-06-26 00:17:24
+epoch:  156
+2023-06-26 00:17:26: train loss: 62.2652
+2023-06-26 00:17:26: lr: 0.0005
+2023-06-26 00:17:26: This epoch took 2.03 s
+
+2023-06-26 00:17:26
+epoch:  157
+2023-06-26 00:17:28: train loss: 62.7812
+2023-06-26 00:17:28: lr: 0.0005
+2023-06-26 00:17:28: This epoch took 2.18 s
+
+2023-06-26 00:17:28
+epoch:  158
+2023-06-26 00:17:30: train loss: 60.8258
+2023-06-26 00:17:30: lr: 0.0005
+2023-06-26 00:17:30: This epoch took 2.21 s
+
+2023-06-26 00:17:30
+epoch:  159
+2023-06-26 00:17:32: train loss: 61.5862
+2023-06-26 00:17:32: lr: 0.0005
+2023-06-26 00:17:32: This epoch took 2.26 s
+
+2023-06-26 00:17:32
+epoch:  160
+2023-06-26 00:17:35: train loss: 60.8485
+2023-06-26 00:17:50: validation foreground dice: ['0.5590']
+2023-06-26 00:17:50: current mean dice: 0.5590, best mean dice: 0.6326 at epoch 115
+2023-06-26 00:17:50: lr: 0.0005
+2023-06-26 00:17:50: This epoch took 17.41 s
+
+2023-06-26 00:17:50
+epoch:  161
+2023-06-26 00:17:52: train loss: 61.8504
+2023-06-26 00:17:52: lr: 0.0005
+2023-06-26 00:17:52: This epoch took 2.19 s
+
+2023-06-26 00:17:52
+epoch:  162
+2023-06-26 00:17:54: train loss: 62.4366
+2023-06-26 00:17:54: lr: 0.0005
+2023-06-26 00:17:54: This epoch took 2.18 s
+
+2023-06-26 00:17:54
+epoch:  163
+2023-06-26 00:17:56: train loss: 61.3002
+2023-06-26 00:17:56: lr: 0.0005
+2023-06-26 00:17:56: This epoch took 2.17 s
+
+2023-06-26 00:17:56
+epoch:  164
+2023-06-26 00:17:59: train loss: 60.6723
+2023-06-26 00:17:59: lr: 0.0005
+2023-06-26 00:17:59: This epoch took 2.15 s
+
+2023-06-26 00:17:59
+epoch:  165
+2023-06-26 00:18:01: train loss: 61.0028
+2023-06-26 00:18:16: validation foreground dice: ['0.5910']
+2023-06-26 00:18:16: current mean dice: 0.5910, best mean dice: 0.6326 at epoch 115
+2023-06-26 00:18:16: lr: 0.0005
+2023-06-26 00:18:16: This epoch took 17.46 s
+
+2023-06-26 00:18:16
+epoch:  166
+2023-06-26 00:18:18: train loss: 60.9669
+2023-06-26 00:18:18: lr: 0.0005
+2023-06-26 00:18:18: This epoch took 2.06 s
+
+2023-06-26 00:18:18
+epoch:  167
+2023-06-26 00:18:20: train loss: 61.3864
+2023-06-26 00:18:20: lr: 0.0005
+2023-06-26 00:18:20: This epoch took 2.15 s
+
+2023-06-26 00:18:20
+epoch:  168
+2023-06-26 00:18:22: train loss: 61.1676
+2023-06-26 00:18:22: lr: 0.0005
+2023-06-26 00:18:22: This epoch took 2.12 s
+
+2023-06-26 00:18:22
+epoch:  169
+2023-06-26 00:18:24: train loss: 61.9583
+2023-06-26 00:18:24: lr: 0.0005
+2023-06-26 00:18:24: This epoch took 2.12 s
+
+2023-06-26 00:18:24
+epoch:  170
+2023-06-26 00:18:27: train loss: 60.5758
+2023-06-26 00:18:42: validation foreground dice: ['0.6056']
+2023-06-26 00:18:42: current mean dice: 0.6056, best mean dice: 0.6326 at epoch 115
+2023-06-26 00:18:42: lr: 0.0005
+2023-06-26 00:18:42: This epoch took 17.40 s
+
+2023-06-26 00:18:42
+epoch:  171
+2023-06-26 00:18:44: train loss: 61.0919
+2023-06-26 00:18:44: lr: 0.0005
+2023-06-26 00:18:44: This epoch took 2.06 s
+
+2023-06-26 00:18:44
+epoch:  172
+2023-06-26 00:18:46: train loss: 61.0417
+2023-06-26 00:18:46: lr: 0.0005
+2023-06-26 00:18:46: This epoch took 2.10 s
+
+2023-06-26 00:18:46
+epoch:  173
+2023-06-26 00:18:48: train loss: 60.2604
+2023-06-26 00:18:48: lr: 0.0005
+2023-06-26 00:18:48: This epoch took 2.13 s
+
+2023-06-26 00:18:48
+epoch:  174
+2023-06-26 00:18:50: train loss: 61.3854
+2023-06-26 00:18:50: lr: 0.0005
+2023-06-26 00:18:50: This epoch took 2.07 s
+
+2023-06-26 00:18:50
+epoch:  175
+2023-06-26 00:18:52: train loss: 62.1013
+2023-06-26 00:19:07: validation foreground dice: ['0.5188']
+2023-06-26 00:19:07: current mean dice: 0.5188, best mean dice: 0.6326 at epoch 115
+2023-06-26 00:19:08: lr: 0.0005
+2023-06-26 00:19:08: This epoch took 17.33 s
+
+2023-06-26 00:19:08
+epoch:  176
+2023-06-26 00:19:10: train loss: 61.7102
+2023-06-26 00:19:10: lr: 0.0005
+2023-06-26 00:19:10: This epoch took 2.14 s
+
+2023-06-26 00:19:10
+epoch:  177
+2023-06-26 00:19:12: train loss: 60.6553
+2023-06-26 00:19:12: lr: 0.0005
+2023-06-26 00:19:12: This epoch took 2.13 s
+
+2023-06-26 00:19:12
+epoch:  178
+2023-06-26 00:19:14: train loss: 61.2405
+2023-06-26 00:19:14: lr: 0.0005
+2023-06-26 00:19:14: This epoch took 2.16 s
+
+2023-06-26 00:19:14
+epoch:  179
+2023-06-26 00:19:16: train loss: 61.0123
+2023-06-26 00:19:16: lr: 0.0005
+2023-06-26 00:19:16: This epoch took 2.10 s
+
+2023-06-26 00:19:16
+epoch:  180
+2023-06-26 00:19:18: train loss: 61.4754
+2023-06-26 00:19:33: validation foreground dice: ['0.6142']
+2023-06-26 00:19:33: current mean dice: 0.6142, best mean dice: 0.6326 at epoch 115
+2023-06-26 00:19:33: lr: 0.0005
+2023-06-26 00:19:33: This epoch took 17.38 s
+
+2023-06-26 00:19:33
+epoch:  181
+2023-06-26 00:19:36: train loss: 59.9527
+2023-06-26 00:19:36: lr: 0.0005
+2023-06-26 00:19:36: This epoch took 2.11 s
+
+2023-06-26 00:19:36
+epoch:  182
+2023-06-26 00:19:38: train loss: 61.2311
+2023-06-26 00:19:38: lr: 0.0005
+2023-06-26 00:19:38: This epoch took 2.12 s
+
+2023-06-26 00:19:38
+epoch:  183
+2023-06-26 00:19:40: train loss: 61.4574
+2023-06-26 00:19:40: lr: 0.0005
+2023-06-26 00:19:40: This epoch took 2.06 s
+
+2023-06-26 00:19:40
+epoch:  184
+2023-06-26 00:19:42: train loss: 61.1449
+2023-06-26 00:19:42: lr: 0.0005
+2023-06-26 00:19:42: This epoch took 2.13 s
+
+2023-06-26 00:19:42
+epoch:  185
+2023-06-26 00:19:44: train loss: 60.7955
+2023-06-26 00:19:59: validation foreground dice: ['0.6063']
+2023-06-26 00:19:59: current mean dice: 0.6063, best mean dice: 0.6326 at epoch 115
+2023-06-26 00:19:59: lr: 0.0005
+2023-06-26 00:19:59: This epoch took 17.37 s
+
+2023-06-26 00:19:59
+epoch:  186
+2023-06-26 00:20:01: train loss: 61.4271
+2023-06-26 00:20:01: lr: 0.0005
+2023-06-26 00:20:01: This epoch took 2.22 s
+
+2023-06-26 00:20:01
+epoch:  187
+2023-06-26 00:20:04: train loss: 60.2273
+2023-06-26 00:20:04: lr: 0.0005
+2023-06-26 00:20:04: This epoch took 2.12 s
+
+2023-06-26 00:20:04
+epoch:  188
+2023-06-26 00:20:06: train loss: 60.4536
+2023-06-26 00:20:06: lr: 0.0005
+2023-06-26 00:20:06: This epoch took 2.08 s
+
+2023-06-26 00:20:06
+epoch:  189
+2023-06-26 00:20:08: train loss: 61.1790
+2023-06-26 00:20:08: lr: 0.0005
+2023-06-26 00:20:08: This epoch took 2.18 s
+
+2023-06-26 00:20:08
+epoch:  190
+2023-06-26 00:20:10: train loss: 60.8087
+2023-06-26 00:20:25: validation foreground dice: ['0.6037']
+2023-06-26 00:20:25: current mean dice: 0.6037, best mean dice: 0.6326 at epoch 115
+2023-06-26 00:20:25: lr: 0.0005
+2023-06-26 00:20:25: This epoch took 17.41 s
+
+2023-06-26 00:20:25
+epoch:  191
+2023-06-26 00:20:27: train loss: 59.8466
+2023-06-26 00:20:27: lr: 0.0005
+2023-06-26 00:20:27: This epoch took 2.13 s
+
+2023-06-26 00:20:27
+epoch:  192
+2023-06-26 00:20:30: train loss: 59.6307
+2023-06-26 00:20:30: lr: 0.0005
+2023-06-26 00:20:30: This epoch took 2.15 s
+
+2023-06-26 00:20:30
+epoch:  193
+2023-06-26 00:20:32: train loss: 61.8655
+2023-06-26 00:20:32: lr: 0.0005
+2023-06-26 00:20:32: This epoch took 2.26 s
+
+2023-06-26 00:20:32
+epoch:  194
+2023-06-26 00:20:34: train loss: 59.7377
+2023-06-26 00:20:34: lr: 0.0005
+2023-06-26 00:20:34: This epoch took 2.07 s
+
+2023-06-26 00:20:34
+epoch:  195
+2023-06-26 00:20:36: train loss: 60.0871
+2023-06-26 00:20:51: validation foreground dice: ['0.5709']
+2023-06-26 00:20:51: current mean dice: 0.5709, best mean dice: 0.6326 at epoch 115
+2023-06-26 00:20:51: lr: 0.0005
+2023-06-26 00:20:51: This epoch took 17.36 s
+
+2023-06-26 00:20:51
+epoch:  196
+2023-06-26 00:20:53: train loss: 60.3769
+2023-06-26 00:20:53: lr: 0.0005
+2023-06-26 00:20:53: This epoch took 2.11 s
+
+2023-06-26 00:20:53
+epoch:  197
+2023-06-26 00:20:55: train loss: 60.1619
+2023-06-26 00:20:55: lr: 0.0005
+2023-06-26 00:20:55: This epoch took 2.19 s
+
+2023-06-26 00:20:55
+epoch:  198
+2023-06-26 00:20:58: train loss: 60.8788
+2023-06-26 00:20:58: lr: 0.0005
+2023-06-26 00:20:58: This epoch took 2.22 s
+
+2023-06-26 00:20:58
+epoch:  199
+2023-06-26 00:21:00: train loss: 59.7936
+2023-06-26 00:21:00: lr: 0.0005
+2023-06-26 00:21:00: This epoch took 2.15 s
+
+2023-06-26 00:21:00
+epoch:  200
+2023-06-26 00:21:02: train loss: 61.3106
+2023-06-26 00:21:17: validation foreground dice: ['0.6514']
+2023-06-26 00:21:17: current mean dice: 0.6514, best mean dice: 0.6514 at epoch 200
+2023-06-26 00:21:17: lr: 0.0005
+2023-06-26 00:21:17: This epoch took 17.63 s
+
+2023-06-26 00:21:17
+epoch:  201
+2023-06-26 00:21:20: train loss: 60.8144
+2023-06-26 00:21:20: lr: 0.000498
+2023-06-26 00:21:20: This epoch took 2.29 s
+
+2023-06-26 00:21:20
+epoch:  202
+2023-06-26 00:21:22: train loss: 59.7055
+2023-06-26 00:21:22: lr: 0.000495
+2023-06-26 00:21:22: This epoch took 2.14 s
+
+2023-06-26 00:21:22
+epoch:  203
+2023-06-26 00:21:24: train loss: 59.9650
+2023-06-26 00:21:24: lr: 0.000492
+2023-06-26 00:21:24: This epoch took 2.05 s
+
+2023-06-26 00:21:24
+epoch:  204
+2023-06-26 00:21:26: train loss: 60.3277
+2023-06-26 00:21:26: lr: 0.00049
+2023-06-26 00:21:26: This epoch took 2.08 s
+
+2023-06-26 00:21:26
+epoch:  205
+2023-06-26 00:21:28: train loss: 62.2311
+2023-06-26 00:21:44: validation foreground dice: ['0.6077']
+2023-06-26 00:21:44: current mean dice: 0.6077, best mean dice: 0.6514 at epoch 200
+2023-06-26 00:21:44: lr: 0.000488
+2023-06-26 00:21:44: This epoch took 17.67 s
+
+2023-06-26 00:21:44
+epoch:  206
+2023-06-26 00:21:46: train loss: 60.0606
+2023-06-26 00:21:46: lr: 0.000485
+2023-06-26 00:21:46: This epoch took 2.06 s
+
+2023-06-26 00:21:46
+epoch:  207
+2023-06-26 00:21:48: train loss: 59.3343
+2023-06-26 00:21:48: lr: 0.000482
+2023-06-26 00:21:48: This epoch took 2.20 s
+
+2023-06-26 00:21:48
+epoch:  208
+2023-06-26 00:21:50: train loss: 61.0227
+2023-06-26 00:21:50: lr: 0.00048
+2023-06-26 00:21:50: This epoch took 2.44 s
+
+2023-06-26 00:21:50
+epoch:  209
+2023-06-26 00:21:53: train loss: 60.4309
+2023-06-26 00:21:53: lr: 0.000478
+2023-06-26 00:21:53: This epoch took 2.27 s
+
+2023-06-26 00:21:53
+epoch:  210
+2023-06-26 00:21:55: train loss: 60.7150
+2023-06-26 00:22:10: validation foreground dice: ['0.5987']
+2023-06-26 00:22:10: current mean dice: 0.5987, best mean dice: 0.6514 at epoch 200
+2023-06-26 00:22:10: lr: 0.000475
+2023-06-26 00:22:10: This epoch took 17.36 s
+
+2023-06-26 00:22:10
+epoch:  211
+2023-06-26 00:22:12: train loss: 58.8324
+2023-06-26 00:22:12: lr: 0.000472
+2023-06-26 00:22:12: This epoch took 2.07 s
+
+2023-06-26 00:22:12
+epoch:  212
+2023-06-26 00:22:14: train loss: 60.1629
+2023-06-26 00:22:14: lr: 0.00047
+2023-06-26 00:22:14: This epoch took 1.98 s
+
+2023-06-26 00:22:14
+epoch:  213
+2023-06-26 00:22:16: train loss: 59.3419
+2023-06-26 00:22:16: lr: 0.000468
+2023-06-26 00:22:16: This epoch took 2.08 s
+
+2023-06-26 00:22:16
+epoch:  214
+2023-06-26 00:22:18: train loss: 60.6269
+2023-06-26 00:22:18: lr: 0.000465
+2023-06-26 00:22:18: This epoch took 2.05 s
+
+2023-06-26 00:22:18
+epoch:  215
+2023-06-26 00:22:20: train loss: 60.5019
+2023-06-26 00:22:36: validation foreground dice: ['0.5867']
+2023-06-26 00:22:36: current mean dice: 0.5867, best mean dice: 0.6514 at epoch 200
+2023-06-26 00:22:36: lr: 0.000462
+2023-06-26 00:22:36: This epoch took 17.74 s
+
+2023-06-26 00:22:36
+epoch:  216
+2023-06-26 00:22:38: train loss: 59.1648
+2023-06-26 00:22:38: lr: 0.00046
+2023-06-26 00:22:38: This epoch took 2.29 s
+
+2023-06-26 00:22:38
+epoch:  217
+2023-06-26 00:22:40: train loss: 59.9328
+2023-06-26 00:22:40: lr: 0.000458
+2023-06-26 00:22:40: This epoch took 2.09 s
+
+2023-06-26 00:22:40
+epoch:  218
+2023-06-26 00:22:42: train loss: 60.0114
+2023-06-26 00:22:42: lr: 0.000455
+2023-06-26 00:22:42: This epoch took 2.09 s
+
+2023-06-26 00:22:42
+epoch:  219
+2023-06-26 00:22:45: train loss: 59.8201
+2023-06-26 00:22:45: lr: 0.000453
+2023-06-26 00:22:45: This epoch took 2.10 s
+
+2023-06-26 00:22:45
+epoch:  220
+2023-06-26 00:22:47: train loss: 58.9602
+2023-06-26 00:23:02: validation foreground dice: ['0.5824']
+2023-06-26 00:23:02: current mean dice: 0.5824, best mean dice: 0.6514 at epoch 200
+2023-06-26 00:23:02: lr: 0.00045
+2023-06-26 00:23:02: This epoch took 17.43 s
+
+2023-06-26 00:23:02
+epoch:  221
+2023-06-26 00:23:04: train loss: 59.9081
+2023-06-26 00:23:04: lr: 0.000448
+2023-06-26 00:23:04: This epoch took 2.13 s
+
+2023-06-26 00:23:04
+epoch:  222
+2023-06-26 00:23:06: train loss: 59.0436
+2023-06-26 00:23:06: lr: 0.000445
+2023-06-26 00:23:06: This epoch took 2.12 s
+
+2023-06-26 00:23:06
+epoch:  223
+2023-06-26 00:23:08: train loss: 59.7434
+2023-06-26 00:23:08: lr: 0.000442
+2023-06-26 00:23:08: This epoch took 2.07 s
+
+2023-06-26 00:23:08
+epoch:  224
+2023-06-26 00:23:10: train loss: 58.9366
+2023-06-26 00:23:10: lr: 0.00044
+2023-06-26 00:23:10: This epoch took 2.13 s
+
+2023-06-26 00:23:10
+epoch:  225
+2023-06-26 00:23:12: train loss: 59.8570
+2023-06-26 00:23:28: validation foreground dice: ['0.6028']
+2023-06-26 00:23:28: current mean dice: 0.6028, best mean dice: 0.6514 at epoch 200
+2023-06-26 00:23:28: lr: 0.000438
+2023-06-26 00:23:28: This epoch took 17.33 s
+
+2023-06-26 00:23:28
+epoch:  226
+2023-06-26 00:23:30: train loss: 59.8305
+2023-06-26 00:23:30: lr: 0.000435
+2023-06-26 00:23:30: This epoch took 2.18 s
+
+2023-06-26 00:23:30
+epoch:  227
+2023-06-26 00:23:32: train loss: 59.5511
+2023-06-26 00:23:32: lr: 0.000432
+2023-06-26 00:23:32: This epoch took 2.16 s
+
+2023-06-26 00:23:32
+epoch:  228
+2023-06-26 00:23:34: train loss: 59.8731
+2023-06-26 00:23:34: lr: 0.00043
+2023-06-26 00:23:34: This epoch took 2.08 s
+
+2023-06-26 00:23:34
+epoch:  229
+2023-06-26 00:23:36: train loss: 59.8040
+2023-06-26 00:23:36: lr: 0.000428
+2023-06-26 00:23:36: This epoch took 2.12 s
+
+2023-06-26 00:23:36
+epoch:  230
+2023-06-26 00:23:38: train loss: 59.4025
+2023-06-26 00:23:54: validation foreground dice: ['0.6069']
+2023-06-26 00:23:54: current mean dice: 0.6069, best mean dice: 0.6514 at epoch 200
+2023-06-26 00:23:54: lr: 0.000425
+2023-06-26 00:23:54: This epoch took 17.36 s
+
+2023-06-26 00:23:54
+epoch:  231
+2023-06-26 00:23:56: train loss: 60.4299
+2023-06-26 00:23:56: lr: 0.000422
+2023-06-26 00:23:56: This epoch took 2.09 s
+
+2023-06-26 00:23:56
+epoch:  232
+2023-06-26 00:23:58: train loss: 59.6383
+2023-06-26 00:23:58: lr: 0.00042
+2023-06-26 00:23:58: This epoch took 2.09 s
+
+2023-06-26 00:23:58
+epoch:  233
+2023-06-26 00:24:00: train loss: 59.1847
+2023-06-26 00:24:00: lr: 0.000418
+2023-06-26 00:24:00: This epoch took 2.08 s
+
+2023-06-26 00:24:00
+epoch:  234
+2023-06-26 00:24:02: train loss: 59.3873
+2023-06-26 00:24:02: lr: 0.000415
+2023-06-26 00:24:02: This epoch took 2.17 s
+
+2023-06-26 00:24:02
+epoch:  235
+2023-06-26 00:24:04: train loss: 59.6903
+2023-06-26 00:24:19: validation foreground dice: ['0.5974']
+2023-06-26 00:24:19: current mean dice: 0.5974, best mean dice: 0.6514 at epoch 200
+2023-06-26 00:24:19: lr: 0.000412
+2023-06-26 00:24:19: This epoch took 17.33 s
+
+2023-06-26 00:24:19
+epoch:  236
+2023-06-26 00:24:22: train loss: 59.9394
+2023-06-26 00:24:22: lr: 0.00041
+2023-06-26 00:24:22: This epoch took 2.13 s
+
+2023-06-26 00:24:22
+epoch:  237
+2023-06-26 00:24:24: train loss: 60.0445
+2023-06-26 00:24:24: lr: 0.000408
+2023-06-26 00:24:24: This epoch took 2.14 s
+
+2023-06-26 00:24:24
+epoch:  238
+2023-06-26 00:24:26: train loss: 58.0511
+2023-06-26 00:24:26: lr: 0.000405
+2023-06-26 00:24:26: This epoch took 2.16 s
+
+2023-06-26 00:24:26
+epoch:  239
+2023-06-26 00:24:28: train loss: 58.6866
+2023-06-26 00:24:28: lr: 0.000402
+2023-06-26 00:24:28: This epoch took 2.05 s
+
+2023-06-26 00:24:28
+epoch:  240
+2023-06-26 00:24:30: train loss: 58.8589
+2023-06-26 00:24:45: validation foreground dice: ['0.6453']
+2023-06-26 00:24:45: current mean dice: 0.6453, best mean dice: 0.6514 at epoch 200
+2023-06-26 00:24:45: lr: 0.0004
+2023-06-26 00:24:45: This epoch took 17.52 s
+
+2023-06-26 00:24:45
+epoch:  241
+2023-06-26 00:24:48: train loss: 59.2528
+2023-06-26 00:24:48: lr: 0.000398
+2023-06-26 00:24:48: This epoch took 2.10 s
+
+2023-06-26 00:24:48
+epoch:  242
+2023-06-26 00:24:50: train loss: 59.7652
+2023-06-26 00:24:50: lr: 0.000395
+2023-06-26 00:24:50: This epoch took 2.11 s
+
+2023-06-26 00:24:50
+epoch:  243
+2023-06-26 00:24:52: train loss: 58.8343
+2023-06-26 00:24:52: lr: 0.000392
+2023-06-26 00:24:52: This epoch took 2.12 s
+
+2023-06-26 00:24:52
+epoch:  244
+2023-06-26 00:24:54: train loss: 59.7491
+2023-06-26 00:24:54: lr: 0.00039
+2023-06-26 00:24:54: This epoch took 2.16 s
+
+2023-06-26 00:24:54
+epoch:  245
+2023-06-26 00:24:56: train loss: 59.2263
+2023-06-26 00:25:11: validation foreground dice: ['0.5880']
+2023-06-26 00:25:11: current mean dice: 0.5880, best mean dice: 0.6514 at epoch 200
+2023-06-26 00:25:11: lr: 0.000388
+2023-06-26 00:25:11: This epoch took 17.51 s
+
+2023-06-26 00:25:11
+epoch:  246
+2023-06-26 00:25:14: train loss: 58.4242
+2023-06-26 00:25:14: lr: 0.000385
+2023-06-26 00:25:14: This epoch took 2.09 s
+
+2023-06-26 00:25:14
+epoch:  247
+2023-06-26 00:25:16: train loss: 58.5152
+2023-06-26 00:25:16: lr: 0.000382
+2023-06-26 00:25:16: This epoch took 2.21 s
+
+2023-06-26 00:25:16
+epoch:  248
+2023-06-26 00:25:18: train loss: 59.3362
+2023-06-26 00:25:18: lr: 0.00038
+2023-06-26 00:25:18: This epoch took 2.18 s
+
+2023-06-26 00:25:18
+epoch:  249
+2023-06-26 00:25:20: train loss: 58.7528
+2023-06-26 00:25:20: lr: 0.000378
+2023-06-26 00:25:20: This epoch took 2.25 s
+
+2023-06-26 00:25:20
+epoch:  250
+2023-06-26 00:25:22: train loss: 58.0994
+2023-06-26 00:25:38: validation foreground dice: ['0.6059']
+2023-06-26 00:25:38: current mean dice: 0.6059, best mean dice: 0.6514 at epoch 200
+2023-06-26 00:25:38: lr: 0.000375
+2023-06-26 00:25:38: This epoch took 17.63 s
+
+2023-06-26 00:25:38
+epoch:  251
+2023-06-26 00:25:40: train loss: 59.2737
+2023-06-26 00:25:40: lr: 0.000372
+2023-06-26 00:25:40: This epoch took 2.23 s
+
+2023-06-26 00:25:40
+epoch:  252
+2023-06-26 00:25:42: train loss: 58.0445
+2023-06-26 00:25:42: lr: 0.00037
+2023-06-26 00:25:42: This epoch took 2.14 s
+
+2023-06-26 00:25:42
+epoch:  253
+2023-06-26 00:25:44: train loss: 58.8741
+2023-06-26 00:25:44: lr: 0.000368
+2023-06-26 00:25:44: This epoch took 2.15 s
+
+2023-06-26 00:25:44
+epoch:  254
+2023-06-26 00:25:46: train loss: 58.8759
+2023-06-26 00:25:46: lr: 0.000365
+2023-06-26 00:25:46: This epoch took 2.08 s
+
+2023-06-26 00:25:46
+epoch:  255
+2023-06-26 00:25:49: train loss: 58.9697
+2023-06-26 00:26:04: validation foreground dice: ['0.6142']
+2023-06-26 00:26:04: current mean dice: 0.6142, best mean dice: 0.6514 at epoch 200
+2023-06-26 00:26:04: lr: 0.000362
+2023-06-26 00:26:04: This epoch took 17.51 s
+
+2023-06-26 00:26:04
+epoch:  256
+2023-06-26 00:26:06: train loss: 58.8987
+2023-06-26 00:26:06: lr: 0.00036
+2023-06-26 00:26:06: This epoch took 2.24 s
+
+2023-06-26 00:26:06
+epoch:  257
+2023-06-26 00:26:08: train loss: 57.5710
+2023-06-26 00:26:08: lr: 0.000358
+2023-06-26 00:26:08: This epoch took 2.13 s
+
+2023-06-26 00:26:08
+epoch:  258
+2023-06-26 00:26:10: train loss: 58.1402
+2023-06-26 00:26:10: lr: 0.000355
+2023-06-26 00:26:10: This epoch took 2.14 s
+
+2023-06-26 00:26:10
+epoch:  259
+2023-06-26 00:26:12: train loss: 59.5294
+2023-06-26 00:26:12: lr: 0.000353
+2023-06-26 00:26:12: This epoch took 2.05 s
+
+2023-06-26 00:26:12
+epoch:  260
+2023-06-26 00:26:15: train loss: 57.6174
+2023-06-26 00:26:30: validation foreground dice: ['0.6094']
+2023-06-26 00:26:30: current mean dice: 0.6094, best mean dice: 0.6514 at epoch 200
+2023-06-26 00:26:30: lr: 0.00035
+2023-06-26 00:26:30: This epoch took 17.96 s
+
+2023-06-26 00:26:30
+epoch:  261
+2023-06-26 00:26:33: train loss: 58.8258
+2023-06-26 00:26:33: lr: 0.000348
+2023-06-26 00:26:33: This epoch took 2.20 s
+
+2023-06-26 00:26:33
+epoch:  262
+2023-06-26 00:26:35: train loss: 58.8920
+2023-06-26 00:26:35: lr: 0.000345
+2023-06-26 00:26:35: This epoch took 2.27 s
+
+2023-06-26 00:26:35
+epoch:  263
+2023-06-26 00:26:37: train loss: 58.2680
+2023-06-26 00:26:37: lr: 0.000343
+2023-06-26 00:26:37: This epoch took 2.10 s
+
+2023-06-26 00:26:37
+epoch:  264
+2023-06-26 00:26:39: train loss: 57.9299
+2023-06-26 00:26:39: lr: 0.00034
+2023-06-26 00:26:39: This epoch took 2.15 s
+
+2023-06-26 00:26:39
+epoch:  265
+2023-06-26 00:26:41: train loss: 57.6354
+2023-06-26 00:26:57: validation foreground dice: ['0.6293']
+2023-06-26 00:26:57: current mean dice: 0.6293, best mean dice: 0.6514 at epoch 200
+2023-06-26 00:26:57: lr: 0.000338
+2023-06-26 00:26:57: This epoch took 17.66 s
+
+2023-06-26 00:26:57
+epoch:  266
+2023-06-26 00:26:59: train loss: 57.9195
+2023-06-26 00:26:59: lr: 0.000335
+2023-06-26 00:26:59: This epoch took 2.09 s
+
+2023-06-26 00:26:59
+epoch:  267
+2023-06-26 00:27:01: train loss: 58.1525
+2023-06-26 00:27:01: lr: 0.000332
+2023-06-26 00:27:01: This epoch took 2.08 s
+
+2023-06-26 00:27:01
+epoch:  268
+2023-06-26 00:27:03: train loss: 57.5189
+2023-06-26 00:27:03: lr: 0.00033
+2023-06-26 00:27:03: This epoch took 2.10 s
+
+2023-06-26 00:27:03
+epoch:  269
+2023-06-26 00:27:05: train loss: 58.7074
+2023-06-26 00:27:05: lr: 0.000328
+2023-06-26 00:27:05: This epoch took 2.10 s
+
+2023-06-26 00:27:05
+epoch:  270
+2023-06-26 00:27:07: train loss: 57.8930
+2023-06-26 00:27:23: validation foreground dice: ['0.6286']
+2023-06-26 00:27:23: current mean dice: 0.6286, best mean dice: 0.6514 at epoch 200
+2023-06-26 00:27:23: lr: 0.000325
+2023-06-26 00:27:23: This epoch took 17.47 s
+
+2023-06-26 00:27:23
+epoch:  271
+2023-06-26 00:27:25: train loss: 57.3646
+2023-06-26 00:27:25: lr: 0.000323
+2023-06-26 00:27:25: This epoch took 2.14 s
+
+2023-06-26 00:27:25
+epoch:  272
+2023-06-26 00:27:27: train loss: 58.5975
+2023-06-26 00:27:27: lr: 0.00032
+2023-06-26 00:27:27: This epoch took 2.15 s
+
+2023-06-26 00:27:27
+epoch:  273
+2023-06-26 00:27:29: train loss: 58.2585
+2023-06-26 00:27:29: lr: 0.000318
+2023-06-26 00:27:29: This epoch took 2.14 s
+
+2023-06-26 00:27:29
+epoch:  274
+2023-06-26 00:27:31: train loss: 58.6354
+2023-06-26 00:27:31: lr: 0.000315
+2023-06-26 00:27:31: This epoch took 2.18 s
+
+2023-06-26 00:27:31
+epoch:  275
+2023-06-26 00:27:33: train loss: 57.4214
+2023-06-26 00:27:48: validation foreground dice: ['0.6281']
+2023-06-26 00:27:48: current mean dice: 0.6281, best mean dice: 0.6514 at epoch 200
+2023-06-26 00:27:49: lr: 0.000312
+2023-06-26 00:27:49: This epoch took 17.28 s
+
+2023-06-26 00:27:49
+epoch:  276
+2023-06-26 00:27:51: train loss: 59.4650
+2023-06-26 00:27:51: lr: 0.00031
+2023-06-26 00:27:51: This epoch took 2.25 s
+
+2023-06-26 00:27:51
+epoch:  277
+2023-06-26 00:27:53: train loss: 57.7235
+2023-06-26 00:27:53: lr: 0.000308
+2023-06-26 00:27:53: This epoch took 2.10 s
+
+2023-06-26 00:27:53
+epoch:  278
+2023-06-26 00:27:55: train loss: 58.2244
+2023-06-26 00:27:55: lr: 0.000305
+2023-06-26 00:27:55: This epoch took 2.15 s
+
+2023-06-26 00:27:55
+epoch:  279
+2023-06-26 00:27:57: train loss: 58.1761
+2023-06-26 00:27:57: lr: 0.000302
+2023-06-26 00:27:57: This epoch took 2.13 s
+
+2023-06-26 00:27:57
+epoch:  280
+2023-06-26 00:27:59: train loss: 57.4801
+2023-06-26 00:28:14: validation foreground dice: ['0.6395']
+2023-06-26 00:28:14: current mean dice: 0.6395, best mean dice: 0.6514 at epoch 200
+2023-06-26 00:28:14: lr: 0.0003
+2023-06-26 00:28:14: This epoch took 17.31 s
+
+2023-06-26 00:28:14
+epoch:  281
+2023-06-26 00:28:17: train loss: 57.4536
+2023-06-26 00:28:17: lr: 0.000297
+2023-06-26 00:28:17: This epoch took 2.35 s
+
+2023-06-26 00:28:17
+epoch:  282
+2023-06-26 00:28:19: train loss: 57.1903
+2023-06-26 00:28:19: lr: 0.000295
+2023-06-26 00:28:19: This epoch took 2.31 s
+
+2023-06-26 00:28:19
+epoch:  283
+2023-06-26 00:28:21: train loss: 57.6335
+2023-06-26 00:28:21: lr: 0.000292
+2023-06-26 00:28:21: This epoch took 2.16 s
+
+2023-06-26 00:28:21
+epoch:  284
+2023-06-26 00:28:23: train loss: 57.7557
+2023-06-26 00:28:23: lr: 0.00029
+2023-06-26 00:28:23: This epoch took 2.18 s
+
+2023-06-26 00:28:23
+epoch:  285
+2023-06-26 00:28:26: train loss: 57.6941
+2023-06-26 00:28:41: validation foreground dice: ['0.6429']
+2023-06-26 00:28:41: current mean dice: 0.6429, best mean dice: 0.6514 at epoch 200
+2023-06-26 00:28:41: lr: 0.000288
+2023-06-26 00:28:41: This epoch took 17.57 s
+
+2023-06-26 00:28:41
+epoch:  286
+2023-06-26 00:28:43: train loss: 58.0871
+2023-06-26 00:28:43: lr: 0.000285
+2023-06-26 00:28:43: This epoch took 2.11 s
+
+2023-06-26 00:28:43
+epoch:  287
+2023-06-26 00:28:45: train loss: 57.7538
+2023-06-26 00:28:45: lr: 0.000282
+2023-06-26 00:28:45: This epoch took 2.11 s
+
+2023-06-26 00:28:45
+epoch:  288
+2023-06-26 00:28:47: train loss: 58.3646
+2023-06-26 00:28:47: lr: 0.00028
+2023-06-26 00:28:47: This epoch took 2.12 s
+
+2023-06-26 00:28:47
+epoch:  289
+2023-06-26 00:28:50: train loss: 57.9792
+2023-06-26 00:28:50: lr: 0.000277
+2023-06-26 00:28:50: This epoch took 2.17 s
+
+2023-06-26 00:28:50
+epoch:  290
+2023-06-26 00:28:52: train loss: 58.2841
+2023-06-26 00:29:07: validation foreground dice: ['0.6051']
+2023-06-26 00:29:07: current mean dice: 0.6051, best mean dice: 0.6514 at epoch 200
+2023-06-26 00:29:07: lr: 0.000275
+2023-06-26 00:29:07: This epoch took 17.34 s
+
+2023-06-26 00:29:07
+epoch:  291
+2023-06-26 00:29:09: train loss: 57.5568
+2023-06-26 00:29:09: lr: 0.000272
+2023-06-26 00:29:09: This epoch took 2.22 s
+
+2023-06-26 00:29:09
+epoch:  292
+2023-06-26 00:29:11: train loss: 57.1686
+2023-06-26 00:29:11: lr: 0.00027
+2023-06-26 00:29:11: This epoch took 2.06 s
+
+2023-06-26 00:29:11
+epoch:  293
+2023-06-26 00:29:13: train loss: 57.7453
+2023-06-26 00:29:13: lr: 0.000267
+2023-06-26 00:29:13: This epoch took 2.13 s
+
+2023-06-26 00:29:13
+epoch:  294
+2023-06-26 00:29:15: train loss: 57.2169
+2023-06-26 00:29:15: lr: 0.000265
+2023-06-26 00:29:15: This epoch took 2.15 s
+
+2023-06-26 00:29:15
+epoch:  295
+2023-06-26 00:29:18: train loss: 57.7491
+2023-06-26 00:29:33: validation foreground dice: ['0.6060']
+2023-06-26 00:29:33: current mean dice: 0.6060, best mean dice: 0.6514 at epoch 200
+2023-06-26 00:29:33: lr: 0.000263
+2023-06-26 00:29:33: This epoch took 17.36 s
+
+2023-06-26 00:29:33
+epoch:  296
+2023-06-26 00:29:35: train loss: 57.5350
+2023-06-26 00:29:35: lr: 0.00026
+2023-06-26 00:29:35: This epoch took 2.10 s
+
+2023-06-26 00:29:35
+epoch:  297
+2023-06-26 00:29:37: train loss: 57.9517
+2023-06-26 00:29:37: lr: 0.000258
+2023-06-26 00:29:37: This epoch took 2.26 s
+
+2023-06-26 00:29:37
+epoch:  298
+2023-06-26 00:29:39: train loss: 57.4337
+2023-06-26 00:29:39: lr: 0.000255
+2023-06-26 00:29:39: This epoch took 2.13 s
+
+2023-06-26 00:29:39
+epoch:  299
+2023-06-26 00:29:42: train loss: 57.3059
+2023-06-26 00:29:42: lr: 0.000252
+2023-06-26 00:29:42: This epoch took 2.23 s
+
+2023-06-26 00:29:42
+epoch:  300
+2023-06-26 00:29:44: train loss: 57.5814
+2023-06-26 00:29:59: validation foreground dice: ['0.6344']
+2023-06-26 00:29:59: current mean dice: 0.6344, best mean dice: 0.6514 at epoch 200
+2023-06-26 00:29:59: lr: 0.00025
+2023-06-26 00:29:59: This epoch took 17.44 s
+
+2023-06-26 00:29:59
+epoch:  301
+2023-06-26 00:30:01: train loss: 57.6572
+2023-06-26 00:30:01: lr: 0.000248
+2023-06-26 00:30:01: This epoch took 2.11 s
+
+2023-06-26 00:30:01
+epoch:  302
+2023-06-26 00:30:03: train loss: 57.6089
+2023-06-26 00:30:03: lr: 0.000245
+2023-06-26 00:30:03: This epoch took 2.21 s
+
+2023-06-26 00:30:03
+epoch:  303
+2023-06-26 00:30:05: train loss: 57.7121
+2023-06-26 00:30:05: lr: 0.000242
+2023-06-26 00:30:05: This epoch took 2.10 s
+
+2023-06-26 00:30:05
+epoch:  304
+2023-06-26 00:30:07: train loss: 57.4735
+2023-06-26 00:30:07: lr: 0.00024
+2023-06-26 00:30:07: This epoch took 2.06 s
+
+2023-06-26 00:30:07
+epoch:  305
+2023-06-26 00:30:10: train loss: 57.4148
+2023-06-26 00:30:25: validation foreground dice: ['0.6196']
+2023-06-26 00:30:25: current mean dice: 0.6196, best mean dice: 0.6514 at epoch 200
+2023-06-26 00:30:25: lr: 0.000238
+2023-06-26 00:30:25: This epoch took 17.37 s
+
+2023-06-26 00:30:25
+epoch:  306
+2023-06-26 00:30:27: train loss: 57.0663
+2023-06-26 00:30:27: lr: 0.000235
+2023-06-26 00:30:27: This epoch took 2.14 s
+
+2023-06-26 00:30:27
+epoch:  307
+2023-06-26 00:30:29: train loss: 56.4280
+2023-06-26 00:30:29: lr: 0.000232
+2023-06-26 00:30:29: This epoch took 2.05 s
+
+2023-06-26 00:30:29
+epoch:  308
+2023-06-26 00:30:31: train loss: 57.1847
+2023-06-26 00:30:31: lr: 0.00023
+2023-06-26 00:30:31: This epoch took 2.09 s
+
+2023-06-26 00:30:31
+epoch:  309
+2023-06-26 00:30:33: train loss: 57.9650
+2023-06-26 00:30:33: lr: 0.000227
+2023-06-26 00:30:33: This epoch took 2.18 s
+
+2023-06-26 00:30:33
+epoch:  310
+2023-06-26 00:30:35: train loss: 57.1250
+2023-06-26 00:30:51: validation foreground dice: ['0.6294']
+2023-06-26 00:30:51: current mean dice: 0.6294, best mean dice: 0.6514 at epoch 200
+2023-06-26 00:30:51: lr: 0.000225
+2023-06-26 00:30:51: This epoch took 17.57 s
+
+2023-06-26 00:30:51
+epoch:  311
+2023-06-26 00:30:53: train loss: 56.6686
+2023-06-26 00:30:53: lr: 0.000222
+2023-06-26 00:30:53: This epoch took 2.11 s
+
+2023-06-26 00:30:53
+epoch:  312
+2023-06-26 00:30:55: train loss: 57.7812
+2023-06-26 00:30:55: lr: 0.00022
+2023-06-26 00:30:55: This epoch took 2.15 s
+
+2023-06-26 00:30:55
+epoch:  313
+2023-06-26 00:30:57: train loss: 57.6449
+2023-06-26 00:30:57: lr: 0.000218
+2023-06-26 00:30:57: This epoch took 2.25 s
+
+2023-06-26 00:30:57
+epoch:  314
+2023-06-26 00:30:59: train loss: 57.3314
+2023-06-26 00:30:59: lr: 0.000215
+2023-06-26 00:30:59: This epoch took 2.13 s
+
+2023-06-26 00:30:59
+epoch:  315
+2023-06-26 00:31:02: train loss: 56.6278
+2023-06-26 00:31:17: validation foreground dice: ['0.6189']
+2023-06-26 00:31:17: current mean dice: 0.6189, best mean dice: 0.6514 at epoch 200
+2023-06-26 00:31:17: lr: 0.000213
+2023-06-26 00:31:17: This epoch took 17.63 s
+
+2023-06-26 00:31:17
+epoch:  316
+2023-06-26 00:31:19: train loss: 57.1667
+2023-06-26 00:31:19: lr: 0.00021
+2023-06-26 00:31:19: This epoch took 2.12 s
+
+2023-06-26 00:31:19
+epoch:  317
+2023-06-26 00:31:21: train loss: 57.5455
+2023-06-26 00:31:21: lr: 0.000208
+2023-06-26 00:31:21: This epoch took 2.09 s
+
+2023-06-26 00:31:21
+epoch:  318
+2023-06-26 00:31:23: train loss: 57.7225
+2023-06-26 00:31:23: lr: 0.000205
+2023-06-26 00:31:23: This epoch took 2.18 s
+
+2023-06-26 00:31:23
+epoch:  319
+2023-06-26 00:31:26: train loss: 56.9356
+2023-06-26 00:31:26: lr: 0.000203
+2023-06-26 00:31:26: This epoch took 2.17 s
+
+2023-06-26 00:31:26
+epoch:  320
+2023-06-26 00:31:28: train loss: 56.5133
+2023-06-26 00:31:43: validation foreground dice: ['0.6238']
+2023-06-26 00:31:43: current mean dice: 0.6238, best mean dice: 0.6514 at epoch 200
+2023-06-26 00:31:43: lr: 0.0002
+2023-06-26 00:31:43: This epoch took 17.30 s
+
+2023-06-26 00:31:43
+epoch:  321
+2023-06-26 00:31:45: train loss: 56.9735
+2023-06-26 00:31:45: lr: 0.000198
+2023-06-26 00:31:45: This epoch took 2.14 s
+
+2023-06-26 00:31:45
+epoch:  322
+2023-06-26 00:31:47: train loss: 56.1714
+2023-06-26 00:31:47: lr: 0.000195
+2023-06-26 00:31:47: This epoch took 2.05 s
+
+2023-06-26 00:31:47
+epoch:  323
+2023-06-26 00:31:49: train loss: 56.5445
+2023-06-26 00:31:49: lr: 0.000193
+2023-06-26 00:31:49: This epoch took 2.10 s
+
+2023-06-26 00:31:49
+epoch:  324
+2023-06-26 00:31:51: train loss: 56.3864
+2023-06-26 00:31:51: lr: 0.00019
+2023-06-26 00:31:51: This epoch took 2.13 s
+
+2023-06-26 00:31:51
+epoch:  325
+2023-06-26 00:31:53: train loss: 56.9934
+2023-06-26 00:32:09: validation foreground dice: ['0.6156']
+2023-06-26 00:32:09: current mean dice: 0.6156, best mean dice: 0.6514 at epoch 200
+2023-06-26 00:32:09: lr: 0.000188
+2023-06-26 00:32:09: This epoch took 17.58 s
+
+2023-06-26 00:32:09
+epoch:  326
+2023-06-26 00:32:11: train loss: 56.5426
+2023-06-26 00:32:11: lr: 0.000185
+2023-06-26 00:32:11: This epoch took 2.16 s
+
+2023-06-26 00:32:11
+epoch:  327
+2023-06-26 00:32:13: train loss: 57.3617
+2023-06-26 00:32:13: lr: 0.000182
+2023-06-26 00:32:13: This epoch took 2.20 s
+
+2023-06-26 00:32:13
+epoch:  328
+2023-06-26 00:32:15: train loss: 56.2131
+2023-06-26 00:32:15: lr: 0.00018
+2023-06-26 00:32:15: This epoch took 2.14 s
+
+2023-06-26 00:32:15
+epoch:  329
+2023-06-26 00:32:18: train loss: 56.8438
+2023-06-26 00:32:18: lr: 0.000178
+2023-06-26 00:32:18: This epoch took 2.21 s
+
+2023-06-26 00:32:18
+epoch:  330
+2023-06-26 00:32:20: train loss: 56.7405
+2023-06-26 00:32:35: validation foreground dice: ['0.6285']
+2023-06-26 00:32:35: current mean dice: 0.6285, best mean dice: 0.6514 at epoch 200
+2023-06-26 00:32:35: lr: 0.000175
+2023-06-26 00:32:35: This epoch took 17.73 s
+
+2023-06-26 00:32:35
+epoch:  331
+2023-06-26 00:32:37: train loss: 56.7812
+2023-06-26 00:32:37: lr: 0.000172
+2023-06-26 00:32:37: This epoch took 2.07 s
+
+2023-06-26 00:32:37
+epoch:  332
+2023-06-26 00:32:40: train loss: 56.0767
+2023-06-26 00:32:40: lr: 0.00017
+2023-06-26 00:32:40: This epoch took 2.21 s
+
+2023-06-26 00:32:40
+epoch:  333
+2023-06-26 00:32:42: train loss: 56.3561
+2023-06-26 00:32:42: lr: 0.000167
+2023-06-26 00:32:42: This epoch took 2.09 s
+
+2023-06-26 00:32:42
+epoch:  334
+2023-06-26 00:32:44: train loss: 56.8494
+2023-06-26 00:32:44: lr: 0.000165
+2023-06-26 00:32:44: This epoch took 2.14 s
+
+2023-06-26 00:32:44
+epoch:  335
+2023-06-26 00:32:46: train loss: 56.1136
+2023-06-26 00:33:01: validation foreground dice: ['0.6048']
+2023-06-26 00:33:01: current mean dice: 0.6048, best mean dice: 0.6514 at epoch 200
+2023-06-26 00:33:01: lr: 0.000162
+2023-06-26 00:33:01: This epoch took 17.36 s
+
+2023-06-26 00:33:01
+epoch:  336
+2023-06-26 00:33:03: train loss: 56.8911
+2023-06-26 00:33:03: lr: 0.00016
+2023-06-26 00:33:03: This epoch took 2.18 s
+
+2023-06-26 00:33:03
+epoch:  337
+2023-06-26 00:33:06: train loss: 57.3693
+2023-06-26 00:33:06: lr: 0.000157
+2023-06-26 00:33:06: This epoch took 2.15 s
+
+2023-06-26 00:33:06
+epoch:  338
+2023-06-26 00:33:08: train loss: 57.0568
+2023-06-26 00:33:08: lr: 0.000155
+2023-06-26 00:33:08: This epoch took 2.29 s
+
+2023-06-26 00:33:08
+epoch:  339
+2023-06-26 00:33:10: train loss: 56.1155
+2023-06-26 00:33:10: lr: 0.000153
+2023-06-26 00:33:10: This epoch took 2.08 s
+
+2023-06-26 00:33:10
+epoch:  340
+2023-06-26 00:33:12: train loss: 56.9697
+2023-06-26 00:33:27: validation foreground dice: ['0.6188']
+2023-06-26 00:33:27: current mean dice: 0.6188, best mean dice: 0.6514 at epoch 200
+2023-06-26 00:33:27: lr: 0.00015
+2023-06-26 00:33:27: This epoch took 17.44 s
+
+2023-06-26 00:33:27
+epoch:  341
+2023-06-26 00:33:30: train loss: 56.5644
+2023-06-26 00:33:30: lr: 0.000148
+2023-06-26 00:33:30: This epoch took 2.24 s
+
+2023-06-26 00:33:30
+epoch:  342
+2023-06-26 00:33:32: train loss: 56.4801
+2023-06-26 00:33:32: lr: 0.000145
+2023-06-26 00:33:32: This epoch took 2.12 s
+
+2023-06-26 00:33:32
+epoch:  343
+2023-06-26 00:33:34: train loss: 56.3665
+2023-06-26 00:33:34: lr: 0.000143
+2023-06-26 00:33:34: This epoch took 2.12 s
+
+2023-06-26 00:33:34
+epoch:  344
+2023-06-26 00:33:36: train loss: 56.0028
+2023-06-26 00:33:36: lr: 0.00014
+2023-06-26 00:33:36: This epoch took 2.09 s
+
+2023-06-26 00:33:36
+epoch:  345
+2023-06-26 00:33:38: train loss: 56.6553
+2023-06-26 00:33:53: validation foreground dice: ['0.6099']
+2023-06-26 00:33:53: current mean dice: 0.6099, best mean dice: 0.6514 at epoch 200
+2023-06-26 00:33:53: lr: 0.000138
+2023-06-26 00:33:53: This epoch took 17.35 s
+
+2023-06-26 00:33:53
+epoch:  346
+2023-06-26 00:33:55: train loss: 56.5625
+2023-06-26 00:33:55: lr: 0.000135
+2023-06-26 00:33:55: This epoch took 2.16 s
+
+2023-06-26 00:33:55
+epoch:  347
+2023-06-26 00:33:58: train loss: 56.7055
+2023-06-26 00:33:58: lr: 0.000133
+2023-06-26 00:33:58: This epoch took 2.09 s
+
+2023-06-26 00:33:58
+epoch:  348
+2023-06-26 00:34:00: train loss: 56.6430
+2023-06-26 00:34:00: lr: 0.00013
+2023-06-26 00:34:00: This epoch took 2.09 s
+
+2023-06-26 00:34:00
+epoch:  349
+2023-06-26 00:34:02: train loss: 56.4545
+2023-06-26 00:34:02: lr: 0.000128
+2023-06-26 00:34:02: This epoch took 2.14 s
+
+2023-06-26 00:34:02
+epoch:  350
+2023-06-26 00:34:04: train loss: 55.5218
+2023-06-26 00:34:19: validation foreground dice: ['0.6147']
+2023-06-26 00:34:19: current mean dice: 0.6147, best mean dice: 0.6514 at epoch 200
+2023-06-26 00:34:19: lr: 0.000125
+2023-06-26 00:34:19: This epoch took 17.59 s
+
+2023-06-26 00:34:19
+epoch:  351
+2023-06-26 00:34:22: train loss: 56.2519
+2023-06-26 00:34:22: lr: 0.000122
+2023-06-26 00:34:22: This epoch took 2.13 s
+
+2023-06-26 00:34:22
+epoch:  352
+2023-06-26 00:34:24: train loss: 56.7339
+2023-06-26 00:34:24: lr: 0.00012
+2023-06-26 00:34:24: This epoch took 2.18 s
+
+2023-06-26 00:34:24
+epoch:  353
+2023-06-26 00:34:26: train loss: 56.1998
+2023-06-26 00:34:26: lr: 0.000118
+2023-06-26 00:34:26: This epoch took 2.10 s
+
+2023-06-26 00:34:26
+epoch:  354
+2023-06-26 00:34:28: train loss: 56.3106
+2023-06-26 00:34:28: lr: 0.000115
+2023-06-26 00:34:28: This epoch took 2.24 s
+
+2023-06-26 00:34:28
+epoch:  355
+2023-06-26 00:34:30: train loss: 56.5682
+2023-06-26 00:34:45: validation foreground dice: ['0.6125']
+2023-06-26 00:34:45: current mean dice: 0.6125, best mean dice: 0.6514 at epoch 200
+2023-06-26 00:34:46: lr: 0.000112
+2023-06-26 00:34:46: This epoch took 17.47 s
+
+2023-06-26 00:34:46
+epoch:  356
+2023-06-26 00:34:48: train loss: 56.1695
+2023-06-26 00:34:48: lr: 0.00011
+2023-06-26 00:34:48: This epoch took 2.08 s
+
+2023-06-26 00:34:48
+epoch:  357
+2023-06-26 00:34:50: train loss: 56.2964
+2023-06-26 00:34:50: lr: 0.000107
+2023-06-26 00:34:50: This epoch took 2.12 s
+
+2023-06-26 00:34:50
+epoch:  358
+2023-06-26 00:34:52: train loss: 57.1136
+2023-06-26 00:34:52: lr: 0.000105
+2023-06-26 00:34:52: This epoch took 2.17 s
+
+2023-06-26 00:34:52
+epoch:  359
+2023-06-26 00:34:54: train loss: 56.2737
+2023-06-26 00:34:54: lr: 0.000102
+2023-06-26 00:34:54: This epoch took 2.09 s
+
+2023-06-26 00:34:54
+epoch:  360
+2023-06-26 00:34:56: train loss: 56.7027
+2023-06-26 00:35:12: validation foreground dice: ['0.6270']
+2023-06-26 00:35:12: current mean dice: 0.6270, best mean dice: 0.6514 at epoch 200
+2023-06-26 00:35:12: lr: 0.0001
+2023-06-26 00:35:12: This epoch took 17.89 s
+
+2023-06-26 00:35:12
+epoch:  361
+2023-06-26 00:35:14: train loss: 57.2254
+2023-06-26 00:35:14: lr: 9.7e-05
+2023-06-26 00:35:14: This epoch took 2.05 s
+
+2023-06-26 00:35:14
+epoch:  362
+2023-06-26 00:35:16: train loss: 55.6364
+2023-06-26 00:35:16: lr: 9.5e-05
+2023-06-26 00:35:16: This epoch took 2.08 s
+
+2023-06-26 00:35:16
+epoch:  363
+2023-06-26 00:35:18: train loss: 56.9479
+2023-06-26 00:35:18: lr: 9.3e-05
+2023-06-26 00:35:18: This epoch took 2.17 s
+
+2023-06-26 00:35:18
+epoch:  364
+2023-06-26 00:35:20: train loss: 55.6856
+2023-06-26 00:35:20: lr: 9e-05
+2023-06-26 00:35:20: This epoch took 2.18 s
+
+2023-06-26 00:35:20
+epoch:  365
+2023-06-26 00:35:22: train loss: 55.9536
+2023-06-26 00:35:38: validation foreground dice: ['0.6383']
+2023-06-26 00:35:38: current mean dice: 0.6383, best mean dice: 0.6514 at epoch 200
+2023-06-26 00:35:38: lr: 8.8e-05
+2023-06-26 00:35:38: This epoch took 17.73 s
+
+2023-06-26 00:35:38
+epoch:  366
+2023-06-26 00:35:40: train loss: 55.8788
+2023-06-26 00:35:40: lr: 8.5e-05
+2023-06-26 00:35:40: This epoch took 2.16 s
+
+2023-06-26 00:35:40
+epoch:  367
+2023-06-26 00:35:42: train loss: 56.7547
+2023-06-26 00:35:42: lr: 8.3e-05
+2023-06-26 00:35:42: This epoch took 2.08 s
+
+2023-06-26 00:35:42
+epoch:  368
+2023-06-26 00:35:44: train loss: 56.1203
+2023-06-26 00:35:44: lr: 8e-05
+2023-06-26 00:35:44: This epoch took 2.15 s
+
+2023-06-26 00:35:44
+epoch:  369
+2023-06-26 00:35:47: train loss: 56.1638
+2023-06-26 00:35:47: lr: 7.8e-05
+2023-06-26 00:35:47: This epoch took 2.18 s
+
+2023-06-26 00:35:47
+epoch:  370
+2023-06-26 00:35:49: train loss: 55.9763
+2023-06-26 00:36:04: validation foreground dice: ['0.6324']
+2023-06-26 00:36:04: current mean dice: 0.6324, best mean dice: 0.6514 at epoch 200
+2023-06-26 00:36:04: lr: 7.5e-05
+2023-06-26 00:36:04: This epoch took 17.35 s
+
+2023-06-26 00:36:04
+epoch:  371
+2023-06-26 00:36:06: train loss: 56.4574
+2023-06-26 00:36:06: lr: 7.3e-05
+2023-06-26 00:36:06: This epoch took 2.25 s
+
+2023-06-26 00:36:06
+epoch:  372
+2023-06-26 00:36:08: train loss: 56.4072
+2023-06-26 00:36:08: lr: 7e-05
+2023-06-26 00:36:08: This epoch took 2.04 s
+
+2023-06-26 00:36:08
+epoch:  373
+2023-06-26 00:36:10: train loss: 56.1136
+2023-06-26 00:36:10: lr: 6.8e-05
+2023-06-26 00:36:10: This epoch took 2.07 s
+
+2023-06-26 00:36:10
+epoch:  374
+2023-06-26 00:36:12: train loss: 56.1619
+2023-06-26 00:36:12: lr: 6.5e-05
+2023-06-26 00:36:12: This epoch took 2.09 s
+
+2023-06-26 00:36:12
+epoch:  375
+2023-06-26 00:36:14: train loss: 56.2528
+2023-06-26 00:36:30: validation foreground dice: ['0.6303']
+2023-06-26 00:36:30: current mean dice: 0.6303, best mean dice: 0.6514 at epoch 200
+2023-06-26 00:36:30: lr: 6.2e-05
+2023-06-26 00:36:30: This epoch took 17.36 s
+
+2023-06-26 00:36:30
+epoch:  376
+2023-06-26 00:36:32: train loss: 56.6790
+2023-06-26 00:36:32: lr: 6e-05
+2023-06-26 00:36:32: This epoch took 2.21 s
+
+2023-06-26 00:36:32
+epoch:  377
+2023-06-26 00:36:34: train loss: 56.1354
+2023-06-26 00:36:34: lr: 5.7e-05
+2023-06-26 00:36:34: This epoch took 2.13 s
+
+2023-06-26 00:36:34
+epoch:  378
+2023-06-26 00:36:36: train loss: 56.3258
+2023-06-26 00:36:36: lr: 5.5e-05
+2023-06-26 00:36:36: This epoch took 2.23 s
+
+2023-06-26 00:36:36
+epoch:  379
+2023-06-26 00:36:38: train loss: 56.4489
+2023-06-26 00:36:38: lr: 5.2e-05
+2023-06-26 00:36:38: This epoch took 2.08 s
+
+2023-06-26 00:36:38
+epoch:  380
+2023-06-26 00:36:40: train loss: 55.7500
+2023-06-26 00:36:56: validation foreground dice: ['0.6350']
+2023-06-26 00:36:56: current mean dice: 0.6350, best mean dice: 0.6514 at epoch 200
+2023-06-26 00:36:56: lr: 5e-05
+2023-06-26 00:36:56: This epoch took 17.52 s
+
+2023-06-26 00:36:56
+epoch:  381
+2023-06-26 00:36:58: train loss: 56.7235
+2023-06-26 00:36:58: lr: 4.7e-05
+2023-06-26 00:36:58: This epoch took 2.11 s
+
+2023-06-26 00:36:58
+epoch:  382
+2023-06-26 00:37:00: train loss: 56.5483
+2023-06-26 00:37:00: lr: 4.5e-05
+2023-06-26 00:37:00: This epoch took 2.02 s
+
+2023-06-26 00:37:00
+epoch:  383
+2023-06-26 00:37:02: train loss: 56.0795
+2023-06-26 00:37:02: lr: 4.2e-05
+2023-06-26 00:37:02: This epoch took 2.20 s
+
+2023-06-26 00:37:02
+epoch:  384
+2023-06-26 00:37:04: train loss: 56.9138
+2023-06-26 00:37:04: lr: 4e-05
+2023-06-26 00:37:04: This epoch took 2.10 s
+
+2023-06-26 00:37:04
+epoch:  385
+2023-06-26 00:37:07: train loss: 55.8409
+2023-06-26 00:37:22: validation foreground dice: ['0.6296']
+2023-06-26 00:37:22: current mean dice: 0.6296, best mean dice: 0.6514 at epoch 200
+2023-06-26 00:37:22: lr: 3.7e-05
+2023-06-26 00:37:22: This epoch took 17.44 s
+
+2023-06-26 00:37:22
+epoch:  386
+2023-06-26 00:37:24: train loss: 56.4337
+2023-06-26 00:37:24: lr: 3.5e-05
+2023-06-26 00:37:24: This epoch took 2.21 s
+
+2023-06-26 00:37:24
+epoch:  387
+2023-06-26 00:37:26: train loss: 55.3485
+2023-06-26 00:37:26: lr: 3.2e-05
+2023-06-26 00:37:26: This epoch took 2.19 s
+
+2023-06-26 00:37:26
+epoch:  388
+2023-06-26 00:37:28: train loss: 56.9924
+2023-06-26 00:37:28: lr: 3e-05
+2023-06-26 00:37:28: This epoch took 2.10 s
+
+2023-06-26 00:37:28
+epoch:  389
+2023-06-26 00:37:31: train loss: 56.1023
+2023-06-26 00:37:31: lr: 2.8e-05
+2023-06-26 00:37:31: This epoch took 2.20 s
+
+2023-06-26 00:37:31
+epoch:  390
+2023-06-26 00:37:33: train loss: 55.9413
+2023-06-26 00:37:48: validation foreground dice: ['0.6368']
+2023-06-26 00:37:48: current mean dice: 0.6368, best mean dice: 0.6514 at epoch 200
+2023-06-26 00:37:48: lr: 2.5e-05
+2023-06-26 00:37:48: This epoch took 17.53 s
+
+2023-06-26 00:37:48
+epoch:  391
+2023-06-26 00:37:50: train loss: 56.7311
+2023-06-26 00:37:50: lr: 2.3e-05
+2023-06-26 00:37:50: This epoch took 2.13 s
+
+2023-06-26 00:37:50
+epoch:  392
+2023-06-26 00:37:52: train loss: 56.0303
+2023-06-26 00:37:52: lr: 2e-05
+2023-06-26 00:37:52: This epoch took 2.04 s
+
+2023-06-26 00:37:52
+epoch:  393
+2023-06-26 00:37:54: train loss: 56.1278
+2023-06-26 00:37:54: lr: 1.8e-05
+2023-06-26 00:37:54: This epoch took 2.11 s
+
+2023-06-26 00:37:54
+epoch:  394
+2023-06-26 00:37:56: train loss: 56.0199
+2023-06-26 00:37:56: lr: 1.5e-05
+2023-06-26 00:37:56: This epoch took 2.14 s
+
+2023-06-26 00:37:56
+epoch:  395
+2023-06-26 00:37:59: train loss: 55.4441
+2023-06-26 00:38:14: validation foreground dice: ['0.6346']
+2023-06-26 00:38:14: current mean dice: 0.6346, best mean dice: 0.6514 at epoch 200
+2023-06-26 00:38:14: lr: 1.3e-05
+2023-06-26 00:38:14: This epoch took 17.32 s
+
+2023-06-26 00:38:14
+epoch:  396
+2023-06-26 00:38:16: train loss: 56.0445
+2023-06-26 00:38:16: lr: 1e-05
+2023-06-26 00:38:16: This epoch took 2.13 s
+
+2023-06-26 00:38:16
+epoch:  397
+2023-06-26 00:38:18: train loss: 55.8239
+2023-06-26 00:38:18: lr: 8e-06
+2023-06-26 00:38:18: This epoch took 2.09 s
+
+2023-06-26 00:38:18
+epoch:  398
+2023-06-26 00:38:20: train loss: 56.2055
+2023-06-26 00:38:20: lr: 5e-06
+2023-06-26 00:38:20: This epoch took 2.08 s
+
+2023-06-26 00:38:20
+epoch:  399
+2023-06-26 00:38:22: train loss: 55.7652
+2023-06-26 00:38:22: lr: 3e-06
+2023-06-26 00:38:22: This epoch took 2.14 s
+
+2023-06-26 00:38:22
+epoch:  400
+2023-06-26 00:38:24: train loss: 55.2159
+2023-06-26 00:38:40: validation foreground dice: ['0.6370']
+2023-06-26 00:38:40: current mean dice: 0.6370, best mean dice: 0.6514 at epoch 200
+2023-06-26 00:38:40: lr: 0.0
+2023-06-26 00:38:40: This epoch took 17.43 s
+model architecture: 2D LightUNet
+model initialization: Normal
+model architecture: 2D LightUNet

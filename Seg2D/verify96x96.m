@@ -11,13 +11,7 @@
 
 
 %% Load network
-netMatlab = importONNXNetwork('smallerInputs.onnx'); %model was saved with incorrect input size
-% Create new input layer
-in1 = imageInputLayer([96 96 1], "Normalization", 'none', "Name", 'input');
-% replace input layer for correct size
-netMatlab = layerGraph(netMatlab);
-netMatlab = replaceLayer(netMatlab, 'input', in1);
-netMatlab = assembleNetwork(netMatlab); % convert back to DAGNetwork
+netMatlab = importONNXNetwork('models/size_96/best_model.onnx'); %model was saved with incorrect input size
 % Create network in NNV
 net = matlab2nnv(netMatlab);
 
@@ -30,11 +24,13 @@ img = load(img_path);
 target = img.mask;
 img = img.flair;
 
-slice1 = 129:224;
-slice2 = 1:96;
+img_size = size(img);
+slice_size = 96;
+target_size = [slice_size, slice_size];
 
-slice_target = target(slice1, slice2);
-slice_img = img(slice1, slice2);
+r = centerCropWindow2d(img_size,target_size);
+slice_img = imcrop(img, r);
+slice_target = imcrop(target, r);
 
 y = netMatlab.predict(slice_img);
 y_mask = double(y > 0);
@@ -63,6 +59,7 @@ nPix = [10, 20, 30];
 
 rT = zeros(length(relaxFactors), length(epsilon), length(nPix));
 res = zeros(length(relaxFactors), length(epsilon), length(nPix));
+errMsgs = {};
 
 % Begin exploration
 rng(0);
@@ -80,19 +77,22 @@ for rF = 1:length(relaxFactors)
             % Create input set
             IS = ImageStar(img_lb, img_ub);
             t = tic;
-            % try
-            net.reach(IS, reachOptions);
-            res(rF, i, j) = 1;
-            disp("Well done");
-            % catch ME
-            %     warning(ME.message);
-            %     warning("Boooooooooooooooooooooooooooooooooooooo...");
-            %     disp(sum(net.reachTime > 0));
-            %     res(rF, i, j) = -1;
-            % end
+            try
+                net.reach(IS, reachOptions);
+                res(rF, i, j) = 1;
+                disp("Well done");
+            catch ME
+                warning(ME.message);
+                warning("Boooooooooooooooooooooooooooooooooooooo...");
+                disp(sum(net.reachTime > 0));
+                res(rF, i, j) = -1;
+                errMsgs{rF,i,j} = ME;
+            end
             rT(rF, i, j) = toc(t);
             disp("Finished with combo: (" + string(relaxFactors(rF)) + ", " + string(epsilon(i)) + ", "+string(nPix(j))+") is finished");
         end
     end
 end
+
+save('results/r96.mat', 'rT', 'res', "errMsgs");
 
