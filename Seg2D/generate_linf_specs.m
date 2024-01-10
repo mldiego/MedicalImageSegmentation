@@ -30,7 +30,7 @@ for k=1:length(dims)
     sliceIn = reshape(slice_img, [], 1);
     sliceOut = reshape(slice_target, [], 1);
     outputSpec = create_output_spec(sliceOut);
-    [lb,ub] = l_inf_attack(sliceIn, epsilon, 1, 0);
+    [lb,ub] = l_inf_attack(sliceIn, epsilon, inf, 0); % no known upper bound
     
     % Save spec
     export2vnnlib(lb, ub, length(ub), outputSpec, vnnlibfile);
@@ -74,3 +74,4 @@ function Hs = create_output_spec(mask)
     Hs = HalfSpace(G, g);
 
 end
+
