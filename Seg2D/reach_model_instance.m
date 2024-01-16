@@ -70,7 +70,7 @@ function [R,rT] = reach_model_instance(sliceSize, imgIdx, reachOptions, attack)
     end
     rT = toc(t);
 
-    save("reach_linf_"+string(sliceSize)+"_"+string(imgIdx)+"_"+string(nPix)+"_"+string(epsilon)+".mat", "R", "rT", "ME");
+    save("results/reach_linf_"+string(sliceSize)+"_"+string(imgIdx)+"_"+string(nPix)+"_"+string(epsilon)+".mat", "R", "rT", "ME", "-v7.3");
 
 
 end
