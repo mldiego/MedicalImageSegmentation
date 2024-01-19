@@ -7,7 +7,7 @@ function [R,rT] = reach_model_instance(sliceSize, imgIdx, reachOptions, attack)
     
     %% Load data
     
-    % load single data pint
+    % load single data point
     data_path = "../../FMitF/Seg2D/data/matData/";
     img_path = data_path + ".._data_axis_2_slice_"+string(imgIdx)+".mat";
     data = load(img_path);
