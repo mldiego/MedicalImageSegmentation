@@ -1,5 +1,5 @@
 %% Generate vnnlib specs for semantic segmentation
-% Most should be unsat (for single pixel),  most if not all are SAT for all
+% Most should be unsat (for single pixel), most if not all are SAT for all
 
 rng(0);
 
@@ -8,7 +8,7 @@ sliceSizes = [64, 80, 96]; % for cropping and loading models
 imgIdxs = randperm(315,5) + 100; % get 5 images from data
 epsilon = [0.0001; 0.0005];
 nPix = {10, "10", "20"};
-specType = "singlePixel"; % "all", "region"; region = lesion pixels, singlePixel = one pixel from lesion
+specType = "all"; % {"all", "region", "singlePixel"}; region = lesion pixels, singlePixel = one pixel from lesion
 
 dataPath = '../../FMitF/Seg2D/data/matData/.._data_axis_2_slice_';% 101.mat';
 
@@ -16,8 +16,10 @@ dataPath = '../../FMitF/Seg2D/data/matData/.._data_axis_2_slice_';% 101.mat';
 
 % Begin exploration
 for i=1:length(sliceSizes)
-
+    
     sZ = sliceSizes(i); % to choose models and reshape data into
+    % Load model
+    net = importONNXNetwork("models/size_"+string(sZ)+"/best_model.onnx");
 
     for j = 1:length(epsilon)
 
@@ -31,7 +33,7 @@ for i=1:length(sliceSizes)
 
                 idx = imgIdxs(m);
 
-                create_pred_vnnlib(dataPath, sZ, idx, ep, nP, specType);
+                create_vnnlib(net, dataPath, sZ, idx, ep, nP, specType);
 
             end
 
@@ -43,7 +45,7 @@ end
 
 %% Helper functions
 
-function create_pred_vnnlib(dataPath, sliceSize, imgIdx, epsilon, nPix, specType)
+function create_vnnlib(net, dataPath, sliceSize, imgIdx, epsilon, nPix, specType)
 
     rng(2024); % to select the same pixels for all models
 
@@ -55,20 +57,25 @@ function create_pred_vnnlib(dataPath, sliceSize, imgIdx, epsilon, nPix, specType
     % create file name
     name = "vnnlib/img_"+string(imgIdx)+"_sliceSize_"+string(sliceSize) + ...
         "_linf_pixels_" + string(nPix)+ "_eps_" + string(epsilon) + "_" + specType;
-    vnnlibfile = name+".vnnlib";
+    vnnlibfile = name+"_pred.vnnlib";
 
     % Load data
     data = load([dataPath num2str(imgIdx) '.mat']);
     img = data.flair; % input
-    target = data.mask; % output (target)
+    % target = data.mask; % output (target)
     img_size = size(img); % size of I/O
     
     % Preprocess data
     target_size = [sliceSize sliceSize];
     r = centerCropWindow2d(img_size, target_size); % cropping window
     slice_img = imcrop(img, r); % sliced input image
-    slice_target = imcrop(target, r); % sliced target output
+    % slice_target = imcrop(target, r); % sliced target output
     idxs = randperm(numel(slice_img), nPix); % idxs to modify in input image
+
+    % Compute model output
+    yPred = predict(net, slice_img);
+    yPred = (yPred > 0); % classify into 0 or 1
+    slice_target = yPred; % use model predictions as the target
 
     % create vnnlib files
     sliceIn = reshape(slice_img, [], 1);
