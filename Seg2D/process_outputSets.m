@@ -82,7 +82,7 @@ for k = 1:length(models)
             reg_ver_label = (VERIFIED_label == 1) & (slice_target == 1);
             rb_reg_label = sum(reg_ver_label, "all")/sum(slice_target, "all");
             reg_ver_pred = (VERIFIED_pred == 1) & (yPred == 1);
-            rb_reg_pred = sum(reg_ver_pred, "all")/sum(yPred, "all");
+            rb_reg_pred = sum(reg_ver_pred, "all")/sum(yPred, "all"); % if not "interesting region" (aka 1s) are originally predicted, then it returns Nan
     
             % 6) IoU
             % a) get verified output
