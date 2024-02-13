@@ -8,7 +8,9 @@ sliceSizes = [64, 80, 96]; % for cropping and loading models
 imgIdxs = randperm(315,5) + 100; % get 5 images from data
 epsilon = [0.0001; 0.0005];
 nPix = {10, "10", "20"};
-specType = "singlePixel"; % "all", "region"; region = lesion pixels, singlePixel = one pixel from lesion
+% specType = "singlePixel"; % "all", "region"; region = lesion pixels, singlePixel = one pixel from lesion
+% specType = "all";
+specType = "region";
 
 dataPath = '../../FMitF/Seg2D/data/matData/.._data_axis_2_slice_';% 101.mat';
 
@@ -121,18 +123,23 @@ function Hs = create_output_spec(mask, specType)
         % define spec
         x = xx(1); % only choose first pixel to verify
         G(x) = 1;
+        Hs = HalfSpace(G,g);
 
     elseif strcmp(specType, "region")
+        Hs = [];
         % initalize halfspace vars
         G = zeros(length(xx), outSize);
         g = zeros(length(xx),1);
+        Hs = [];
         % define spec
         for i=1:length(xx)
             x = xx(i); 
-            G(i, x) = 1; 
+            G(i, x) = 1;
+            Hs = [Hs; HalfSpace(G(i,:), g(i))];
         end
 
     elseif strcmp(specType, "all")
+        Hs = [];
         % initalize halfspace vars
         G = zeros(outSize, outSize);
         g = zeros(outSize,1);
@@ -143,12 +150,10 @@ function Hs = create_output_spec(mask, specType)
             else
                 G(i, i) = -1;
             end
+            Hs = [Hs; HalfSpace(G(i,:), g(i))];
         end
 
     end
-
-    % Create HalfSapce to define robustness specification
-    Hs = HalfSpace(G, g);
 
 end
 
