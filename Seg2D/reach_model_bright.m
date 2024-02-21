@@ -59,11 +59,16 @@ function I = bright_attack(im, max_pixels, threshold, noise_disturbance)
     im = single(im);
     at_im = im;
 
+    maxPixel = max(im, [], 'all');
+    minPixel = min(im, [], 'all');
+    threshold = threshold/255 * (maxPixel-minPixel) + minPixel;
+    epsilon = noise_disturbance * (maxPixel-minPixel)/255;
+
     % Create brightening attack
     for i=1:size(im,1)
         for j=1:size(im,2)
             if im(i,j) < threshold
-                at_im(i,j) = 255;
+                at_im(i,j) = maxPixel;
                 ct = ct + 1;
                 if ct >= max_pixels
                     flag = 1;
@@ -85,8 +90,8 @@ function I = bright_attack(im, max_pixels, threshold, noise_disturbance)
     V(:,:,:,1) = im;   % center of set
     V(:,:,:,2) = noise; % basis vectors
     C = [1; -1];          % constraints
-    d = [1-noise_disturbance; -1]; % constraints
-    I = ImageStar(V, C, d, 1-noise_disturbance, 1); % input set
+    d = [1-epsilon; -1]; % constraints
+    I = ImageStar(V, C, d, 1-epsilon, 1); % input set
 
 end
 

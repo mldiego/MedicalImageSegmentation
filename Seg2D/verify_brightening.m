@@ -15,7 +15,7 @@ rng(0);
 N = 10; % number of images to study
 sliceSizes = [64, 80, 96]; % for cropping and loading models
 imgIdxs = randperm(315,N) + 100; % get 5 images from data
-epsilon = [1/(255)^2; 2/(255)^2]; % because data is normalized, this actually corresponds to 1 and 2 pixel color values
+epsilon = [1; 2]; % corresponds to 1 and 2 pixel color values
 nPix = {10, 20, 30, 40, 50};
 
 % Define reachability options
@@ -32,13 +32,13 @@ for i=1:length(sliceSizes)
         ep = epsilon(j);
         attack = struct;
         attack.epsilon = ep;
-        attack.threshold = 100;
+        attack.threshold = 55;
         for k = 1:length(nPix)
             nP = nPix{k};
             attack.nPix = nP;
             for m = 1:length(imgIdxs)
                 idx = imgIdxs(m);
-                reach_model_instance(sZ, idx, reachOptions, attack);
+                reach_model_bright(sZ, idx, reachOptions, attack);
             end
         end
     end
