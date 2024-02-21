@@ -46,10 +46,10 @@ function [R,rT] = reach_model_instance(sliceSize, imgIdx, reachOptions, attack)
         nPix = floor(sliceSize^2 * str2double(nPix)/100);
     end
 
-    idxs = randperm(numel(slice_img), nPix);
+    % idxs = randperm(numel(slice_img), nPix);
         
     %% Define input set
-    
+
     % Create bounds
     img_lb = slice_img;
     img_lb(idxs) = img_lb(idxs) - epsilon;
@@ -74,4 +74,3 @@ function [R,rT] = reach_model_instance(sliceSize, imgIdx, reachOptions, attack)
 
 
 end
-
