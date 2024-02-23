@@ -47,7 +47,8 @@ function [R,rT] = reach_model_monai(sliceSize, imgIdx, reachOptions, transform)
     rT = toc(t);
 
     save("results/reach_monai_"+transform.name+"_"+string(sliceSize)+"_"+...
-        string(imgIdx)+"_"+string(nPix)+"_"+string(epsilon)+".mat", "R", "rT", "ME", "-v7.3");
+        string(imgIdx)+"_"+string(transform.gamma)+"_"+string(transform.gamma_range)+".mat", ...
+        "R", "rT", "ME", "-v7.3");
 
 
 end
