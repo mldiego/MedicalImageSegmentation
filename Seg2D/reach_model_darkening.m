@@ -85,7 +85,7 @@ function I = dark_attack(im, max_pixels, threshold, noise_disturbance)
         end
     end
 
-    % Define input set as VolumeStar
+    % Define input set as ImageStar
     dif_vol = im - at_im;
     noise = -dif_vol;
     V(:,:,:,1) = im; % center of set
