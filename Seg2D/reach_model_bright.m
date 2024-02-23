@@ -90,7 +90,7 @@ function I = bright_attack(im, max_pixels, threshold, noise_disturbance)
     V(:,:,:,1) = im;   % center of set
     V(:,:,:,2) = noise; % basis vectors
     C = [1; -1];          % constraints
-    d = [1-epsilon; -1]; % constraints
+    d = [1; -1]; % constraints
     I = ImageStar(V, C, d, 1-epsilon, 1); % input set
 
 end
