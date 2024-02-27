@@ -20,14 +20,14 @@ N = 10; % number of images to study
 sliceSizes = [64, 80, 96]; % for cropping and loading models
 imgIdxs = randperm(315,N) + 100; % get N images from data
 gamma = [0.5; 1; 2]; % lower and upper bound for typical ranges used for gamma
-gamma_range = [0.0075; 0.01; 0.0125; 0.015]; % gamma ranges to consider for each gamma value
+gamma_range = [0.005; 0.0075; 0.01]; % gamma ranges to consider for each gamma value
 % first one is equivalent to max interval ranges of about 1.3935 (for digital images)
 
 
 % Define reachability options
 reachOptions = struct;
 reachOptions.reachMethod = 'relax-star-range';
-reachOptions.relaxFactor = 0.8;
+reachOptions.relaxFactor = 0.95;
 % reachOptions.reachMethod = 'approx-star';
 
 %% Reachability analysis for all models
