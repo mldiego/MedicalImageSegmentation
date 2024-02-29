@@ -11,7 +11,7 @@ for k = 1:length(models)
     sliceSize = models(k);
 
     % adversarial perturbation: linf
-    results = dir("results/reach*linf_"+string(sliceSize)+"*.mat");
+    results = dir("oldResults/reach*linf_"+string(sliceSize)+"*.mat");
     data_path = "../../FMitF/Seg2D/data/matData/";
     
     N = length(results);
@@ -43,7 +43,7 @@ for k = 1:length(models)
         slice_img = imcrop(img, r);
     
         % Load reachability data
-        resData = load(['results/', fileName]);
+        resData = load(['oldResults/', fileName]);
     
         if ~isempty(resData.ME)
             warning("There is no output set compute, an error was encountered.")

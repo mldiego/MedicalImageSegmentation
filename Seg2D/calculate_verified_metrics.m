@@ -49,8 +49,7 @@ for k = 1:length(models)
         % 7) Save results
         params{1} = 'results';
         saveFile = join(params, "_");
-        % save(['results/', saveFile{1}], "riou_pred", "riou_label", "rb_reg_pred",...
-        %     "rb_reg_label", "rb_pred", "rb_label");
+        save(['results/', saveFile{1}], "inference_metrics", "verifiedPred_metrics", "verifiedGT_metrics");
     
     end
 

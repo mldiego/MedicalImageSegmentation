@@ -53,6 +53,7 @@ function [inference_metrics, verifiedGT_metrics, verifiedPred_metrics] = semanti
     
         % For faster verification, get bound estimates for each pixel
         [lb,ub] = R.estimateRanges; % overapproximation of actual set computed
+        yPred = (yPred > 0);
     
         % 1) Get robustness value / certified accuracy (1 = correct, 0 = incorrect)
         inference_metrics.cra    = get_accuracy(yPred, gt);
@@ -99,11 +100,10 @@ function dsc = get_dice_score(varargin)
 
     if nargin == 2 % (pred, target)
 
-        pred = varargin{1};
-        target = varargin{2};
+        pred = double(varargin{1});
+        target = double(varargin{2});
 
-        cra = pred == target;
-        cra = sum(cra, 'all')/numel(cra);
+        dsc = dice(pred,target);
 
     else
 
@@ -114,11 +114,11 @@ function dsc = get_dice_score(varargin)
         % 1) get correctly classified as 0 (background)
         ver_background = (ub <= 0);
         ver_background = ~ver_background;
-        ver_background = (ver_background == target) & (ver_background == 0);
+        % ver_background = (ver_background == target) & (ver_background == 0);
         
         % 2) get correctly classified as 1 (lession)
         ver_lesion = (lb > 0);
-        ver_lesion = (ver_lesion == target) & (ver_lesion == 1);
+        % ver_lesion = (ver_lesion == target) & (ver_lesion == 1);
     
         % 3) Get all correctly verified pixels
         % ver_img = ver_background + ver_lession; % could refine this by looking at the exact reach sets computed (reach set vs halfspace)
@@ -127,13 +127,13 @@ function dsc = get_dice_score(varargin)
         ver_img = 2*ones(size(target)); % pixel = 2 -> unknown
         
         background = find(ver_background == 0); % 0
-        ver_image(background) = 0;
+        ver_img(background) = 0;
         
         lesion = find(ver_lesion == 1); % 1
-        ver_image(lesion) = 1;
+        ver_img(lesion) = 1;
         
         % 4) compute dice score
-        dsc = dice(double(target), double(ver_image));
+        dsc = dice(double(target), double(ver_img));
         dsc = dsc(~isnan(dsc));
         dsc = sum(dsc)/length(dsc);
 
