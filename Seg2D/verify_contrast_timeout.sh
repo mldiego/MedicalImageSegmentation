@@ -33,7 +33,7 @@ do
 
             # adding an & at the end would execute in parallel, but matlab fails way too often like this
             # adding the pause seems to reduce a lot of the errors (at least the undetected toolboxes), but not eliminate them completely
-            timeout 450 matlab -r "addpath(genpath('"../../nnv/code/nnv"')); verify_model_monai_image $i $img $reachMethod $relaxFactor $perturbation $j $k; pause(1); quit
+            timeout 450 matlab -r "addpath(genpath('"../../nnv/code/nnv"')); verify_model_monai_image $i $img $reachMethod $relaxFactor $perturbation $j $k; pause(1); quit"
 
             killall -q matlab
 
