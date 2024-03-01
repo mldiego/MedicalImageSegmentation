@@ -1,4 +1,4 @@
-function verify_model_monai_image(sliceSize, gamma, gamma_range, imgIdx, reachMethod, relaxFactor, transformType)
+function verify_model_monai_image(sliceSize, imgIdx, reachMethod, relaxFactor, transformType, varargin)
    
     %% Load network
     
@@ -29,9 +29,16 @@ function verify_model_monai_image(sliceSize, gamma, gamma_range, imgIdx, reachMe
             % IS = bright_attack(slice_img, nPix, threshold, epsilon);
             error("Working on it");
         case "AdjustContrast"
+            gamma = varargin{1};
+            gamma_range = varargin{2};
             IS = AdjustContrast(slice_img, gamma, gamma_range);
+        case "BiasField"
+            order = varargin{1};
+            coefficient = varargin{2};
+            coefficient_range = varargin{3};
+            IS = BiasField(slice_img, order, coefficient, coefficient_range);
         otherwise
-            error("Wrong transformation name. Only 'AdjustContrast' and 'IntensityShift' are supported yet.");
+            error("Wrong transformation name. Only 'AdjustContrast' , 'BiasField', and 'IntensityShift' are supported yet.");
     end
     
 
@@ -52,8 +59,8 @@ function verify_model_monai_image(sliceSize, gamma, gamma_range, imgIdx, reachMe
     end
     rT = toc(t);
 
-    save("results/reach_monai_"+transformType+"_"+sliceSize+"_" + imgIdx + "_"+gamma+"_"...
-        +gamma_range + "_" + reachMethod + relaxFactor+".mat", "R", "rT", "ME", "-v7.3");
+    save("results/reach_monai_"+transformType+"_"+sliceSize+"_" + imgIdx + "_"+order+"_" + coefficient+"_"...
+        +coefficient_range + "_" + reachMethod + relaxFactor+".mat", "R", "rT", "ME", "-v7.3");
 
 
 end
@@ -62,6 +69,123 @@ end
 
 % function I = IntensityShift()
 % end
+
+function I = BiasField(img, order, coeffs, cRange)
+% Get the code from torchIO to generate the BiasField
+% https://torchio.readthedocs.io/_modules/torchio/transforms/augmentation/intensity/random_bias_field.html#RandomBiasField
+
+    % Transform variables
+    coeffs = str2double(coeffs);
+    order  = str2double(order);
+    cRange = str2double(cRange);
+    
+    bField1 = generate_bias_field(img, coeffs-cRange, order);
+    img1 = img .* bField1;
+
+    bField2 = generate_bias_field(img, coeffs+cRange, order);
+    img2 = img .* bField2;
+
+    % get max and min value for every pixel given the biasField applied
+    % interval range for every pixel is given by min and max values for
+    % that pixel in images img1 and img2
+    img_lb = min(img1,img2);
+    img_ub = max(img1,img2);
+
+    % Define input set as ImageStar
+    img_diff = img_ub - img_lb;
+    V(:,:,:,1) = img_lb; % assume lb is center of set (instead of img)
+    V(:,:,:,2) = img_diff ; % basis vectors
+    C = [1; -1]; % constraints
+    d = [1; -1];
+    I = ImageStar(V, C, d, 0, 1); % input set
+
+end
+
+function bias_field = generate_bias_field(img, coeffs, order)
+% def generate_bias_field(
+%     data: TypeData,
+%     order: int,
+%     coefficients: TypeData,
+% ) -> np.ndarray:
+%     # Create the bias field map using a linear combination of polynomial
+%     # functions and the coefficients previously sampled
+%     shape = np.array(data.shape[1:])  # first axis is channels
+%     half_shape = shape / 2
+% 
+%     ranges = [np.arange(-n, n) + 0.5 for n in half_shape]
+% 
+%     bias_field = np.zeros(shape)
+%     meshes = np.asarray(np.meshgrid(*ranges))
+% 
+%     for mesh in meshes:
+%         mesh_max = mesh.max()
+%         if mesh_max > 0:
+%             mesh /= mesh_max
+%     x_mesh, y_mesh, z_mesh = meshes
+% 
+%     i = 0
+%     for x_order in range(order + 1):
+%         for y_order in range(order + 1 - x_order):
+%             for z_order in range(order + 1 - (x_order + y_order)):
+%                 coefficient = coefficients[i]
+%                 new_map = (
+%                     coefficient
+%                     * x_mesh**x_order
+%                     * y_mesh**y_order
+%                     * z_mesh**z_order
+%                 )
+%                 bias_field += np.transpose(new_map, (1, 0, 2))  # why?
+%                 i += 1
+%     bias_field = np.exp(bias_field).astype(np.float32)
+%     return bias_field
+
+    % Create the bias field map using a linear combination of polynomial
+    % functions and the coefficients previously sampled
+    shape = size(img); 
+    % shape = shape(2:end); % first axis is channels (not necessary as it is a greyscale image -> 1 channel, already removed dimension)
+    half_shape = shape ./ 2;
+    ranges = [];
+    
+    for n = half_shape
+        ranges = [ranges; (-n:1:(n-1)) + 0.5];
+    end
+    
+    bias_field = zeros(shape);
+    
+    ndim = length(shape);
+    meshes = zeros([ndim, shape(1), shape(2)]);
+    for k=1:ndim
+        meshes(k, :,:) = meshgrid(ranges(k,:));
+    end
+    
+    for i = 1:size(meshes,1)
+        mesh = meshes(i,:,:);
+        mesh_max = max(mesh, [], 'all');
+        if mesh_max > 0
+            mesh = mesh./mesh_max;
+            meshes(i,:,:) = mesh;
+        end
+    end
+    
+    x_mesh = meshes(1,:,:);
+    y_mesh = meshes(2,:,:);
+    
+    % i = 0; % initialize counter (for coeffs)
+    cf = coeffs;
+    for x_order = 0:order
+        for y_order = 0:(order-x_order)
+            % cf = coeffs(i); % will this always be within limits? Why this?
+            new_map = (cf .* x_mesh.^x_order .* y_mesh.^y_order);
+            new_map = squeeze(permute(new_map, [2 1 3]));
+            bias_field = bias_field + new_map; % why?
+            % i = i + 1;
+        end
+    end
+    
+    % And that's it
+    bias_field = exp(bias_field);
+
+end
 
 function I = AdjustContrast(img, gamma, gamma_range)
 % Python Code from Project-MONAI

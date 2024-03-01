@@ -12,7 +12,6 @@
 rng(0);
 
 % Study variables
-% sliceSizes = [64, 80, 96, 112, 128]; % for cropping and loading models
 sliceSizes = [96, 112, 128]; % for cropping and loading models
 imgIdxs = randperm(315,5) + 100; % get 5 images from data
 epsilon = [0.0001; 0.0005];
