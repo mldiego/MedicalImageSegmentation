@@ -85,7 +85,7 @@ for s = 1:length(subjects)
         
     end
 
-end\MA
+end
 
 
 
