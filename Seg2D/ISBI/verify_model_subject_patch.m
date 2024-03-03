@@ -4,9 +4,9 @@ function verify_model_subject_patch(img_path, subject, sliceSize, reachMethod, r
 
     % Get variable arguments
     switch transformType
-        case "IntensityShift"
-            % IS = bright_attack(slice_img, nPix, threshold, epsilon);
-            error("Working on it");
+        case "linf"
+            epsilon = varargin{1};
+            nPix = varargin{2}; % percentage for each 2D data (not slices)
         case "AdjustContrast"
             gamma = varargin{1};
             gamma_range = varargin{2};
@@ -20,7 +20,7 @@ function verify_model_subject_patch(img_path, subject, sliceSize, reachMethod, r
  
     %% Load network
     
-    netMatlab = importNetworkFromONNX("models/size_"+string(sliceSize)+"/best_model.onnx");
+    netMatlab = importNetworkFromONNX("models/model"+string(sliceSize)+".onnx");
     net = matlab2nnv(netMatlab);
     
     %% Load data
@@ -65,11 +65,19 @@ function verify_model_subject_patch(img_path, subject, sliceSize, reachMethod, r
     end
     rT = toc(t);
 
-    save("results/reach_monai_" + transformType + "_" + sliceSize+ "_" + subject + "_" ...
+    if strcmp(transformType, "BiasField")
+        save("results/reach_monai_" + transformType + "_" + sliceSize+ "_" + subject + "_" ...
         + channel + "_" + xC + "_" + yC + "_" + order + "_" + coefficient + "_" + coefficient_range...
         + "_" + reachMethod + relaxFactor+".mat", "R", "rT", "ME", "-v7.3");
-
-    system("taskkill /F /IM cmd.exe"); % will this stop the timeout command?
+    elseif strcmp(transformType, "AdjustContrast")
+        save("results/reach_monai_" + transformType + "_" + sliceSize+ "_" + subject + "_" ...
+        + channel + "_" + xC + "_" + yC + "_" + gamma + "_" + gamma_range...
+        + "_" + reachMethod + relaxFactor+".mat", "R", "rT", "ME", "-v7.3");
+    elseif strcmp(transformType, "linf")
+        save("results/reach_monai_" + transformType + "_" + sliceSize+ "_" + subject + "_" ...
+        + channel + "_" + xC + "_" + yC + "_" + epsilon + "_" + nPix...
+        + "_" + reachMethod + relaxFactor+".mat", "R", "rT", "ME", "-v7.3");
+    end
 
 
 end

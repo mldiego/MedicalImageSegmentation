@@ -1,0 +1,1 @@
+To include info (mask) of which pixes were modified

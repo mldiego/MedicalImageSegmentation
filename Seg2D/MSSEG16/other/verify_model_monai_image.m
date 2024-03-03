@@ -59,8 +59,16 @@ function verify_model_monai_image(sliceSize, imgIdx, reachMethod, relaxFactor, t
     end
     rT = toc(t);
 
-    save("results/reach_monai_"+transformType+"_"+sliceSize+"_" + imgIdx + "_"+order+"_" + coefficient+"_"...
+    if strcmp(transformType, "BiasField")
+        save("results/reach_monai_"+transformType+"_"+sliceSize+"_" + imgIdx + "_"+order+"_" + coefficient+"_"...
         +coefficient_range + "_" + reachMethod + relaxFactor+".mat", "R", "rT", "ME", "-v7.3");
+    elseif strcmp(transformType, "AdjustContrast")
+        save("results/reach_monai_"+transformType+"_"+sliceSize+"_" + imgIdx + "_"+order+"_" + coefficient+"_"...
+        +coefficient_range + "_" + reachMethod + relaxFactor+".mat", "R", "rT", "ME", "-v7.3");
+    elseif strcmp(transformType, "linf")
+        save("results/reach_monai_"+transformType+"_"+sliceSize+"_" + imgIdx + "_"+order+"_" + coefficient+"_"...
+        +coefficient_range + "_" + reachMethod + relaxFactor+".mat", "R", "rT", "ME", "-v7.3");
+    end
 
 
 end
