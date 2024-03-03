@@ -185,6 +185,20 @@ function [lb, ub, idxs] = L_inf(img, wm_mask, epsilon, nPix)
 
     idxs = randperm(N,cN); % choose cN pixels out of N for each patch
 
+    % Get data ranges
+    img_min = min(img, [], 'all');
+    img_max = max(img, [], 'all');
+    img_range = img_max-img_min;
+
+    epsilon = epsilon *img_range; % resize epsilon to match the equivalence of color values argued for
+
+    % Get data ranges
+    img_min = min(img, [], 'all');
+    img_max = max(img, [], 'all');
+    img_range = img_max-img_min;
+
+    epsilon = epsilon *img_range; % resize epsilon to match the equivalence of color values argued for
+
     % Apply perturnbation to those pixels
     lb = img;
     lb(idxs) = lb(idxs) - epsilon;
