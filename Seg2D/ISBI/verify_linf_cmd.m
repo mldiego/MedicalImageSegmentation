@@ -38,17 +38,17 @@ for s = 1:length(subjects)
         
         for j = 1:length(gamma)
     
-            gval = gamma(j);
-            gval = string(gval);
+            ep = epsilon(j);
+            ep = string(ep);
     
-            for k = 1:length(gamma_range)
+            for k = 1:length(nPix)
             
-                gRange = gamma_range(k);
-                gRange = string(gRange);
+                nP = nPix(k);
+                nP = string(nP);
 
                 for c = 1:size(flair,1) % iterate through all 2D slices (it broke at 70, restart from there)
 
-                    generate_patches(flair, mask, wm_mask, sZ, c, gval, gRange); % generates all possible patches to analyze
+                    generate_patches(flair, mask, wm_mask, sZ, c, ep, nP); % generates all possible patches to analyze
 
                     patches = dir("tempData/*.mat"); % get generated patches
 
@@ -58,7 +58,7 @@ for s = 1:length(subjects)
 
                         % sys_cmd = sprintf('C:/"Program Files"/Git/git-bash.exe timeout 450 matlab -r "cd ../../nnv/code/nnv; startup_nnv; cd ../../../MedicalImageSegmentation/Seg2D; verify_model_subject_patch(%s, %s, %s, %s, %s, %s, %s, %s, %s); quit;"', img_path, sbName, sZ, reachMethod, relaxFactor, transType, order, coefficient, cRange);
                         % sys_cmd = sprintf('C:/"Program Files"/Git/usr/bin/timeout.exe 450 matlab -r "addpath(genpath(''../../nnv/code/nnv'')); verify_model_subject_patch(""%s"", ""%s"", ""%s"", ""%s"", ""%s"", ""%s"", ""%s"", ""%s"", ""%s""); pause(0.5); quit force;"', img_path, sbName, sZ, reachMethod, relaxFactor, transType, order, coefficient, cRange);
-                        sys_cmd = sprintf('timeout 450 matlab -r "addpath(genpath(''../../../nnv/code/nnv'')); verify_model_subject_patch(''%s'', ''%s'', ''%s'', ''%s'', ''%s'', ''%s'', ''%s'', ''%s''); pause(0.5); quit force;"', img_path, sbName, sZ, reachMethod, relaxFactor, transType, epsilon, nPix);
+                        sys_cmd = sprintf('timeout 450 matlab -r "addpath(genpath(''../../../nnv/code/nnv'')); verify_model_subject_patch(''%s'', ''%s'', ''%s'', ''%s'', ''%s'', ''%s'', ''%s'', ''%s''); pause(0.5); quit force;"', img_path, sbName, sZ, reachMethod, relaxFactor, transType, ep, nP);
 
                         [status, cmdout] = system(sys_cmd);
                         % verify_model_subject_patch(img_path, sb, sZ, reachMethod, relaxFactor, transType, order, coefficient, cRange);
@@ -125,7 +125,7 @@ function generate_patches(flair, mask, wm_mask, sZ, c, epsilon, nPix)
     wm_mask_slice = squeeze(wm_mask(c,:,:));
 
     % Apply transformation
-    [flair_lb, flair_ub, idxs] = L_inf(flair_slice, epsilon, nPix);
+    [flair_lb, flair_ub, idxs] = L_inf(flair_slice, wm_mask_slice, epsilon, nPix);
 
     save("linfData/patch"+string(c)+".mat", "idxs");
 
