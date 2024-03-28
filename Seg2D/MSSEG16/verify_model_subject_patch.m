@@ -59,9 +59,10 @@ function verify_model_subject_patch(img_path, subject, sliceSize, reachMethod, r
     ME = [];
     try
         R = net.reach(IS, reachOptions);
+        [lb, ub] = R.estimateRanges;
     catch ME
         % R = net.reachSet;
-        R = [];
+        lb = []; ub = [];
     end
     rT = toc(t);
 
@@ -69,20 +70,16 @@ function verify_model_subject_patch(img_path, subject, sliceSize, reachMethod, r
     if strcmp(transformType, "BiasField")
         save("results/reach_monai_" + transformType + "_" + sliceSize+ "_" + subject + "_" ...
         + channel + "_" + xC + "_" + yC + "_" + order + "_" + coefficient + "_" + coefficient_range...
-        + "_" + reachMethod + relaxFactor+".mat", "R", "rT", "ME", "-v7.3");
+        + "_" + reachMethod + relaxFactor+".mat", "lb", "ub", "rT", "ME", "-v7.3");
     elseif strcmp(transformType, "AdjustContrast")
         save("results/reach_monai_" + transformType + "_" + sliceSize+ "_" + subject + "_" ...
         + channel + "_" + xC + "_" + yC + "_" + gamma + "_" + gamma_range...
-        + "_" + reachMethod + relaxFactor+".mat", "R", "rT", "ME", "-v7.3");
+        + "_" + reachMethod + relaxFactor+".mat", "lb", "ub", "rT", "ME", "-v7.3");
     elseif strcmp(transformType, "linf")
         save("results/reach_monai_" + transformType + "_" + sliceSize+ "_" + subject + "_" ...
         + channel + "_" + xC + "_" + yC + "_" + epsilon + "_" + nPix...
-        + "_" + reachMethod + relaxFactor+".mat", "R", "rT", "ME", "-v7.3");
+        + "_" + reachMethod + relaxFactor+".mat", "lb", "ub", "rT", "ME", "-v7.3");
     end
-    
-
-    % system("taskkill /F /IM cmd.exe"); % will this stop the timeout
-    % command? (Windows)
 
 
 end

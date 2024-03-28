@@ -1,9 +1,9 @@
 %% Example of how to load and process data from nifti files
 
-pth2data = "../../../data/UMCL/subjects/patient01/1/";
+pth2data = "../../../data/ISBI/subjects/01/01/";
 
 flair = niftiread(pth2data+"flair.nii");
-mask = niftiread(pth2data+"mask.nii");
+mask = niftiread(pth2data+"mask1.nii");
 % wm_mask = niftiread(pth2data+"wm_mask.nii"); % not there yet for umcl
 
 % get max and min values for visualizing

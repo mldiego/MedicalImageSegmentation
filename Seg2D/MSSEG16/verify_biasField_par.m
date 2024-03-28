@@ -1,14 +1,12 @@
 %% Verify msseg models given a bias field perturbation
 
-% rng(0);
-
 % Study variables
 sliceSizes = [64, 80, 96]; % for cropping and loading models
 order = "3"; % possible polynomial order values ( > 1, default = 3)
 coeff = [0.1, 0.25, 0.5];
 coeff_range = [0.00025, 0.0005, 0.001]; % what should the size of this be? 
-path2data = "../../data/ISBI/subjects/01/";
-subjects = ["01", "02", "03", "04"]; % subject data to analyze (omly use mask1 for each)
+path2data = "../../data/MSSEG16/subjects/";
+subjects = ["CHJE/1", "DORE/1", "GULE/1"]; % subject data to analyze
 transType = "BiasField";
 
 % Perturbation to evaluate
@@ -30,14 +28,13 @@ relaxFactor = "0.95";
 for s = 1:length(subjects)
 
     sb = subjects(s);
-    % sbName = split(sb, '/');
-    % sbName = string(sbName{1});
-    sbName = sb;
+    sbName = split(sb, '/');
+    sbName = string(sbName{1});
 
     % load 3d data
     flair   = niftiread(path2data + sb+"/flair.nii");
     flair = flair_normalization(flair);
-    mask    = niftiread(path2data + sb+"/mask1.nii");
+    mask    = niftiread(path2data + sb+"/mask.nii");
     wm_mask = niftiread(path2data + sb+"/wm_mask.nii");
     [flair, mask, wm_mask] = removeExtraBackground(flair, mask, wm_mask);
 
@@ -57,28 +54,21 @@ for s = 1:length(subjects)
                 cRange = coeff_range(k);
                 cRange = string(cRange);
 
-                for c = 1:size(flair,1) % iterate through all 2D slices (it broke at 70, restart from there)
+                parfor c = 1:size(flair,1) % iterate through all 2D slices 
 
                     generate_patches(flair, mask, wm_mask, sZ, c, order, coefficient, cRange); % generates all possible patches to analyze
 
-                    patches = dir("tempData/*.mat"); % get generated patches
+                    patches = dir("tempData/data_"+string(c)+"_*.mat"); % get generated patches
 
                     for p = 1:height(patches)
 
                         img_path = "tempData/"+patches(p).name;
 
-                        % sys_cmd = sprintf('C:/"Program Files"/Git/git-bash.exe timeout 450 matlab -r "cd ../../nnv/code/nnv; startup_nnv; cd ../../../MedicalImageSegmentation/Seg2D; verify_model_subject_patch(%s, %s, %s, %s, %s, %s, %s, %s, %s); quit;"', img_path, sbName, sZ, reachMethod, relaxFactor, transType, order, coefficient, cRange);
-                        % sys_cmd = sprintf('C:/"Program Files"/Git/usr/bin/timeout.exe 450 matlab -r "addpath(genpath(''../../nnv/code/nnv'')); verify_model_subject_patch(""%s"", ""%s"", ""%s"", ""%s"", ""%s"", ""%s"", ""%s"", ""%s"", ""%s""); pause(0.5); quit force;"', img_path, sbName, sZ, reachMethod, relaxFactor, transType, order, coefficient, cRange);
-                        sys_cmd = sprintf('timeout 450 matlab -r "addpath(genpath(''../../../nnv/code/nnv'')); verify_model_subject_patch(''%s'', ''%s'', ''%s'', ''%s'', ''%s'', ''%s'', ''%s'', ''%s'', ''%s''); pause(0.5); quit force;"', img_path, sbName, sZ, reachMethod, relaxFactor, transType, order, coefficient, cRange);
-
-                        [status, cmdout] = system(sys_cmd);
-                        % verify_model_subject_patch(img_path, sb, sZ, reachMethod, relaxFactor, transType, order, coefficient, cRange);
+                        verify_model_subject_patch(img_path, sbName, sZ, reachMethod, relaxFactor, transType, order, coefficient, cRange);
                         
-                        % system("sleep 5"); % wait a few seconds to ensure matlab is closed (windows)
-
                     end
 
-                    delete("tempData/*.mat"); % remove all generated patches
+                    delete("tempData/data_"+string(c)+"_*.mat"); % remove all generated patches
                 
                 end
 
@@ -145,13 +135,13 @@ function generate_patches(flair, mask, wm_mask, sZ, c, order, coeffs, cRange)
         for j = yC
 
             % Get data info
-            flair = flair_slice(min(i:i+sZ-1, height), min(j:j+sZ-1, width));
-            mask = mask_slice(min(i:i+sZ-1, height), min(j:j+sZ-1, width));
-            wm_mask = wm_mask_slice(min(i:i+sZ-1, height), min(j:j+sZ-1, width));
+            flair = flair_slice(i:min(i+sZ-1, height), j:min(j+sZ-1, width));
+            mask = mask_slice(i:min(i+sZ-1, height), j:min(j+sZ-1, width));
+            wm_mask = wm_mask_slice(i:min(i+sZ-1, height), j:min(j+sZ-1, width));
             
             % Get bounds for that data
-            lb = flair_lb(min(i:i+sZ-1, height), min(j:j+sZ-1, width));
-            ub = flair_ub(min(i:i+sZ-1, height), min(j:j+sZ-1, width));
+            lb = flair_lb(i:min(i+sZ-1, height), j:min(j+sZ-1, width));
+            ub = flair_ub(i:min(i+sZ-1, height), j:min(j+sZ-1, width));
             
             % Check the patches are of correct dimensions, otherwise add 0s
             % to the bottom/right

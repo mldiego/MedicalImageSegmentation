@@ -57,11 +57,11 @@ for s = 1:length(subjects)
                 cRange = coeff_range(k);
                 cRange = string(cRange);
 
-                for c = 1:size(flair,1) % iterate through all 2D slices (it broke at 70, restart from there)
+                parfor c = 1:size(flair,1) % iterate through all 2D slices (it broke at 70, restart from there)
 
                     generate_patches(flair, mask, wm_mask, sZ, c, order, coefficient, cRange); % generates all possible patches to analyze
 
-                    patches = dir("tempData/*.mat"); % get generated patches
+                    patches = dir("tempData/data_"+string(c)+"_*.mat"); % get generated patches
 
                     for p = 1:height(patches)
 
@@ -69,16 +69,18 @@ for s = 1:length(subjects)
 
                         % sys_cmd = sprintf('C:/"Program Files"/Git/git-bash.exe timeout 450 matlab -r "cd ../../nnv/code/nnv; startup_nnv; cd ../../../MedicalImageSegmentation/Seg2D; verify_model_subject_patch(%s, %s, %s, %s, %s, %s, %s, %s, %s); quit;"', img_path, sbName, sZ, reachMethod, relaxFactor, transType, order, coefficient, cRange);
                         % sys_cmd = sprintf('C:/"Program Files"/Git/usr/bin/timeout.exe 450 matlab -r "addpath(genpath(''../../nnv/code/nnv'')); verify_model_subject_patch(""%s"", ""%s"", ""%s"", ""%s"", ""%s"", ""%s"", ""%s"", ""%s"", ""%s""); pause(0.5); quit force;"', img_path, sbName, sZ, reachMethod, relaxFactor, transType, order, coefficient, cRange);
-                        sys_cmd = sprintf('timeout 450 matlab -r "addpath(genpath(''../../../nnv/code/nnv'')); verify_model_subject_patch(''%s'', ''%s'', ''%s'', ''%s'', ''%s'', ''%s'', ''%s'', ''%s'', ''%s''); pause(0.5); quit force;"', img_path, sbName, sZ, reachMethod, relaxFactor, transType, order, coefficient, cRange);
+                        % sys_cmd = sprintf('timeout 450 matlab -r "addpath(genpath(''../../../nnv/code/nnv'')); verify_model_subject_patch(''%s'', ''%s'', ''%s'', ''%s'', ''%s'', ''%s'', ''%s'', ''%s'', ''%s''); pause(0.5); quit force;"', img_path, sbName, sZ, reachMethod, relaxFactor, transType, order, coefficient, cRange);
 
-                        [status, cmdout] = system(sys_cmd);
+                        verify_model_subject_patch(img_path, sbName, sZ, reachMethod, relaxFactor, transType, order, coefficient, cRange); 
+
+                        %[status, cmdout] = system(sys_cmd);
                         % verify_model_subject_patch(img_path, sb, sZ, reachMethod, relaxFactor, transType, order, coefficient, cRange);
                         
                         % system("sleep 5"); % wait a few seconds to ensure matlab is closed (windows)
 
                     end
 
-                    delete("tempData/*.mat"); % remove all generated patches
+                    delete("tempData/data_"+string(c)+"_*.mat"); % remove all generated patches
                 
                 end
 
@@ -187,11 +189,14 @@ function [img_lb, img_ub] = BiasField(img, order, coeffs, cRange)
     order  = str2double(order);
     cRange = str2double(cRange);
     
+    % Field applied only to the center of the image (not background)
+    img1 = img;
     bField1 = generate_bias_field(img, coeffs-cRange, order);
-    img1 = img .* bField1;
+    img1(19:end-18,:) = img(19:end-18,:) .* bField1;
 
+    img2 = img;
     bField2 = generate_bias_field(img, coeffs+cRange, order);
-    img2 = img .* bField2;
+    img2(19:end-18,:) = img(19:end-18,:) .* bField2;
 
     % get max and min value for every pixel given the biasField applied
     % interval range for every pixel is given by min and max values for
@@ -251,33 +256,37 @@ function bias_field = generate_bias_field(img, coeffs, order)
     % Create the bias field map using a linear combination of polynomial
     % functions and the coefficients previously sampled
     shape = size(img); 
+    shape(1) = shape(2); % copy lower dimension
     % shape = shape(2:end); % first axis is channels (not necessary as it is a greyscale image -> 1 channel, already removed dimension)
     half_shape = shape ./ 2;
-    ranges = [];
+    ranges = {};
     
+    i = 1;
     for n = half_shape
-        ranges = [ranges; (-n:1:(n-1)) + 0.5];
+        ranges{i} = (-n:1:(n-1)) + 0.5;
+        i = i + 1;
     end
     
     bias_field = zeros(shape);
     
     ndim = length(shape);
-    meshes = zeros([ndim, shape(1), shape(2)]);
+    % meshes = zeros([ndim, shape(1), shape(2)]);
+    meshes = {};
     for k=1:ndim
-        meshes(k, :,:) = meshgrid(ranges(k,:));
+        meshes{k} = meshgrid(ranges{k});
     end
     
-    for i = 1:size(meshes,1)
-        mesh = meshes(i,:,:);
+    for i = 1:length(meshes)
+        mesh = meshes{i};
         mesh_max = max(mesh, [], 'all');
         if mesh_max > 0
             mesh = mesh./mesh_max;
-            meshes(i,:,:) = mesh;
+            meshes{i} = mesh;
         end
     end
     
-    x_mesh = meshes(1,:,:);
-    y_mesh = meshes(2,:,:);
+    x_mesh = meshes{1};
+    y_mesh = meshes{2};
     
     % i = 0; % initialize counter (for coeffs)
     cf = coeffs;
