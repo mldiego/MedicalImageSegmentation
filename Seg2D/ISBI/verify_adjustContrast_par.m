@@ -1,7 +1,5 @@
 %% Verify msseg models given a bias field perturbation
 
-% rng(0);
-
 % Study variables
 sliceSizes = [64, 80, 96]; % for cropping and loading models
 gamma = [0.5; 1; 2]; % lower and upper bound for typical ranges used for gamma
@@ -57,15 +55,7 @@ for s = 1:length(subjects)
                     for p = 1:height(patches)
 
                         img_path = "tempData/"+patches(p).name;
-
-                        % sys_cmd = sprintf('C:/"Program Files"/Git/git-bash.exe timeout 450 matlab -r "cd ../../nnv/code/nnv; startup_nnv; cd ../../../MedicalImageSegmentation/Seg2D; verify_model_subject_patch(%s, %s, %s, %s, %s, %s, %s, %s, %s); quit;"', img_path, sbName, sZ, reachMethod, relaxFactor, transType, order, coefficient, cRange);
-                        % sys_cmd = sprintf('C:/"Program Files"/Git/usr/bin/timeout.exe 450 matlab -r "addpath(genpath(''../../nnv/code/nnv'')); verify_model_subject_patch(""%s"", ""%s"", ""%s"", ""%s"", ""%s"", ""%s"", ""%s"", ""%s"", ""%s""); pause(0.5); quit force;"', img_path, sbName, sZ, reachMethod, relaxFactor, transType, order, coefficient, cRange);
-                        % sys_cmd = sprintf('timeout 450 matlab -r "addpath(genpath(''../../../nnv/code/nnv'')); verify_model_subject_patch(''%s'', ''%s'', ''%s'', ''%s'', ''%s'', ''%s'', ''%s'', ''%s''); pause(0.5); quit force;"', img_path, sbName, sZ, reachMethod, relaxFactor, transType, gval, gRange);
-
-                        % [status, cmdout] = system(sys_cmd);
                         verify_model_subject_patch(img_path, sb, sZ, reachMethod, relaxFactor, transType, gval, gRange);
-                        
-                        % system("sleep 5"); % wait a few seconds to ensure matlab is closed (windows)
 
                     end
 

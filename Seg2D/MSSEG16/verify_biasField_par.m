@@ -9,13 +9,6 @@ path2data = "../../data/MSSEG16/subjects/";
 subjects = ["CHJE/1", "DORE/1", "GULE/1"]; % subject data to analyze
 transType = "BiasField";
 
-% Perturbation to evaluate
-% transform = struct;
-% transform.name = "BiasField";
-% transform.order = order;
-% transform.coefficient = coeff;
-% transform.coefficient_range = coeff_range;
-
 
 %% Reachability analysis for all models
 

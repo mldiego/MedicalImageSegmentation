@@ -1,7 +1,5 @@
 %% Verify msseg models given a bias field perturbation
 
-% rng(0);
-
 % Study variables
 sliceSizes = [64, 80, 96]; % for cropping and loading models
 order = "3"; % possible polynomial order values ( > 1, default = 3)
@@ -10,13 +8,6 @@ coeff_range = [0.00025, 0.0005, 0.001]; % what should the size of this be?
 path2data = "../../data/ISBI/subjects/01/";
 subjects = ["01", "02", "03", "04"]; % subject data to analyze (omly use mask1 for each)
 transType = "BiasField";
-
-% Perturbation to evaluate
-% transform = struct;
-% transform.name = "BiasField";
-% transform.order = order;
-% transform.coefficient = coeff;
-% transform.coefficient_range = coeff_range;
 
 
 %% Reachability analysis for all models
@@ -67,16 +58,7 @@ for s = 1:length(subjects)
 
                         img_path = "tempData/"+patches(p).name;
 
-                        % sys_cmd = sprintf('C:/"Program Files"/Git/git-bash.exe timeout 450 matlab -r "cd ../../nnv/code/nnv; startup_nnv; cd ../../../MedicalImageSegmentation/Seg2D; verify_model_subject_patch(%s, %s, %s, %s, %s, %s, %s, %s, %s); quit;"', img_path, sbName, sZ, reachMethod, relaxFactor, transType, order, coefficient, cRange);
-                        % sys_cmd = sprintf('C:/"Program Files"/Git/usr/bin/timeout.exe 450 matlab -r "addpath(genpath(''../../nnv/code/nnv'')); verify_model_subject_patch(""%s"", ""%s"", ""%s"", ""%s"", ""%s"", ""%s"", ""%s"", ""%s"", ""%s""); pause(0.5); quit force;"', img_path, sbName, sZ, reachMethod, relaxFactor, transType, order, coefficient, cRange);
-                        % sys_cmd = sprintf('timeout 450 matlab -r "addpath(genpath(''../../../nnv/code/nnv'')); verify_model_subject_patch(''%s'', ''%s'', ''%s'', ''%s'', ''%s'', ''%s'', ''%s'', ''%s'', ''%s''); pause(0.5); quit force;"', img_path, sbName, sZ, reachMethod, relaxFactor, transType, order, coefficient, cRange);
-
                         verify_model_subject_patch(img_path, sbName, sZ, reachMethod, relaxFactor, transType, order, coefficient, cRange); 
-
-                        %[status, cmdout] = system(sys_cmd);
-                        % verify_model_subject_patch(img_path, sb, sZ, reachMethod, relaxFactor, transType, order, coefficient, cRange);
-                        
-                        % system("sleep 5"); % wait a few seconds to ensure matlab is closed (windows)
 
                     end
 

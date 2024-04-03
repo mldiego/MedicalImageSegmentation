@@ -2,8 +2,8 @@
 
 % Study variables
 sliceSizes = [64, 80, 96]; % for cropping and loading models
-epsilon = [0.002; 0.004; 0.006]; % equivalent to 1,2, 3 pixel color values
-nPix = [5, 10, 15, 25, 50];
+epsilon = [0.002; 0.004; 0.006]; % equivalent to 1, 2, 3 pixel color values
+nPix = [5, 10, 15, 25, 50]; % percentage of pixels within white matter mask perturbed
 path2data = "../../data/UMCL/subjects/patient";
 subjects = ["01", "02", "03", "04", "05", "06"]; % subject data to analyze (omly use mask1 for each)
 transType = "linf";
