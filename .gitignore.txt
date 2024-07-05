@@ -1,2 +1,2 @@
-**/**/results/*.mat
-**/**/tempData/
+**/results/*.mat
+**/tempData/
