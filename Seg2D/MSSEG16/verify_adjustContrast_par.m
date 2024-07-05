@@ -56,7 +56,7 @@ for s = 1:length(subjects)
 
                         img_path = "tempData/"+patches(p).name;
 
-                        verify_model_subject_patch(img_path, sb, sZ, reachMethod, relaxFactor, transType, order, coefficient, cRange);
+                        verify_model_subject_patch(img_path, sb, sZ, reachMethod, relaxFactor, transType, gval, gRange);
                         
                     end
 

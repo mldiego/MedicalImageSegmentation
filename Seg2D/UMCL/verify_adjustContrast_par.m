@@ -28,7 +28,7 @@ for s = 1:length(subjects)
     % load 3d data
     flair   = niftiread(path2data + sb+"/1/flair.nii");
     flair = flair_normalization(flair);
-    mask    = niftiread(path2data + sb+"/1/mask1.nii");
+    mask    = niftiread(path2data + sb+"/1/mask.nii");
     wm_mask = niftiread(path2data + sb+"/1/wm_mask.nii");
     [flair, mask, wm_mask] = removeExtraBackground(flair, mask, wm_mask);
 
@@ -58,14 +58,7 @@ for s = 1:length(subjects)
 
                         img_path = "tempData/"+patches(p).name;
 
-                        % sys_cmd = sprintf('C:/"Program Files"/Git/git-bash.exe timeout 450 matlab -r "cd ../../nnv/code/nnv; startup_nnv; cd ../../../MedicalImageSegmentation/Seg2D; verify_model_subject_patch(%s, %s, %s, %s, %s, %s, %s, %s, %s); quit;"', img_path, sbName, sZ, reachMethod, relaxFactor, transType, order, coefficient, cRange);
-                        % sys_cmd = sprintf('C:/"Program Files"/Git/usr/bin/timeout.exe 450 matlab -r "addpath(genpath(''../../nnv/code/nnv'')); verify_model_subject_patch(""%s"", ""%s"", ""%s"", ""%s"", ""%s"", ""%s"", ""%s"", ""%s"", ""%s""); pause(0.5); quit force;"', img_path, sbName, sZ, reachMethod, relaxFactor, transType, order, coefficient, cRange);
-                        sys_cmd = sprintf('timeout 450 matlab -r "addpath(genpath(''../../../nnv/code/nnv'')); verify_model_subject_patch(''%s'', ''%s'', ''%s'', ''%s'', ''%s'', ''%s'', ''%s'', ''%s''); pause(0.5); quit force;"', img_path, sbName, sZ, reachMethod, relaxFactor, transType, gval, gRange);
-
-                        [status, cmdout] = system(sys_cmd);
-                        % verify_model_subject_patch(img_path, sb, sZ, reachMethod, relaxFactor, transType, order, coefficient, cRange);
-                        
-                        % system("sleep 5"); % wait a few seconds to ensure matlab is closed (windows)
+                        verify_model_subject_patch(img_path, sb, sZ, reachMethod, relaxFactor, transType, gval, gRange);
 
                     end
 

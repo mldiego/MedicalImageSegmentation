@@ -60,7 +60,7 @@ function [pred_c, ver_c, verTime] = get_patch_data(net, flair, sZ, c, sbName, tr
             % Get verification data
             dataPath = "reach_monai_"+transType+"_"+string(sZ)+"_"...
                 +sbName+"_"+string(c)+"_"+string(i)+"_"+string(j)+"_"...
-                +epsilon+"_"+nPix+"_relax-star-range0.95.mat";
+                +epsilon+"_"+nPix+"_relax-star-range1.mat";
 
             if any(contains(resFiles,dataPath))
 

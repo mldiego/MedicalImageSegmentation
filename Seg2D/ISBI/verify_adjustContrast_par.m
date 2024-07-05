@@ -1,11 +1,11 @@
 %% Verify msseg models given a bias field perturbation
 
 % Study variables
-sliceSizes = [64, 80, 96]; % for cropping and loading models
+sliceSizes = [80]; % for cropping and loading models
 gamma = [0.5; 1; 2]; % lower and upper bound for typical ranges used for gamma
 gamma_range = [0.0025; 0.00375; 0.005]; % gamma ranges to consider for each gamma value
 path2data = "../../data/ISBI/subjects/01/";
-subjects = ["01", "02", "03", "04"]; % subject data to analyze (omly use mask1 for each)
+subjects = ["02", "03", "04"]; % subject data to analyze (omly use mask1 for each)
 transType = "AdjustContrast";
 
 

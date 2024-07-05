@@ -16,11 +16,13 @@ function metrics = volume_metrics(pred, gt)
 
 
     % Compute the sum of elements in predictions and ground truth
-    pred_total = double(sum(pred(:)));
-    gt_total = double(sum(gt(:)));
+    pred_total = nnz(pred == 1); % only count 1s, not unknowns (2)
+    gt_total = nnz(gt);
 
     % True positives
-    tp = sum(pred(gt == 1));
+    idxs = find(gt == 1);
+    tp = sum(pred(idxs) == 1);
+    % tp = sum(pred(gt == 1));
 
     % DICE coefficient
     dice = 2 * tp / (pred_total + gt_total);
