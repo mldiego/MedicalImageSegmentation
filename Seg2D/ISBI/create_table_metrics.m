@@ -1,6 +1,6 @@
 function create_table_metrics(subjectName, sliceSize, transType, var1, var2, pred_metrics, gt_metrics, robust_metrics, verTime)
 
-    fileName = "metrics/UMCL_"+subjectName+"_"+sliceSize+"_"+transType+"_"+var1+"_"+var2+".tex";
+    fileName = "metrics/ISBI_"+subjectName+"_"+sliceSize+"_"+transType+"_"+var1+"_"+var2+".tex";
     
     fileID = fopen(fileName,'w');
     fprintf(fileID, '\\begin{longtable}{ c  c | c | c  c  c  c  c  c  c c c}\n');

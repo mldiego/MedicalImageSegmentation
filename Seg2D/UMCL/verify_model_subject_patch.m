@@ -52,7 +52,6 @@ function verify_model_subject_patch(img_path, subject, sliceSize, reachMethod, r
         IS.pred_ub = IS.pred_ub(xxx);
         IS.V = IS.V(:,:,:,[1;xxx]);
         IS.numPred = length(xxx);
-        % so probably no other way to do it but the og way
     
         %% Compute reach sets
         

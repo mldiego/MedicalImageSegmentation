@@ -68,6 +68,13 @@ function [pred_c, ver_c, verTime] = get_patch_data(net, flair, sZ, c, sbName, tr
                 lb = reachData.lb;
                 ub = reachData.ub;
                 verTime = verTime + reachData.rT;
+
+                if isfield(reachData, "ME")
+                    if ~isempty(reachData.ME)
+                        warning(dataPath)
+                        warning(readData.ME.message)
+                    end
+                end
         
                 % 1) get correctly classified as 0 (background)
                 ver_background = (ub <= 0);

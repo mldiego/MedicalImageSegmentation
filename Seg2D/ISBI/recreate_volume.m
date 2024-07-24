@@ -60,7 +60,7 @@ function [pred_c, ver_c, verTime] = get_patch_data(net, flair, sZ, c, sbName, tr
             % Get verification data
             dataPath = "reach_monai_"+transType+"_"+string(sZ)+"_"...
                 +sbName+"_"+string(c)+"_"+string(i)+"_"+string(j)+"_"...
-                +epsilon+"_"+nPix+"_relax-star-range0.95.mat";
+                +epsilon+"_"+nPix+"_relax-star-range1.mat";
 
             if any(contains(resFiles,dataPath))
 
@@ -68,6 +68,13 @@ function [pred_c, ver_c, verTime] = get_patch_data(net, flair, sZ, c, sbName, tr
                 lb = reachData.lb;
                 ub = reachData.ub;
                 verTime = verTime + reachData.rT;
+
+                if isfield(reachData, "ME")
+                    if ~isempty(reachData.ME)
+                        warning(dataPath)
+                        warning(reachData.ME.message)
+                    end
+                end
         
                 % 1) get correctly classified as 0 (background)
                 ver_background = (ub <= 0);

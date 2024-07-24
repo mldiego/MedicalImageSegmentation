@@ -1,21 +1,19 @@
 %% Verify msseg models given a bias field perturbation
 
 % Study variables
-sliceSizes = [80]; % for cropping and loading models
-gamma = [0.5; 1; 2]; % lower and upper bound for typical ranges used for gamma
+sliceSizes = [64, 80, 96];
+gamma = 1; % lower and upper bound for typical ranges used for gamma
 gamma_range = [0.0025; 0.00375; 0.005]; % gamma ranges to consider for each gamma value
 path2data = "../../data/ISBI/subjects/01/";
-subjects = ["02", "03", "04"]; % subject data to analyze (omly use mask1 for each)
+subjects = ["02", "03", "04"]; % subject data to analyze (only use mask1 for each)
 transType = "AdjustContrast";
 
 
 %% Reachability analysis for all models
 
 % Define reachability options
-% reachOptions = struct;
 reachMethod = "relax-star-range";
-relaxFactor = "0.95";
-% reachOptions.reachMethod = 'approx-star';
+relaxFactor = "1";
 
 for s = 1:length(subjects)
 
@@ -36,7 +34,7 @@ for s = 1:length(subjects)
         sZ = sliceSizes(i);
         sZ = string(sZ);
         
-        for j = 2:length(gamma)
+        for j = 1:length(gamma)
     
             gval = gamma(j);
             gval = string(gval);
@@ -46,11 +44,19 @@ for s = 1:length(subjects)
                 gRange = gamma_range(k);
                 gRange = string(gRange);
 
-                parfor c = 1:size(flair,1) % iterate through all 2D slices 
+                disp("Verifying subject " + sbName +", model " + sZ + ", gamma "+ gval ...
+                    +", and gamma range of "+ gRange);
+                t = tic;
+
+                for c = 1:size(flair,1) % iterate through all 2D slices 
 
                     generate_patches(flair, mask, wm_mask, sZ, c, gval, gRange); % generates all possible patches to analyze
 
                     patches = dir("tempData/data_"+string(c)+"_*.mat"); % get generated patches
+
+                    npatch = height(patches);
+
+                    disp("  - Checking slice "+string(c) +" with " + string(npatch)+" patches");
 
                     for p = 1:height(patches)
 
@@ -62,6 +68,8 @@ for s = 1:length(subjects)
                     delete("tempData/data_"+string(c)+"_*.mat"); % remove all generated patches
                 
                 end
+
+                toc(t);
 
             end
     

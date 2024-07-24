@@ -2,10 +2,16 @@
 
 % Study variables
 sliceSizes = [64, 80, 96]; % for cropping and loading models
-epsilon = [0.002; 0.004; 0.006]; % equivalent to 1,2, 3 pixel color values
-nPix = [5, 10, 15];
+% sliceSizes = [80, 96];
+% epsilon = [0.002; 0.004; 0.006]; % equivalent to 1,2, 3 pixel color values
+% nPix = [5, 10, 15];
+% epsilon = [0.001; 0.002];
+% nPix = [1, 2, 5];
+epsilon = 0.004;
+nPix = [1, 5, 10];
 path2data = "../../data/ISBI/subjects/01/";
-subjects = ["01", "02", "03", "04"]; % subject data to analyze (omly use mask1 for each)
+subjects = ["01", "02", "03", "04"]; % subject data to analyze (only use mask1 for each)
+% subjects = ["02"; "03"; "04"];
 transType = "linf";
 
 
@@ -14,7 +20,7 @@ transType = "linf";
 % Define reachability options
 % reachOptions = struct;
 reachMethod = "relax-star-range";
-relaxFactor = "0.95";
+relaxFactor = "1";
 % reachOptions.reachMethod = 'approx-star';
 
 for s = 1:length(subjects)
@@ -28,7 +34,6 @@ for s = 1:length(subjects)
     flair = flair_normalization(flair);
     mask    = niftiread(path2data + sb+"/mask1.nii");
     wm_mask = niftiread(path2data + sb+"/wm_mask.nii");
-    [flair, mask, wm_mask] = removeExtraBackground(flair, mask, wm_mask);
 
     % Begin exploration
     for i=1:length(sliceSizes)
@@ -46,11 +51,18 @@ for s = 1:length(subjects)
                 nP = nPix(k);
                 nP = string(nP);
 
-                parfor c = 1:size(flair,1) % iterate through all 2D slices
+                disp("Verifying subject " + sbName +", model " + sZ + ", epsilon "+ ep +", and "+ nP +"% of pixels");
+                t = tic;
+
+                for c = 1:size(flair,1) % iterate through all 2D slices
 
                     generate_patches(flair, mask, wm_mask, sZ, c, ep, nP); % generates all possible patches to analyze
 
                     patches = dir("tempData/data_"+string(c)+"_*.mat"); % get generated patches
+
+                    npatch = height(patches);
+
+                    disp("  - Checking slice "+string(c) +" with " + string(npatch)+" patches");
 
                     for p = 1:height(patches)
 
@@ -64,6 +76,8 @@ for s = 1:length(subjects)
                 
                 end
 
+                toc(t);
+
             end
     
         end
@@ -76,27 +90,6 @@ end
 
 
 %% Helper Functions
-
-% Remove background (all useless 0s outside of brain)
-function [flair, mask, wm_mask] = removeExtraBackground(flair, mask, wm_mask)
-    
-    % Remove all background around brain to simplify the verification process
-    % This reduces the number of slices to verify
-    
-    % First remove all 2D slices that are just background
-    cropMask = wm_mask < 1;% Find all zeros, even those inside the image.
-    cropMask = imfill(cropMask, 'holes'); % Get rid of zeros inside image.
-    % Invert mask and get bounding box.
-    props = regionprops(~cropMask, 'BoundingBox');
-    if ~isempty(props) % there may be nothing to crop out
-        bvol = floor(props.BoundingBox); % bounding volume to crop around brain
-        % Crop data
-        flair = imcrop3(flair, bvol);
-        mask = imcrop3(flair, bvol);
-        wm_mask = imcrop3(wm_mask, bvol);
-    end
-    
-end
 
 % Generate starting points for slices
 function generate_patches(flair, mask, wm_mask, sZ, c, epsilon, nPix)
@@ -175,7 +168,8 @@ function [lb, ub, idxs] = L_inf(img, wm_mask, epsilon, nPix)
     N = length(idxs); % how many wm_pixels?
     cN = floor(N * nPix/100); % these are the total pixels to modify
 
-    idxs = randperm(N,cN); % choose cN pixels out of N for each patch
+    id = randperm(N,cN); % choose cN pixels out of N for each patch
+    idxs = idxs(id);
 
     % Get data ranges
     img_min = min(img, [], 'all');
@@ -191,6 +185,4 @@ function [lb, ub, idxs] = L_inf(img, wm_mask, epsilon, nPix)
     ub(idxs) = ub(idxs) + epsilon;
 
 end
-
-
 

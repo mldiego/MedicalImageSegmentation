@@ -4,7 +4,7 @@
 sliceSizes = [64, 80, 96]; % for cropping and loading models
 % epsilon = [0.002; 0.004; 0.006]; % equivalent to 1, 2, 3 pixel color values
 epsilon = 0.002;
-nPix = 1; % [0.5, 1]
+nPix = 5; % [0.5, 1]
 % nPix = [1, 2, 5]; % percentage of pixels within white matter mask perturbed
 path2data = "../../data/UMCL/subjects/patient";
 % subjects = ["01", "02", "03", "04", "05", "06"]; % subject data to analyze (only use mask1 for each)
