@@ -5,7 +5,7 @@ sliceSizes = [64, 80, 96];
 gamma = 1; % lower and upper bound for typical ranges used for gamma
 gamma_range = [0.0025; 0.00375; 0.005]; % gamma ranges to consider for each gamma value
 path2data = "../../data/ISBI/subjects/01/";
-subjects = ["02", "03", "04"]; % subject data to analyze (only use mask1 for each)
+subjects = ["01", "02", "03", "04"]; % subject data to analyze (only use mask1 for each)
 transType = "AdjustContrast";
 
 

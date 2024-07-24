@@ -1,0 +1,13 @@
+'PosLin.multipleStepReachStarApprox_at_one', line 652
+Layer 48, before that it seems fine
+
+What layers do we have? Can we change some Star variables to sparse and still make it work? Sparse only supports 2D, so no V possible, only C. Would this do it?
+ - ImageInput        (fine)
+ - Conv2D            (fine, it only cares about V, so we can keep C (the problem so far) as sparse)
+ - Relu              (seems fine with C as sparse)
+ - BatchNorm         (fine)
+ - TransposedConv2D  (?)
+ - Concatenation     (this should be fine with sparse)
+ - Tanh              (this should be fine with sparse)
+
+I can also get a "Box" overapprox if too many constraints are present to reduce memory, even if method may be a bit worse, but how much worse can it get? Not sure...
