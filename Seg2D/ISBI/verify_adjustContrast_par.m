@@ -2,7 +2,7 @@
 
 % Study variables
 sliceSizes = [64, 80, 96];
-gamma = 1; % lower and upper bound for typical ranges used for gamma
+gamma = [0.5; 1; 2]; % lower and upper bound for typical ranges used for gamma
 gamma_range = [0.0025; 0.00375; 0.005]; % gamma ranges to consider for each gamma value
 path2data = "../../data/ISBI/subjects/01/";
 subjects = ["01", "02", "03", "04"]; % subject data to analyze (only use mask1 for each)
@@ -12,7 +12,7 @@ transType = "AdjustContrast";
 %% Reachability analysis for all models
 
 % Define reachability options
-reachMethod = "relax-star-range";
+reachMethod = "relax-star-range-reduceMem"; % over approx at every ReLU -> reduce constraints -> reduce memory needs
 relaxFactor = "1";
 
 for s = 1:length(subjects)
@@ -48,7 +48,7 @@ for s = 1:length(subjects)
                     +", and gamma range of "+ gRange);
                 t = tic;
 
-                for c = 1:size(flair,1) % iterate through all 2D slices 
+                for c = 1:size(flair,1) % iterate through all 2D slices
 
                     generate_patches(flair, mask, wm_mask, sZ, c, gval, gRange); % generates all possible patches to analyze
 

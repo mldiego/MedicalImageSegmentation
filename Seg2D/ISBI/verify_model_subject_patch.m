@@ -66,7 +66,7 @@ function verify_model_subject_patch(img_path, subject, sliceSize, reachMethod, r
             [lb,ub] = R.estimateRanges;
         catch ME
             warning(ME.message)
-            warning("reach_monai_" + transformType + "_" + sliceSize+ "_" + subject + "_" ...
+            warning("This one got an exception...     reach_monai_" + transformType + "_" + sliceSize+ "_" + subject + "_" ...
             + channel + "_" + xC + "_" + yC + "_..._.mat")
             lb = [];
             ub = [];
