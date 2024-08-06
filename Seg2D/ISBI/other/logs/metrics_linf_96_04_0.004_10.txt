@@ -1,0 +1,10 @@
+reach_monai_linf_96_04_46_97_97_0.004_10_relax-star-range1.mat
+reach_monai_linf_96_04_53_97_97_0.004_10_relax-star-range1.mat
+reach_monai_linf_96_04_55_97_97_0.004_10_relax-star-range1.mat
+reach_monai_linf_96_04_64_97_97_0.004_10_relax-star-range1.mat
+reach_monai_linf_96_04_65_97_1_0.004_10_relax-star-range1.mat
+reach_monai_linf_96_04_67_97_97_0.004_10_relax-star-range1.mat
+reach_monai_linf_96_04_70_97_97_0.004_10_relax-star-range1.mat
+reach_monai_linf_96_04_90_97_97_0.004_10_relax-star-range1.mat
+reach_monai_linf_96_04_94_97_97_0.004_10_relax-star-range1.mat
+reach_monai_linf_96_04_117_97_1_0.004_10_relax-star-range1.mat

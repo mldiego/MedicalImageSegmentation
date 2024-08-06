@@ -61,6 +61,8 @@ function [pred_c, ver_c, verTime] = get_patch_data(net, flair, sZ, c, sbName, tr
             dataPath = "reach_monai_"+transType+"_"+string(sZ)+"_"...
                 +sbName+"_"+string(c)+"_"+string(i)+"_"+string(j)+"_"...
                 +epsilon+"_"+nPix+"_relax-star-range1.mat";
+            % "_relax-star-range-reduceMem1.mat";
+                % +"_relax-star-range1.mat";
 
             if any(contains(resFiles,dataPath))
 
@@ -71,27 +73,30 @@ function [pred_c, ver_c, verTime] = get_patch_data(net, flair, sZ, c, sbName, tr
 
                 if isfield(reachData, "ME")
                     if ~isempty(reachData.ME)
-                        warning(dataPath)
-                        warning(reachData.ME.message)
+                        % warning(dataPath);
+                        % disp(dataPath);
+                        % warning(reachData.ME.message);
+                        ver_img = y;
+                    else
+
+                        % 1) get correctly classified as 0 (background)
+                        ver_background = (ub <= 0);
+                        ver_background = ~ver_background;
+                        
+                        % 2) get correctly classified as 1 (lession)
+                        ver_lesion = (lb > 0);
+        
+                        % 3) get verified output
+                        ver_img = 2*ones(size(img)); % pixel = 2 -> unknown
+                        
+                        background = find(ver_background == 0); % 0
+                        ver_img(background) = 0;
+                        
+                        lesion = find(ver_lesion == 1); % 1
+                        ver_img(lesion) = 1;
                     end
                 end
         
-                % 1) get correctly classified as 0 (background)
-                ver_background = (ub <= 0);
-                ver_background = ~ver_background;
-                
-                % 2) get correctly classified as 1 (lession)
-                ver_lesion = (lb > 0);
-
-                % 3) get verified output
-                ver_img = 2*ones(size(img)); % pixel = 2 -> unknown
-                
-                background = find(ver_background == 0); % 0
-                ver_img(background) = 0;
-                
-                lesion = find(ver_lesion == 1); % 1
-                ver_img(lesion) = 1;
-
             else
 
                 ver_img = y; % if slice contains no white matter

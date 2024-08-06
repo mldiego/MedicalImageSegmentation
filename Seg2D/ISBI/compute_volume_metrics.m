@@ -4,23 +4,25 @@
 % var2 = [0.00025, 0.0005, 0.001]; % coeff_range
 % transType = "BiasField";
 
-% var1 = [0.001; 0.002]; %
-% var2 = [1,2,5]; % (nPix)
-var1 = 0.001;
-var2 = 1;
+var1 = [0.001, 0.002, 0.004]; %
+var2 = [1,2,5,10]; % (nPix)
+% var1 = 0.004;
+% var2 = 10;
 transType = "linf";
 
 % var1 = [0.5; 1; 2]; % (gamma)
+% var1 = 0.5;
 % var1 = [0.5; 1];
+% var2 = 0.0025;
 % var2 = [0.0025; 0.00375; 0.005]; % gamma ranges to consider for each gamma value
 % transType = "AdjustContrast";
 
 % Data
 path2data = "../../data/ISBI/subjects/01/";
-% subjects = ["01", "02", "03", "04"];
-subjects = ["01"];
+subjects = ["01", "02", "03", "04"];
+% subjects = ["01"];
 
-
+% models = [64,80];
 models = [64, 80, 96];
 % models = 96;
 
@@ -51,6 +53,13 @@ for m=1:length(models)
             
                 v2 = var2(k);
                 v2 = string(v2);
+
+                t = tic;
+
+                diaryName = "other/logs/metrics_linf_"+string(sliceSize)+"_"...
+                    +sbName+"_"+v1+"_"+v2+".txt";
+
+                diary(diaryName);
                 
                 % Get predicted and verified volume data
                 [ver_vol, pred_vol,verTime] = recreate_volume(net, flair, sliceSize, sbName, transType, v1, v2);
@@ -68,6 +77,12 @@ for m=1:length(models)
                 % Create table for latex
                 create_table_metrics(sbName, string(sliceSize), transType, string(v1), string(v2),...
                 pred_metrics, gt_metrics, robust_metrics, verTime)
+
+                diary off;
+                
+                disp(diaryName);
+                toc(t);
+                disp(" ");
                 
             end
     

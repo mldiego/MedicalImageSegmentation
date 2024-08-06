@@ -2,14 +2,14 @@
 
 % Study variables
 % sliceSizes = [64, 80, 96];
-sliceSizes = 64;
-% gamma = [0.5; 1; 2]; % lower and upper bound for typical ranges used for gamma
-gamma = 0.5;
+sliceSizes = 80;
+gamma = [0.5; 1; 2]; % lower and upper bound for typical ranges used for gamma
+% gamma = 0.5;
 % gamma_range = [0.0025; 0.00375; 0.005]; % gamma ranges to consider for each gamma value
 gamma_range = 0.0025;
 path2data = "../../data/ISBI/subjects/01/";
-% subjects = ["01", "02", "03", "04"]; % subject data to analyze (only use mask1 for each)
-subjects = ["02", "03", "04"];
+subjects = ["01", "02", "03", "04"]; % subject data to analyze (only use mask1 for each)
+% subjects = ["02", "03", "04"];
 transType = "AdjustContrast";
 
 
@@ -19,7 +19,7 @@ transType = "AdjustContrast";
 reachMethod = "relax-star-range-reduceMem"; % over approx at every ReLU -> reduce constraints -> reduce memory needs
 relaxFactor = "1";
 
-parpool(4); % with 6 -> OEM, 4 -> OEM, 3 -> seems okay (what about now with 4?)
+parpool(3); % with 6 -> OEM, 4 -> OEM, 3 -> seems okay (what about now with 4?)
 
 for s = 1:length(subjects)
 
