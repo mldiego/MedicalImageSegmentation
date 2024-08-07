@@ -2,17 +2,18 @@
 
 % Study variables
 % order = "3"; % possible polynomial order values ( > 1, default = 3)
-var1 = [0.1, 0.25, 0.5]; % coeff
-var2 = [0.00025, 0.0005, 0.001]; % coeff_range
-transType = "BiasField";
+% var1 = [0.1, 0.25, 0.5]; % coeff
+% var2 = [0.00025, 0.0005, 0.001]; % coeff_range
+% transType = "BiasField";
 
 % var1 = [0.002; 0.004; 0.006]; % (epsilon) equivalent to 1,2, 3 pixel color values
 % var2 = [5, 10, 15]; (nPix)
 % transType = "linf";
 
-% var1 = [0.5; 1; 2]; % (gamma)
+var1 = [0.5; 1; 2]; % (gamma)
 % var2 = [0.0025; 0.00375; 0.005]; % gamma ranges to consider for each gamma value
-% transType = "AdjustContrast";
+var2 = 0.0025;
+transType = "AdjustContrast";
 
 % Data
 path2data = "../../data/ISBI/subjects/01/";
@@ -39,7 +40,7 @@ for s = 1:length(subjects)
             v2 = var2(k);
             v2 = string(v2);
 
-            stats = zeros(size(flair,1), 7); % stats [max_diff, mean_diff, median_diff, max_flair]
+            stats = zeros(size(flair,1), 6); % stats [max_diff, mean_diff, median_diff, max_flair]
 
             % t = tic;
 
@@ -201,24 +202,26 @@ function stats = computeStats(lb, ub, flair)
     ub = squeeze(ub); 
     flair = squeeze(flair);
     % initialize stats var
-    stats = zeros(1,7);
+    stats = zeros(1,6);
     % Compute stats for whole slice
     img_diff = abs(lb - ub);
     stats(1) = max(img_diff, [], 'all');
     stats(2) = mean(img_diff, 'all');
     stats(3) = median(img_diff, 'all');
     stats(4) = max(flair, [], 'all'); % there is always some 0s, so this is good enough
+    stats(5) = min(flair, [], 'all'); % there is always some 0s, so this is good enough
+    stats(6) = stats(1)/abs(stats(4)-stats(5));
 
     % Compute stats for center patch of slice (64x64)
-    win1 = centerCropWindow2d(size(flair), [64 64]); % important features seems to be a bit shifted to the right
+    % win1 = centerCropWindow2d(size(flair), [64 64]); % important features seems to be a bit shifted to the right
     % imS = imcrop(flair,win1);
     % imDiffS = imcrop(img_diff,win1);
-    xC = win1.XLimits; 
-    yC = win1.YLimits + 40; % something like this seems to be closer to the worst case scenarios
-    imDiffS = img_diff(xC(1):xC(2), yC(1):yC(2));
-    stats(5) = max(imDiffS, [], 'all');
-    stats(6) = mean(imDiffS, 'all');
-    stats(7) = median(imDiffS, 'all');
+    % xC = win1.XLimits; 
+    % yC = win1.YLimits + 40; % something like this seems to be closer to the worst case scenarios
+    % imDiffS = img_diff(xC(1):xC(2), yC(1):yC(2));
+    % stats(5) = max(imDiffS, [], 'all');
+    % stats(6) = mean(imDiffS, 'all');
+    % stats(7) = median(imDiffS, 'all');
 
 end
 
