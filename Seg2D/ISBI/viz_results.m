@@ -44,21 +44,29 @@ m80_2  = load("metrics/avg_ISBI_80_AdjustContrast_2_0.0025.mat");
 
 f = figure;
 grid; hold on;
+% Verification scores
 plot([1;2;3], [m64_0001_1.avg_.gt_metrics.dice; m64_0002_5.avg_.gt_metrics.dice;...
     m64_0004_10.avg_.gt_metrics.dice],'r', 'LineWidth', 2);
 plot([1;2;3], [m80_0001_1.avg_.gt_metrics.dice; m80_0002_5.avg_.gt_metrics.dice;...
     m80_0004_10.avg_.gt_metrics.dice],'b', 'LineWidth', 2);
 plot([1;2;3], [m96_0001_1.avg_.gt_metrics.dice; m96_0002_5.avg_.gt_metrics.dice;...
     m96_0004_10.avg_.gt_metrics.dice], '-', 'color', "#7E2F8E", 'LineWidth', 2);
+% Prediction scores
+plot([1;2;3], [m64_0001_1.avg_.pred_metrics.dice; m64_0002_5.avg_.pred_metrics.dice;...
+    m64_0004_10.avg_.pred_metrics.dice],'--r', 'LineWidth', 1);
+plot([1;2;3], [m80_0001_1.avg_.pred_metrics.dice; m80_0002_5.avg_.pred_metrics.dice;...
+    m80_0004_10.avg_.pred_metrics.dice],'--b', 'LineWidth', 1);
+plot([1;2;3], [m96_0001_1.avg_.pred_metrics.dice; m96_0002_5.avg_.pred_metrics.dice;...
+    m96_0004_10.avg_.pred_metrics.dice], '--', 'color', "#7E2F8E", 'LineWidth', 1);
 % xlim([0.8 3.2]);
-% ylim([0.57 0.61]);
+ylim([0.0 0.613]);
 xticks([1;2;3])
 xticklabels({"[0.001, 1%]", "[0.002, 5%]", "[0.004, 10%]"});
-xlabel('L_{\infty} variables [\epsilon, % pixels]');
+xlabel('Random noise variables');
 ylabel('Dice')
 ax = gca;
 ax.FontSize = 16; 
-legend({"64", "80", "96"}, 'Location','best');
+legend({"64 verified", "80 verified", "96 verified", "64 pred", "80 pred", "96 pred"}, 'Location','best');
 % legend('boxoff');
 exportgraphics(f, 'figures/linf_dice.pdf', 'ContentType', 'vector');
 
@@ -71,15 +79,22 @@ plot([1;2;3], [m80_0001_1.avg_.gt_metrics.sc; m80_0002_5.avg_.gt_metrics.sc;...
     m80_0004_10.avg_.gt_metrics.sc],'b', 'LineWidth', 2);
 plot([1;2;3], [m96_0001_1.avg_.gt_metrics.sc; m96_0002_5.avg_.gt_metrics.sc;...
     m96_0004_10.avg_.gt_metrics.sc], '-', 'color', "#7E2F8E", 'LineWidth', 2);
+% Prediction scores
+plot([1;2;3], [m64_0001_1.avg_.pred_metrics.sc; m64_0002_5.avg_.pred_metrics.sc;...
+    m64_0004_10.avg_.pred_metrics.sc],'--r', 'LineWidth', 1);
+plot([1;2;3], [m80_0001_1.avg_.pred_metrics.sc; m80_0002_5.avg_.pred_metrics.sc;...
+    m80_0004_10.avg_.pred_metrics.sc],'--b', 'LineWidth', 1);
+plot([1;2;3], [m96_0001_1.avg_.pred_metrics.sc; m96_0002_5.avg_.pred_metrics.sc;...
+    m96_0004_10.avg_.pred_metrics.sc], '--', 'color', "#7E2F8E", 'LineWidth', 1);
 % xlim([0.8 3.2]);
-% ylim([0.57 0.61]);
+ylim([0.0 0.525]);
 xticks([1;2;3])
 xticklabels({"[0.001, 1%]", "[0.002, 5%]", "[0.004, 10%]"});
-xlabel('L_{\infty} variables [\epsilon, % pixels]');
+xlabel('Random noise variables');
 ylabel('SC')
 ax = gca;
 ax.FontSize = 16; 
-legend({"64", "80", "96"}, 'Location','best');
+legend({"64 verified", "80 verified", "96 verified", "64 pred", "80 pred", "96 pred"}, 'Location','best');
 % legend('boxoff');
 exportgraphics(f, 'figures/linf_sc.pdf', 'ContentType', 'vector');
 
@@ -93,10 +108,10 @@ plot([1;2;3], [m80_0001_1.avg_.verTime/900; m80_0002_5.avg_.verTime/900;...
 plot([1;2;3], [m96_0001_1.avg_.verTime/900; m96_0002_5.avg_.verTime/900;...
     m96_0004_10.avg_.verTime/900], '-', 'color', "#7E2F8E", 'LineWidth', 2);
 % xlim([0.8 3.2]);
-% ylim([0.57 0.61]);
+ylim([0.0 90]);
 xticks([1;2;3])
 xticklabels({"[0.001, 1%]", "[0.002, 5%]", "[0.004, 10%]"});
-xlabel('L_{\infty} variables [\epsilon, % pixels]');
+xlabel('Random noise variables');
 ylabel('V. Time (hours)')
 ax = gca;
 ax.FontSize = 16; 
@@ -116,15 +131,19 @@ plot([1;2;3], [m80_05.avg_.gt_metrics.dice; m80_1.avg_.gt_metrics.dice;...
     m80_2.avg_.gt_metrics.dice],'b', 'LineWidth', 2);
 % plot([1;2;3], [m96_05.avg_.gt_metrics.dice; m96_1.avg_.gt_metrics.dice;...
 %     m96_2.avg_.gt_metrics.dice], '-', 'color', "#7E2F8E", 'LineWidth', 2);
+plot([1;2;3], [m64_05.avg_.pred_metrics.dice; m64_1.avg_.pred_metrics.dice;...
+    m64_2.avg_.pred_metrics.dice],'--r', 'LineWidth', 1);
+plot([1;2;3], [m80_05.avg_.pred_metrics.dice; m80_1.avg_.pred_metrics.dice;...
+    m80_2.avg_.pred_metrics.dice],'--b', 'LineWidth', 1);
 % xlim([0.8 3.2]);
-% ylim([0.57 0.61]);
+ylim([0.0 0.613]);
 xticks([1;2;3])
 xticklabels({"0.5", "1", "2"});
 xlabel('\gamma', 'fontweight','bold');
 ylabel('Dice')
 ax = gca;
 ax.FontSize = 16; 
-legend({"64", "80"}, 'Location','best');
+legend({"64 verified", "80 verified", "64 pred", "80 pred"}, 'Location','best');
 % legend('boxoff');
 exportgraphics(f, 'figures/ac_dice.pdf', 'ContentType', 'vector');
 
@@ -134,17 +153,21 @@ plot([1;2;3], [m64_05.avg_.gt_metrics.sc; m64_1.avg_.gt_metrics.sc;...
     m64_2.avg_.gt_metrics.sc],'r', 'LineWidth', 2);
 plot([1;2;3], [m80_05.avg_.gt_metrics.dice; m80_1.avg_.gt_metrics.sc;...
     m80_2.avg_.gt_metrics.sc],'b', 'LineWidth', 2);
+plot([1;2;3], [m64_05.avg_.pred_metrics.sc; m64_1.avg_.pred_metrics.sc;...
+    m64_2.avg_.pred_metrics.sc],'--r', 'LineWidth', 1);
+plot([1;2;3], [m80_05.avg_.pred_metrics.sc; m80_1.avg_.pred_metrics.sc;...
+    m80_2.avg_.pred_metrics.sc],'--b', 'LineWidth', 1);
 % plot([1;2;3], [m96_05.avg_.gt_metrics.dice; m96_1.avg_.gt_metrics.dice;...
 %     m96_2.avg_.gt_metrics.dice], '-', 'color', "#7E2F8E", 'LineWidth', 2);
 % xlim([0.8 3.2]);
-% ylim([0.57 0.61]);
+ylim([0.0 0.525]);
 xticks([1;2;3])
 xticklabels({"0.5", "1", "2"});
 xlabel('\gamma', 'fontweight','bold');
 ylabel('SC')
 ax = gca;
 ax.FontSize = 16; 
-legend({"64", "80"}, 'Location','best');
+legend({"64 verified", "80 verified", "64 pred", "80 pred"}, 'Location','best');
 % legend('boxoff');
 exportgraphics(f, 'figures/ac_sc.pdf', 'ContentType', 'vector');
 
@@ -158,7 +181,7 @@ plot([1;2;3], [m80_05.avg_.verTime/900; m80_1.avg_.verTime/900;...
 % plot([1;2;3], [m96_05.avg_.gt_metrics.dice; m96_1.avg_.gt_metrics.dice;...
 %     m96_2.avg_.gt_metrics.dice], '-', 'color', "#7E2F8E", 'LineWidth', 2);
 % xlim([0.8 3.2]);
-% ylim([0.57 0.61]);
+ylim([0.0 90]);
 xticks([1;2;3])
 xticklabels({"0.5", "1", "2"});
 xlabel('\gamma', 'fontweight','bold');

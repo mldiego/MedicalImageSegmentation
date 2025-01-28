@@ -4,12 +4,22 @@
 
 % Study variables
 sliceSizes = [64, 80, 96]; % for cropping and loading models
+% sliceSizes = 64;
 order = "3"; % possible polynomial order values ( > 1, default = 3)
 coeff = [0.1, 0.25, 0.5];
-coeff_range = [0.00025, 0.0005, 0.001]; % what should the size of this be? 
+% coeff = 0.1;
+% coeff_range = [0.00025, 0.0005, 0.001]; % what should the size of this be? 
+coeff_range = [0.00025];
 path2data = "../../data/UMCL/subjects/patient";
 subjects = ["01", "02", "03", "04", "05", "06"]; % subject data to analyze (omly use mask1 for each)
+% subjects = "01";
 transType = "BiasField";
+
+% So far we only have run:
+% - subject = 01
+% - coeff = 0.1
+% - coeff_range = 0.00025
+% - sliceSize = 64
 
 % Perturbation to evaluate
 % transform = struct;
@@ -24,14 +34,12 @@ transType = "BiasField";
 % Define reachability options
 % reachOptions = struct;
 reachMethod = "relax-star-range";
-relaxFactor = "0.95";
+relaxFactor = "1";
 % reachOptions.reachMethod = 'approx-star';
 
 for s = 1:length(subjects)
 
     sb = subjects(s);
-    % sbName = split(sb, '/');
-    % sbName = string(sbName{1});
     sbName = sb;
 
     % load 3d data
@@ -57,11 +65,20 @@ for s = 1:length(subjects)
                 cRange = coeff_range(k);
                 cRange = string(cRange);
 
-                for c = 1:size(flair,1) % iterate through all 2D slices (it broke at 70, restart from there)
+                if j == 1 && k == 1
+                    break
+                end
+
+                for c = 1:size(flair,1) % iterate through all 2D slices
+                % for c = 80:size(flair,1) % iterate through all 2D slices (it broke at 80, restart from there)
 
                     generate_patches(flair, mask, wm_mask, sZ, c, order, coefficient, cRange); % generates all possible patches to analyze
 
                     patches = dir("tempData/*.mat"); % get generated patches
+
+                    npatch = height(patches);
+
+                    disp("  - Checking slice "+string(c) +" with " + string(npatch)+" patches");
 
                     for p = 1:height(patches)
 
