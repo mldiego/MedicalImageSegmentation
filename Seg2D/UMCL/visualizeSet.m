@@ -19,6 +19,8 @@ order = 3;
 coeff = 0.5;
 coeff_range = 0.001;
 
+bbb = new_bias_field(img_norm, order, coeff);
+
 [lb_bf, ub_bf] = generate_patches_bf(flair, mask, wm_mask, sliceSize, c, order, coeff, coeff_range); % generates all possible patches to analyze
 
 mi = min(lb_bf, [], 'all');
@@ -384,5 +386,53 @@ function [lb, ub, idxs] = L_inf(img, wm_mask, epsilon, nPix)
     lb(idxs) = lb(idxs) - epsilon;
     ub = img;
     ub(idxs) = ub(idxs) + epsilon;
+
+end
+
+function bias_field_image = new_bias_field(img, degree, coeff)
+    rank = length(size(img));
+    coeff_mat = zeros(repmat(degree + 1, 1, rank));
+    % Create coordinate vectors
+    coords = cell(1, rank); % Initialize a cell array to hold coordinate vectors
+    for i = 1:rank
+        coords{i} = linspace(-1.0, 1.0, size(img,i));
+    end
+    % Get coefficients
+    [row, col] = find(tril(ones(degree + 1)));
+    linear_indices = sub2ind(size(coeff_mat), row, col);
+    coeff_mat(linear_indices) = coeff;
+    % Evaluate leggendre polynomials on x,y
+    bf = evaluate_2d_legendre_series(coords{1}, coords{2}, coeff_mat); % Assuming 2D for leggrid2d
+    % Apply field to image
+    bias_field_image = img .* exp(bf)';
+end
+
+function result = evaluate_2d_legendre_series(x, y, c)
+% Evaluates a 2-D Legendre series on the Cartesian product of x and y.
+%
+% Args:
+%   x: 1-D array of x-coordinates.
+%   y: 1-D array of y-coordinates.
+%   c: 2-D array of coefficients, where c(i,j) is the coefficient of 
+%      L_{i-1}(x) * L_{j-1}(y). Note the indexing shift due to Matlab's
+%      1-based indexing.
+%
+% Returns:
+%   result: 2-D array of the same size as meshgrid(x, y), containing the
+%           values of the 2-D Legendre series.
+
+    [X, Y] = meshgrid(x, y);  % Create the Cartesian product grid
+
+    n_coeff_x = size(c, 1); % Number of coefficients in x-direction
+    n_coeff_y = size(c, 2); % Number of coefficients in y-direction
+    
+    sum_val = 0;
+    for k = 1:n_coeff_y  % Iterate over Legendre polynomials in y
+        for l = 1:n_coeff_x  % Iterate over Legendre polynomials in x
+            % Evaluate the Legendre polynomials and multiply by the coefficient
+            sum_val = sum_val + c(l, k) * legendreP(l - 1, X) .* legendreP(k - 1, Y);
+        end
+    end
+    result = sum_val;
 
 end

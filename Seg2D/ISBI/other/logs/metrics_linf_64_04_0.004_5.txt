@@ -1,9 +1,0 @@
-reach_monai_linf_64_04_49_129_65_0.004_5_relax-star-range1.mat
-reach_monai_linf_64_04_50_129_65_0.004_5_relax-star-range1.mat
-reach_monai_linf_64_04_57_129_65_0.004_5_relax-star-range1.mat
-reach_monai_linf_64_04_75_65_65_0.004_5_relax-star-range1.mat
-reach_monai_linf_64_04_76_65_65_0.004_5_relax-star-range1.mat
-reach_monai_linf_64_04_100_65_65_0.004_5_relax-star-range1.mat
-reach_monai_linf_64_04_108_65_65_0.004_5_relax-star-range1.mat
-reach_monai_linf_64_04_128_65_65_0.004_5_relax-star-range1.mat
-reach_monai_linf_64_04_132_65_65_0.004_5_relax-star-range1.mat

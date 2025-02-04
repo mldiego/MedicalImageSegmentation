@@ -13,7 +13,7 @@ function peak = get_peak(vol)
     temp = double(vol(vol ~= 0));
     
     % Calculate 99th percentile
-    q = prctile(temp, 99);
+    q = prctile(temp, 95);
     
     % Keep values less than or equal to the 99th percentile
     temp = temp(temp <= q);

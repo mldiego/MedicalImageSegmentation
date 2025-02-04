@@ -1,2 +1,0 @@
-reach_monai_linf_96_03_53_97_97_0.004_1_relax-star-range1.mat
-reach_monai_linf_96_03_64_97_97_0.004_1_relax-star-range1.mat
