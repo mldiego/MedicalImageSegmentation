@@ -15,7 +15,7 @@ transType = "BiasField";
 % Define reachability options
 % reachOptions = struct;
 reachMethod = "relax-star-range";
-relaxFactor = "0.95";
+relaxFactor = "1";
 % reachOptions.reachMethod = 'approx-star';
 
 for s = 1:length(subjects)
@@ -43,28 +43,27 @@ for s = 1:length(subjects)
             coefficient = coeff(j);
             coefficient = string(coefficient);
     
-            for k = 1:length(coeff_range)
+            % for k = 1:length(coeff_range)
             
-                cRange = coeff_range(k);
-                cRange = string(cRange);
+                % cRange = coeff_range(k);
+                % cRange = string(cRange);
 
-                parfor c = 1:size(flair,1) % iterate through all 2D slices (it broke at 70, restart from there)
+            for c = 1:size(flair,1) % iterate through all 2D slices (it broke at 70, restart from there)
 
-                    generate_patches(flair, mask, wm_mask, sZ, c, order, coefficient, cRange); % generates all possible patches to analyze
+                generate_patches(flair, mask, wm_mask, sZ, c, order, coefficient); % generates all possible patches to analyze
 
-                    patches = dir("tempData/data_"+string(c)+"_*.mat"); % get generated patches
+                patches = dir("tempData/data_"+string(c)+"_*.mat"); % get generated patches
 
-                    for p = 1:height(patches)
+                for p = 1:height(patches)
 
-                        img_path = "tempData/"+patches(p).name;
+                    img_path = "tempData/"+patches(p).name;
 
-                        verify_model_subject_patch(img_path, sbName, sZ, reachMethod, relaxFactor, transType, order, coefficient, cRange); 
+                    verify_model_subject_patch(img_path, sbName, sZ, reachMethod, relaxFactor, transType, order, coefficient); 
 
-                    end
-
-                    delete("tempData/data_"+string(c)+"_*.mat"); % remove all generated patches
-                
                 end
+
+                delete("tempData/data_"+string(c)+"_*.mat"); % remove all generated patches
+                
 
             end
     
@@ -101,7 +100,7 @@ function [flair, mask, wm_mask] = removeExtraBackground(flair, mask, wm_mask)
 end
 
 % Generate starting points for slices
-function generate_patches(flair, mask, wm_mask, sZ, c, order, coeffs, cRange)
+function generate_patches(flair, mask, wm_mask, sZ, c, order, coeffs)
 
     % generate bounds for the whole slize given bias field transformation
     % using the 3D data info or 2D data? 2D data for now
@@ -120,7 +119,7 @@ function generate_patches(flair, mask, wm_mask, sZ, c, order, coeffs, cRange)
     wm_mask_slice = squeeze(wm_mask(c,:,:));
 
     % Apply transformation
-    [flair_lb, flair_ub] = BiasField(flair_slice, order, coeffs, cRange);
+    [flair_lb, flair_ub] = BiasField(flair_slice, order, coeffs);
 
     width = size(flair_slice,2);
     height = size(flair_slice,1);
@@ -162,29 +161,32 @@ function generate_patches(flair, mask, wm_mask, sZ, c, order, coeffs, cRange)
 end
 
 % Get transformation bounds
-function [img_lb, img_ub] = BiasField(img, order, coeffs, cRange)
+function [img_lb, img_ub] = BiasField(img, order, coeffs)
 % Get the code from torchIO to generate the BiasField
 % https://torchio.readthedocs.io/_modules/torchio/transforms/augmentation/intensity/random_bias_field.html#RandomBiasField
 
     % Transform variables
     coeffs = str2double(coeffs);
     order  = str2double(order);
-    cRange = str2double(cRange);
+    % cRange = str2double(cRange);
     
     % Field applied only to the center of the image (not background)
     img1 = img;
-    bField1 = generate_bias_field(img, coeffs-cRange, order);
+    bField1 = generate_bias_field(img, coeffs, order);
     img1(19:end-18,:) = img(19:end-18,:) .* bField1;
 
-    img2 = img;
-    bField2 = generate_bias_field(img, coeffs+cRange, order);
-    img2(19:end-18,:) = img(19:end-18,:) .* bField2;
+    % img2 = img;
+    % bField2 = generate_bias_field(img, coeffs+cRange, order);
+    % img2(19:end-18,:) = img(19:end-18,:) .* bField2;
 
     % get max and min value for every pixel given the biasField applied
     % interval range for every pixel is given by min and max values for
     % that pixel in images img1 and img2
-    img_lb = min(img1,img2);
-    img_ub = max(img1,img2);
+    % img_lb = min(img1,img2);
+    % img_ub = max(img1,img2);
+
+    img_lb = img;
+    img_ub = img1;
 
     % Define input set as ImageStar
     % img_diff = img_ub - img_lb;

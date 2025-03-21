@@ -2,16 +2,10 @@
 
 % Study variables
 sliceSizes = [64, 80, 96]; % for cropping and loading models
-% sliceSizes = [80, 96];
-% epsilon = [0.002; 0.004; 0.006]; % equivalent to 1,2, 3 pixel color values
-% nPix = [5, 10, 15];
-% epsilon = [0.001; 0.002];
-% nPix = [1, 2, 5];
-epsilon = 0.004;
+epsilon = [0.002; 0.004; 0.006]; % equivalent to 1,2, 3 pixel color values
 nPix = [1, 5, 10];
 path2data = "../../data/ISBI/subjects/01/";
 subjects = ["01", "02", "03", "04"]; % subject data to analyze (only use mask1 for each)
-% subjects = ["02"; "03"; "04"];
 transType = "linf";
 
 

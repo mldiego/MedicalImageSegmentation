@@ -4,9 +4,6 @@
 % sliceSizes = [64, 80, 96];
 sliceSizes = 80;
 gamma = [0.5; 1; 2]; % lower and upper bound for typical ranges used for gamma
-% gamma = 0.5;
-% gamma_range = [0.0025; 0.00375; 0.005]; % gamma ranges to consider for each gamma value
-gamma_range = 0.0025;
 path2data = "../../data/ISBI/subjects/01/";
 subjects = ["01", "02", "03", "04"]; % subject data to analyze (only use mask1 for each)
 % subjects = ["02", "03", "04"];
@@ -16,10 +13,10 @@ transType = "AdjustContrast";
 %% Reachability analysis for all models
 
 % Define reachability options
-reachMethod = "relax-star-range-reduceMem"; % over approx at every ReLU -> reduce constraints -> reduce memory needs
+reachMethod = "relax-star-range"; % over approx at every ReLU -> reduce constraints -> reduce memory needs
 relaxFactor = "1";
 
-parpool(3); % with 6 -> OEM, 4 -> OEM, 3 -> seems okay (what about now with 4?)
+% parpool(3); % with 6 -> OEM, 4 -> OEM, 3 -> seems okay (what about now with 4?)
 
 for s = 1:length(subjects)
 
@@ -45,39 +42,33 @@ for s = 1:length(subjects)
             gval = gamma(j);
             gval = string(gval);
     
-            for k = 1:length(gamma_range)
-            
-                gRange = gamma_range(k);
-                gRange = string(gRange);
 
-                disp("Verifying subject " + sbName +", model " + sZ + ", gamma "+ gval ...
-                    +", and gamma range of "+ gRange);
-                t = tic;
+            disp("Verifying subject " + sbName +", model " + sZ + ", gamma "+ gval);
+            t = tic;
 
-                parfor c = 1:size(flair,1) % iterate through all 2D slices
+            for c = 1:size(flair,1) % iterate through all 2D slices
 
-                    generate_patches(flair, mask, wm_mask, sZ, c, gval, gRange); % generates all possible patches to analyze
+                generate_patches(flair, mask, wm_mask, sZ, c, gval); % generates all possible patches to analyze
 
-                    patches = dir("tempData/data_"+string(c)+"_*.mat"); % get generated patches
+                patches = dir("tempData/data_"+string(c)+"_*.mat"); % get generated patches
 
-                    npatch = height(patches);
+                npatch = height(patches);
 
-                    disp("  - Checking slice "+string(c) +" with " + string(npatch)+" patches");
+                disp("  - Checking slice "+string(c) +" with " + string(npatch)+" patches");
 
-                    for p = 1:height(patches)
+                for p = 1:height(patches)
 
-                        img_path = "tempData/"+patches(p).name;
-                        verify_model_subject_patch(img_path, sb, sZ, reachMethod, relaxFactor, transType, gval, gRange);
+                    img_path = "tempData/"+patches(p).name;
+                    verify_model_subject_patch(img_path, sb, sZ, reachMethod, relaxFactor, transType, gval);
 
-                    end
-
-                    delete("tempData/data_"+string(c)+"_*.mat"); % remove all generated patches
-                
                 end
 
-                toc(t);
-
+                delete("tempData/data_"+string(c)+"_*.mat"); % remove all generated patches
+            
             end
+
+            toc(t);
+
     
         end
         
@@ -112,7 +103,7 @@ function [flair, mask, wm_mask] = removeExtraBackground(flair, mask, wm_mask)
 end
 
 % Generate starting points for slices
-function generate_patches(flair, mask, wm_mask, sZ, c, gamma, gRange)
+function generate_patches(flair, mask, wm_mask, sZ, c, gamma)
 
     % generate bounds for the whole slize given bias field transformation
     % using the 3D data info or 2D data? 2D data for now
@@ -131,7 +122,7 @@ function generate_patches(flair, mask, wm_mask, sZ, c, gamma, gRange)
     wm_mask_slice = squeeze(wm_mask(c,:,:));
 
     % Apply transformation
-    [flair_lb, flair_ub] = AdjustContrast(flair_slice, gamma, gRange);
+    [flair_lb, flair_ub] = AdjustContrast(flair_slice, gamma);
 
     width = size(flair_slice,2);
     height = size(flair_slice,1);
@@ -173,7 +164,7 @@ function generate_patches(flair, mask, wm_mask, sZ, c, gamma, gRange)
 end
 
 % Adjust contrast Perturbation
-function [img1, img2] = AdjustContrast(img, gamma, gamma_range)
+function [img_lb, img_ub] = AdjustContrast(img, gamma)
 % Python Code from Project-MONAI
     % """
     % Apply the transform to `img`.
@@ -212,7 +203,6 @@ function [img1, img2] = AdjustContrast(img, gamma, gamma_range)
     img_range = img_max-img_min;
     epsilon = 1e-7; % not sure why we need this, but to avoid dividing by zero probably ???
     gamma = str2double(gamma);
-    gamma_range = str2double(gamma_range);
     % if gamma == 2 % upper range
     %     gamma = gamma - gamma_range;
     % end
@@ -226,9 +216,11 @@ function [img1, img2] = AdjustContrast(img, gamma, gamma_range)
     % I believe this would assign no range values for the background
     % 
     % Would this look something like...
-    img1 = ((img-img_min)./(img_range+epsilon)).^(gamma-gamma_range) * img_range + img_min;
-    img2 = ((img-img_min)./(img_range+epsilon)).^(gamma+gamma_range) * img_range + img_min;
+    img1 = ((img-img_min)./(img_range+epsilon)).^(gamma) * img_range + img_min;
+    % img2 = ((img-img_min)./(img_range+epsilon)).^(gamma+gamma_range) * img_range + img_min;
     % IS = ImageStar(lb,ub);
+    img_lb = img;
+    img_ub = img1;
     
     % However, this will not be computationally efficient (defintely not as
     % efficient as the bright/dark perturbations)

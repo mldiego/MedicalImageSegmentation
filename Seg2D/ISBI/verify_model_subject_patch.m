@@ -9,11 +9,9 @@ function verify_model_subject_patch(img_path, subject, sliceSize, reachMethod, r
             nPix = varargin{2}; % percentage for each 2D data (not slices)
         case "AdjustContrast"
             gamma = varargin{1};
-            gamma_range = varargin{2};
         case "BiasField"
             order = varargin{1};
             coefficient = varargin{2};
-            coefficient_range = varargin{3};
         otherwise
             error("Wrong transformation name. Only 'AdjustContrast' , 'BiasField', and 'IntensityShift' are supported yet.");
     end
@@ -102,11 +100,11 @@ function verify_model_subject_patch(img_path, subject, sliceSize, reachMethod, r
 
         if strcmp(transformType, "BiasField")
             save("results/reach_monai_" + transformType + "_" + sliceSize+ "_" + subject + "_" ...
-            + channel + "_" + xC + "_" + yC + "_" + order + "_" + coefficient + "_" + coefficient_range...
+            + channel + "_" + xC + "_" + yC + "_" + order + "_" + coefficient ...
             + "_" + reachMethod + relaxFactor+".mat", "lb", "ub", "rT", "ME", "-v7.3");
         elseif strcmp(transformType, "AdjustContrast")
             save("results/reach_monai_" + transformType + "_" + sliceSize+ "_" + subject + "_" ...
-            + channel + "_" + xC + "_" + yC + "_" + gamma + "_" + gamma_range...
+            + channel + "_" + xC + "_" + yC + "_" + gamma ...
             + "_" + reachMethod + relaxFactor+".mat", "lb", "ub", "rT", "ME", "-v7.3");
         elseif strcmp(transformType, "linf")
             save("results/reach_monai_" + transformType + "_" + sliceSize+ "_" + subject + "_" ...
