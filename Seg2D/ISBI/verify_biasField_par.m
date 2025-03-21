@@ -3,8 +3,7 @@
 % Study variables
 sliceSizes = [64, 80, 96]; % for cropping and loading models
 order = "3"; % possible polynomial order values ( > 1, default = 3)
-coeff = [0.1, 0.25, 0.5];
-coeff_range = [0.00025, 0.0005, 0.001]; % what should the size of this be? 
+coeff = [0.01, 0.05, 0.1];
 path2data = "../../data/ISBI/subjects/01/";
 subjects = ["01", "02", "03", "04"]; % subject data to analyze (omly use mask1 for each)
 transType = "BiasField";

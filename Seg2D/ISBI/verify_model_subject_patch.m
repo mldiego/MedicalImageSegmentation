@@ -18,8 +18,10 @@ function verify_model_subject_patch(img_path, subject, sliceSize, reachMethod, r
  
     %% Load network
     
-    netMatlab = importNetworkFromONNX("models/model"+string(sliceSize)+".onnx");
-    net = matlab2nnv(netMatlab);
+    % netMatlab = importNetworkFromONNX("models/model"+string(sliceSize)+".onnx");
+    % net = matlab2nnv(netMatlab);
+    net = load("models/model"+string(sliceSize)+".mat");
+    net = net.net;
     
     %% Load data
     

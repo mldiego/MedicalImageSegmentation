@@ -3,10 +3,10 @@
 % Study variables
 % sliceSizes = [64, 80, 96];
 sliceSizes = 80;
-gamma = [0.5; 1; 2]; % lower and upper bound for typical ranges used for gamma
+% gamma = [0.5; 1; 2]; % lower and upper bound for typical ranges used for gamma
+gamma = [0.99; 0.95; 0.90];
 path2data = "../../data/ISBI/subjects/01/";
 subjects = ["01", "02", "03", "04"]; % subject data to analyze (only use mask1 for each)
-% subjects = ["02", "03", "04"];
 transType = "AdjustContrast";
 
 
