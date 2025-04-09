@@ -1,9 +1,7 @@
 %% Verify msseg models given a bias field perturbation
 
 % Study variables
-% sliceSizes = [64, 80, 96];
-sliceSizes = 80;
-% gamma = [0.5; 1; 2]; % lower and upper bound for typical ranges used for gamma
+sliceSizes = [64, 80, 96];
 gamma = [0.99; 0.95; 0.90];
 path2data = "../../data/ISBI/subjects/01/";
 subjects = ["01", "02", "03", "04"]; % subject data to analyze (only use mask1 for each)
@@ -13,7 +11,7 @@ transType = "AdjustContrast";
 %% Reachability analysis for all models
 
 % Define reachability options
-reachMethod = "relax-star-range"; % over approx at every ReLU -> reduce constraints -> reduce memory needs
+reachMethod = "relax-star-range-reduceMem"; % over approx at every ReLU -> reduce constraints -> reduce memory needs
 relaxFactor = "1";
 
 % parpool(3); % with 6 -> OEM, 4 -> OEM, 3 -> seems okay (what about now with 4?)

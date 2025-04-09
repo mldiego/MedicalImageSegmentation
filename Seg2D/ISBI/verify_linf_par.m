@@ -13,7 +13,7 @@ transType = "linf";
 
 % Define reachability options
 % reachOptions = struct;
-reachMethod = "relax-star-range";
+reachMethod = "relax-star-range-reduceMem";
 relaxFactor = "1";
 % reachOptions.reachMethod = 'approx-star';
 
