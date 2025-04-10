@@ -1,10 +1,12 @@
-%% Verify msseg models given a bias field perturbation
+function verify_adjustContrast_func(sliceSizes, gamma, subjects)
+
+%% Verify isbi models given a bias field perturbation
 
 % Study variables
-sliceSizes = [64, 80, 96];
-gamma = [0.99; 0.95; 0.90];
+% sliceSizes = [64, 80, 96];
+% gamma = [0.99; 0.95; 0.90];
 path2data = "../../data/ISBI/subjects/01/";
-subjects = ["01", "02", "03", "04"]; % subject data to analyze (only use mask1 for each)
+% subjects = ["01", "02", "03", "04"]; % subject data to analyze (only use mask1 for each)
 transType = "AdjustContrast";
 
 
@@ -240,4 +242,4 @@ function [img_lb, img_ub] = AdjustContrast(img, gamma)
 end
 
 
-
+end
